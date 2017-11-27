@@ -1,0 +1,23 @@
+.our-info {
+  border: 1px solid gray;
+}
+
+.table td {
+  border: none;
+  padding: 3px;
+  text-align: left;
+}
+
+td.icon-info {
+  padding-right: 10px;
+}
+
+.table thead th {
+  text-align: left;
+  border-bottom: none;
+  padding: 3px;
+}
+
+p {
+  margin-bottom: 0;
+}
