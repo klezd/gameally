@@ -9,10 +9,9 @@
   width : 150px;
   height: 60px;
   float: left;
-
 }
 .pageTitle {
-  font-size: 40px;
+  font-size: 30px;
   text-align: right;
   font-weight: bold;
 }
@@ -30,19 +29,54 @@
 .menuButtons li {
   text-align: right;
   float: left;
-  margin: 10px;
+  margin: 10px 0;
 }
 a.button {
   text-decoration: none;
   color: initial;
   padding: 5px;
-  font-size: 23px;
+  font-size: 15px;
   border-radius: 5px;
   border: solid 1px black;
-  background: linear-gradient(#0040ff, #ccd9ff);
+  background: linear-gradient(#66c2ff, #ccebff);
 }
 
 a.button:hover{
-  background: #4d79ff;
+  background: #005c99;
   color: white;
+}
+
+/*Info at the avatar icon*/
+.userInfo {
+  position: relative;
+  display: inline-block;
+  padding: 0 15px;
+}
+
+.infoContent {
+    display: none;
+    position:absolute;
+    background-color: #66c2ff;
+    min-width: 130px;
+    z-index: 1;
+    border-radius: 15px;
+}
+.infoContent a {
+  padding: 8px 10px;
+  color: black;
+  display: block;
+  margin: 0;
+  text-align: center;
+}
+
+.infoContent a:hover {
+  color: white;
+  background-color: #005c99;
+  text-decoration: none;
+  border-radius: 15px;
+  border-bottom: #0059b3 solid 1px ;
+}
+
+.userInfo:hover .infoContent{
+  display: block;
 }
