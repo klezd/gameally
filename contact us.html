@@ -17,11 +17,11 @@
             <div class="info">
               <table class="table">
                 <tr>
-                  <td class="icon-info"><i class="fa fa-mobile" aria-hidden="true"></i></td>
+                  <td class="icon-info"><i class="fa fa-mobile fa-lg" aria-hidden="true"></i></td>
                   <td>040 0123 456</td>
                 </tr>
                 <tr>
-                  <td class="icon-info"><i class="fa fa-phone" aria-hidden="true"></i></td>
+                  <td class="icon-info"><i class="fa fa-phone fa-lg" aria-hidden="true"></i></td>
                   <td>0124 - 4254780</td>
                 </tr>
                 <tr>
@@ -29,10 +29,9 @@
                   <td>gameally_amazing@gmail.com</td>
                 </tr>
                 <tr>
-                  <td class="icon-info"><i class="fa fa-map-marker" aria-hidden="true"></i></td>
-                  <td><p>Free Hit Technologies Pvt. Ltd,
-                      Shop no- 414 to 418 (4th floor) Vashisht Complex, Sikanderpur,
-                      DLF phase 1 MG road (opp. metro pillar no. 52), Gurugram - 90130</p>
+                  <td class="icon-info"><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i></td>
+                  <td><p>Free Hit Technologies Pvt. Ltd, Oulun ammattikorkeakoulu,
+                      Kotkantien kampus Kotkantie 1 - 90250 </p>
                       <p><b>Registered At:</b></p>
                       <p>Free hit Technologies Pvt Ltd, Suite 4A, Plaza M6,
                       Raksila, OULU - 90130</p>
@@ -40,6 +39,12 @@
                 </tr>
               </table>
             </div>
+          </div>
+          <div class="feedback">
+            <h4>Send us a message</h4>
+            <input type="text" class="form-control" name="ur email" placeholder="Your email">
+            <textarea class="form-control" rows="3" placeholder="Your message"></textarea>
+            <button class="btn" type="button" name="button">Send</button>
           </div>
           <div class="more-info">
             <table class="table">
@@ -52,29 +57,42 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>479 Activities</td>
-                  <td>551 Teams</td>
+                  <td><strong>479</strong> Activities</td>
+                  <td><strong>551</strong> Teams</td>
                   <td rowspan="2" style="font-size: 30px;">
                     <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
                     <a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
                   </td>
                 </tr>
                 <tr>
-                  <td>204 Venues</td>
-                  <td>5137 Players</td>
+                  <td><strong>204</strong> Venues</td>
+                  <td><strong>5137</strong> Players</td>
                 </tr>
                 <tr>
-                  <td>20 Membership Club</td>
-                  <td>78 Team Invitation</td>
+                  <td><strong>20</strong> Membership Club</td>
+                  <td><strong>78</strong> Team Invitation</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
         <div class="col-sm-6">
-
+          <div id="map" style="width:100%;height:500px"></div>
         </div>
       </div>
     </div>
+
+    <script type="text/javascript">
+      function myMap() {
+        var myCenter = new google.maps.LatLng(65.001700, 25.510870);
+        var canvas = document.getElementById('map');
+        var mapOptions = {center: myCenter, zoom: 11};
+        var map = new google.maps.Map(canvas, mapOptions);
+        var marker = new google.maps.Marker({position: myCenter});
+        marker.setMap(map);
+      }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbAwCfP9dMc5VIcxi200_aD_jDQv4Nj5Y&callback=initMap"></script>
   </body>
 </html>

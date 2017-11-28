@@ -1,5 +1,5 @@
-.our-info {
-  border: 1px solid gray;
+.container {
+  margin-top: 30px;
 }
 
 .table td {
@@ -10,12 +10,32 @@
 
 td.icon-info {
   padding-right: 10px;
+  text-align: right;
 }
 
 .table thead th {
   text-align: left;
   border-bottom: none;
   padding: 3px;
+}
+
+.table, button {
+  margin-bottom: 10px;
+}
+
+input, textarea {
+  margin-bottom: 6px;
+}
+
+.feedback button {
+  padding: 6px 16px;
+  text-align: center;
+  float: right;
+}
+
+button:hover {
+  background-color: #60646D;
+  color: #fff;
 }
 
 p {
