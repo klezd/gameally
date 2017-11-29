@@ -1,12 +1,19 @@
-/*header*/
+/*page*/
+body{
+  background-color: #E0F2F1;
+}
 .row {
   box-sizing: border-box;
+}
+/*header*/
+#header {
+  height: 90px;
 }
 .col-sm-3 {
   padding: 10px;
 }
 .logo {
-  width : 150px;
+  width : 180px;
   height: 60px;
   float: left;
 }
@@ -14,11 +21,13 @@
   font-size: 30px;
   text-align: right;
   font-weight: bold;
+  margin-top: 10px;
 }
 .menuButtons{
   padding: 10px;
   display: inline;
   text-align: right;
+  margin-top: 10px;
 }
 .menuButtons ul {
   margin: auto;
@@ -35,33 +44,47 @@ a.button {
   text-decoration: none;
   color: initial;
   padding: 5px;
+  margin: 3px;
   font-size: 15px;
   border-radius: 5px;
   border: solid 1px black;
-  background: linear-gradient(#66c2ff, #ccebff);
+  border-top: none;
+  border-left: none;
+  background: linear-gradient(#00796B, #80CBC4);
+  box-shadow: 1px 1px 1px #2c3e50;
 }
 
 a.button:hover{
-  background: #005c99;
+  background: #00796B;
   color: white;
+  font-weight: bold;
 }
 
 /*Info at the avatar icon*/
-.userInfo {
+#userInfoIcon {
+  box-shadow: 1px 1px 1px #2c3e50;
+  border-radius: 50%;
+}
+.info {
   position: relative;
   display: inline-block;
   padding: 0 15px;
 }
 
-.infoContent {
-    display: none;
-    position:absolute;
-    background-color: #66c2ff;
-    min-width: 130px;
-    z-index: 1;
-    border-radius: 15px;
+.infoMenu {
+    position: absolute;
+    top: 35px;
+    right: 0;
 }
-.infoContent a {
+.menu {
+    opacity: 0;
+    background-color: #4DB6AC;
+    min-width: 150px;
+    z-index: -1;
+    top: -40px;
+    box-shadow: 2px 2px 1px #34495e;
+}
+.infoMenu a {
   padding: 8px 10px;
   color: black;
   display: block;
@@ -69,14 +92,22 @@ a.button:hover{
   text-align: center;
 }
 
-.infoContent a:hover {
+.infoMenu a:hover {
   color: white;
-  background-color: #005c99;
+  font-weight: bold;
+  background-color:#00695C;
   text-decoration: none;
-  border-radius: 15px;
   border-bottom: #0059b3 solid 1px ;
 }
 
-.userInfo:hover .infoContent{
-  display: block;
+hr.header {
+  width: 60%;
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  color:#737373;
+}
+.container {
+  background-color: #E0F2F1;
+  margin-top: 10px;
 }

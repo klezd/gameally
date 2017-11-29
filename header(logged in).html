@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>GameAlly</title>
+    <meta charset="utf-8">
+    <link rel="Shortcut Icon" href="logo/logo-icon.ico" type="image/x-icon">
+    <title>GameAlly - User Profile</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/UProfile.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="scripts.js"></script>
   </head>
   <body style="width:90%; margin:auto">
     <!--header-->
-    <div class="row">
+    <div class="row" id = "header">
       <div class="col-sm-3">
-        <a href="home.html" title="Home"><img src="images/logo.png" alt="GameAlly" class="logo"></a>
+        <a href="home.html" title="Home"><img src="logo/logo.png" alt="GameAlly" class="logo"></a>
       </div>
 
       <div class="col-sm-3 pageTitle">
@@ -22,12 +26,14 @@
       <div class="col-sm-6 menuButtons">
         <ul>
           <li><span style="font-size:25"> Welcome ABC!</span></li>
-          <li class="userInfo">
-            <img src="images/avatar icon.png" width="30" height="30" style="padding: auto" class="userInfoIcon">
-            <div class="infoContent">
-              <a href="eidt_user_profile.html" title="Edit My Profile">Edit My Profile</a>
-              <a href="my_team_profile.html" title="My Team's Profile">Your Team</a>
-              <a title="Sign Out" href="#">Sign Out</a>
+          <li class="info">
+            <img src="images/avatar icon.png" width="30" height="30" style="padding: auto" id="userInfoIcon">
+            <div class="infoMenu">
+              <div class="menu">
+                <a href="eidt_user_profile.html" title="Edit My Profile">Edit My Profile</a>
+                <a href="my_team_profile.html" title="My Team's Profile">Your Team</a>
+                <a title="Sign Out" href="#">Sign Out</a>
+              </div>
             </div>
           </li>
           <li><a href="matchgame.html" class="button" title="Find a Match or Create a Match Yourself">Match Game</a></li>
@@ -35,23 +41,12 @@
         </ul>
       </div>
     </div>
-    <hr style="width: 60%; margin: auto">
+    <hr style="width: 60%; margin: auto; margin-top: 0px; color:#737373;">
 
     <!--user profile-->
 
     <div class="container">
-      <!--img and rank-->
-      <div class="row">
-        <div class="col-sm-4">
-          <img src="" alt="" class="avatarImage">
-        </div>
-        <div class="col-sm-6">
-
-        </div>
-        <div class="col-sm-2 icon">
-
-        </div>
-      </div>
+    
     </div>
   </body>
 </html>
