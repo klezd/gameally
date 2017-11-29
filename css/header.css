@@ -40,7 +40,7 @@ body{
   float: left;
   margin: 10px 0;
 }
-a.button {
+a.button, .button {
   text-decoration: none;
   color: initial;
   padding: 5px;
@@ -54,7 +54,7 @@ a.button {
   box-shadow: 1px 1px 1px #2c3e50;
 }
 
-a.button:hover{
+a.button:hover, .button:hover{
   background: #00796B;
   color: white;
   font-weight: bold;
