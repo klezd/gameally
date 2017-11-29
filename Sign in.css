@@ -1,0 +1,53 @@
+.modal-dialog {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: auto;
+  @media(min-width: 768px) {
+    min-height: calc(100vh - 20px);
+  }
+}
+
+.modal-content {
+  border-radius: 0;
+}
+
+.modal-header, .modal-footer {
+  border: none;
+}
+
+.modal-footer {
+  justify-content: space-between;
+  padding-top: 0;
+}
+
+input.form-control {
+  margin-bottom: 16px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  background-color: transparent;
+}
+
+.remember-me, .signin-btn {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+div.signin-btn .btn {
+  padding: 6px 30px;
+  border-radius: 0;
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+
+div.signin-btn .btn:hover {
+  background-color: #60646D;
+  color: #fff;
+}
+
+.btn:focus, .btn:active, .form-control:focus, .form-control:active {
+   outline: none !important;
+   box-shadow: none;
+}
