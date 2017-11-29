@@ -1,0 +1,42 @@
+.create-team {
+	display: block;
+	margin: auto;
+}
+
+.search-container {
+	display: block;
+    margin: auto;
+    width: 207px;
+    padding-top: 10px;
+}
+
+.row {
+	margin: auto;
+}
+
+
+img {
+	width: 100px;
+    height: 120px;
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.team {
+	border: 1px solid black;
+	border-radius: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.join {
+	display: block;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+
