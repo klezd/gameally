@@ -67,6 +67,15 @@ i.fa {
   color: #EB9532;
 }
 
+a.forgot-pass {
+  color: #EB9532;
+}
+
+a:hover {
+  color: #EB9532;
+  text-decoration: none;
+}
+
 div.signin-btn .btn:hover, div.signup-btn .btn:hover {
   background-color: #FF7416;
   color: #fff;
@@ -106,6 +115,10 @@ img.logo {
   height: 60px;
   opacity: 1;
   transform: rotateX(0deg);
+}
+
+#Forgot-password .modal-footer {
+  padding-bottom: 0;
 }
 
 p {
