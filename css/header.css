@@ -5,6 +5,38 @@ body{
 .row {
   box-sizing: border-box;
 }
+ul {
+  list-style-type: none;
+}
+a:hover {
+  text-decoration: none;
+}
+/*scroll bar of page*/
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #ECEFF1;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	   border-radius: 10px;
+
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background:#B0BEC5;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background:#00796B;
+}
+::-webkit-scrollbar-thumb:active {
+    background: #00695C;
+}
 /*header*/
 #header {
   height: 90px;

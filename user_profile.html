@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="css/UProfile.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="scripts.js"></script>
+    <script src="scripts/scripts.js"></script>
+    <script src="scripts/calendar.js"></script>
   </head>
+
   <body style="width:90%; margin:auto">
     <!--header-->
     <div class="row" id = "header">
@@ -112,33 +114,58 @@
         </div>
         <div class="col-sm-8 bio ">
           <label>Bio</label>
-          <p>I am an American man living in Oulu, Finland. </p>
-          <p>I am interested in playing sports, especially, ice hockey. </p>
-          <p>I am looking for friends to connect and play with me.</p>
+          <br>
+          <textarea name="bio" rows="3" cols="75" disabled>
+            I am an American man living in Oulu, Finland. I am interested in playing sports, especially, ice hockey.
+            I am looking for friends to connect and play with me.
+          </textarea>
         </div>
       </div>
       <!-- team and game -->
       <div class="row basicInfo">
-        <div class="col-sm-4">
-
+        <div class="col-sm-4 editprofile">
+          <a href="edit_user_profile.html" class="editButton" title="Edit Your Profile">Edit Profile</a>
+          <div class="teamofUser">
+            <h4> Member Of Team </h4>
+            <a class="memberofTeam" href="#" title="Click to view team information">Team A</a>
+          </div>
         </div>
         <div class="col-sm-8 gamePlay">
           <label>I Play</label>
           <table>
             <tr>
-              <td><img src="icon/icehockey.svg" alt="Ice Hockey"></td>
-              <td><img src="icon/swimming.png" alt="Swimming"></td>
-              <td> <img src="icon/tennis.png" alt="Tennis"></td>
+              <td><img src="icon/icehockey.svg" alt="Ice Hockey" title="Ice Hockey"></td>
+              <td><img src="icon/swimming.png" alt="Swimming" title="Swimming"></td>
+              <td> <img src="icon/tennis.png" alt="Tennis" title="Tennis"></td>
             </tr>
             <tr>
-              <td>0<input type="range" value=80 title="8" disabled>10</td>
-              <td>0<input type="range" value=50 alt="5" disabled>10</td>
-              <td>0<input type="range" value=30 alt="3" disabled>10</td>
+              <td>0<input type="range" value=80 title="Skill Level: 8" disabled>10</td>
+              <td>0<input type="range" value=50 title="Skill Level: 5" disabled>10</td>
+              <td>0<input type="range" value=30 title="Skill Level: 3" disabled>10</td>
             </tr>
           </table>
+        </div>
+      </div>
+      <!-- event calendar -->
+      <div class="row">
+        <div class="col-sm-4">
+        </div>
 
+        <div class="col-sm-8">
+          <div class="calendar">
+            <div class="calendarMonth">
+              <ul>
+                <li class="prev" onclick="prevmonth()">&#10094;</li>
+                <li class="next" onclick="nextmonth()">&#10095;</li>
+                <li class="monthdescription" id="monthdescription">
+                </li>
+              </ul>
+            </div>
 
+            <div class="calendarDays">
 
+            </div>
+          </div>
         </div>
       </div>
 

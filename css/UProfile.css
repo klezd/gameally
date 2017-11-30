@@ -3,7 +3,8 @@
   border-radius: 50%;
   width: 170px;
   height: 170px;
-  margin-left: 100px
+  margin-left: 100px;
+  box-shadow: 3px 3px 3px #9E9E9E;
 
 }
 
@@ -25,6 +26,7 @@ table.personalAward {
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  box-shadow: -3px -3px 3px #9E9E9E;
 }
 
 td.numberofCups {
@@ -35,6 +37,7 @@ td.numberofCups {
   font-weight: bold;
   color:#3366ff;
   border-right:  #E0F2F1 solid 10px;
+
 }
 .star {
   margin: 2px;
@@ -99,11 +102,18 @@ td.numberofCups:hover .star{
   padding-left: 10px;
 }
 
-p {
+.bio textarea {
   font-size: 18px;
   margin: 3px;
+  border-radius: 10px;
+  padding: 5px 10px;
+  text-align: justify;
 }
-
+.bio textarea:disabled {
+  background-color: #e6f2ff;
+  box-shadow: 1px 1px 6px #d9d9d9;
+  border: #d9d9d9 solid 1px;
+}
 .bio label, .gamePlay label {
   font-size: 20px;
   font-weight: bold;
@@ -124,5 +134,85 @@ p {
   margin: 5px;
   padding: 10px;
   font-size: 13px;
+  z-index: 100;
+  width: 220px;
+}
+.editprofile {
+  padding: 10px 10px;
+  text-align: center;
+
+}
+
+a.editButton {
+  padding-left: 5px;
+  border-radius: 5px;
+  border: solid 1px black;
+  border-top: none;
+  border-left: none;
+  background: linear-gradient(#00796B, #80CBC4);
+  box-shadow: 1px 1px 1px #2c3e50;
+  text-decoration: none;
+  color: black;
+  margin: 3px;
+  font-size: 15px;
+  padding: 10px;
+}
+
+a.cancelButton {
+  padding-left: 5px;
+  border-radius: 5px;
+  border: solid 1px black;
+  border-top: none;
+  border-left: none;
+  background: linear-gradient(#757575, #BDBDBD);
+  box-shadow: 1px 1px 1px #2c3e50;
+  text-decoration: none;
+  color: black;
+  margin: 3px;
+  font-size: 15px;
+  padding: 10px;
+}
+
+.editButton:hover {
+  color: white;
+  background: #00796B;
+  text-decoration: none;
+}
+
+.cancelButton:hover{
+  color: white;
+  background: #757575;
+  text-decoration: none;
+}
+
+.teamofUser {
+  margin: 20px;
+  margin-top: 30px;
+  border: 1px #d9d9d9 solid;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px #2c3e50;
+  padding: 20px;
+}
+
+
+<!--calendar-->
+.calendar {
+  width: 500px;
+  margin: 30px auto;
+  border: solid 1px #2c3e50;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px #d9d9d9;
+}
+.prev {
+ float: left;
+
+}
+.next {
+  float: right;
+}
+.calendarMonth {
+  background:
+}
+.calendarDays {
 
 }
