@@ -32,7 +32,7 @@
               <div class="menu">
                 <a href="eidt_user_profile.html" title="Edit My Profile">Edit My Profile</a>
                 <a href="my_team_profile.html" title="My Team's Profile">Your Team</a>
-                <a title="Sign Out" href="#">Sign Out</a>
+                <a href="#" title="Sign Out">Sign Out</a>
               </div>
             </div>
           </li>
@@ -42,6 +42,12 @@
       </div>
     </div>
     <hr class="header">
+    <!-- contact user icons -->
+    <div class="contactUser">
+      <a href="#"><img src="icon/call.png" alt="Call me"></a>
+      <a href="#"><img src="icon/email.png" alt="Send me message"></a>
+      <a href="#"><img src="icon/add_friend.png" alt="Add me"></a>
+    </div>
 
     <!--user profile-->
 
@@ -49,15 +55,94 @@
       <!--img and rank-->
       <div class="row">
         <div class="col-sm-4">
-          <img src="" alt="" class="avatarImage">
+          <img src="images/avatar icon.png" alt="avatar" class="avatarImage">
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-8">
+          <table class="personalAward">
+            <tr>
+                <td><img src="images/gold cup.png" alt="Gold Cup"></td>
+
+                <td><img src="images/silver cup.png" alt="Silver Cup"></td>
+                <td><img src="images/bronze cup.png" alt="Bronze Cup"></td>
+            </tr>
+            <tr>
+                <td class="numberofCups"><span class="star">&starf;</span></td>
+                <td class="numberofCups"><span class="star">&starf;</span><span class="star">&starf;</span></td>
+                <td class="numberofCups" style=":border-right: none"><span class="star">&starf;</span></td>
+            </tr>
+          </table>
+        </div>
+
+      </div>
+
+      <!--basic information-->
+      <div class="row basicInfo">
+        <div class="col-sm-4">
+                      <!--  <table class="info">
+                          <tr>
+                            <td class="title">Name</td>
+                            <td>John Smith</td>
+                          </tr>
+                          <tr>
+                            <td class="title">Gender</td>
+                            <td>Male</td>
+                          </tr>
+                        </table> -->
+          <form class="infoform">
+
+            <div class="row infoformRow">
+              <label class="infoformLabel col-3">Name</label>
+                <div class="col-9 infoformValue">
+                  <input type="text" class="form-control" id="name" value="John Smith" disabled>
+                </div>
+            </div>
+
+            <div class="row infoformRow">
+              <label class="infoformLabel col-3">Gender</label>
+                <div class="col-9 infoformValue">
+                  <select class="gender" disabled>
+                    <option value="female">Female</option>
+                    <option value="male" selected>Male</option>
+                  </select>
+                </div>
+            </div>
+
+          </form>
 
         </div>
-        <div class="col-sm-2 icon">
+        <div class="col-sm-8 bio ">
+          <label>Bio</label>
+          <p>I am an American man living in Oulu, Finland. </p>
+          <p>I am interested in playing sports, especially, ice hockey. </p>
+          <p>I am looking for friends to connect and play with me.</p>
+        </div>
+      </div>
+      <!-- team and game -->
+      <div class="row basicInfo">
+        <div class="col-sm-4">
+
+        </div>
+        <div class="col-sm-8 gamePlay">
+          <label>I Play</label>
+          <table>
+            <tr>
+              <td><img src="icon/icehockey.svg" alt="Ice Hockey"></td>
+              <td><img src="icon/swimming.png" alt="Swimming"></td>
+              <td> <img src="icon/tennis.png" alt="Tennis"></td>
+            </tr>
+            <tr>
+              <td>0<input type="range" value=80 title="8" disabled>10</td>
+              <td>0<input type="range" value=50 alt="5" disabled>10</td>
+              <td>0<input type="range" value=30 alt="3" disabled>10</td>
+            </tr>
+          </table>
+
+
 
         </div>
       </div>
+
+
     </div>
   </body>
 </html>

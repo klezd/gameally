@@ -73,8 +73,9 @@ a.button:hover, .button:hover{
 
 .infoMenu {
     position: absolute;
+    z-index: 100;
     top: 35px;
-    right: 0;
+    right: 0px;
 }
 .menu {
     opacity: 0;
@@ -109,5 +110,6 @@ hr.header {
 }
 .container {
   background-color: #E0F2F1;
-  margin-top: 10px;
+  margin-top: 20px;
+  margin: 20px;
 }

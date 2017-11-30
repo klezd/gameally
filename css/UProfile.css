@@ -1,3 +1,128 @@
+/*avatar rank table and contact user*/
 .avatarImage {
   border-radius: 50%;
+  width: 170px;
+  height: 170px;
+  margin-left: 100px
+
+}
+
+table.personalAward {
+  border: none;
+  width: auto;
+  background-color: inherit;
+  margin: auto;
+
+}
+
+.personalAward td {
+  padding: 10px;
+  text-align: center;
+  color: black;
+}
+
+.personalAward td img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+td.numberofCups {
+  background-color: white;
+  font-size: 200%;
+  padding: 0;
+  font-style: normal;
+  font-weight: bold;
+  color:#3366ff;
+  border-right:  #E0F2F1 solid 10px;
+}
+.star {
+  margin: 2px;
+}
+
+td.numberofCups:hover .star{
+  box-shadow: 1px 1px 1px #d9d9d9;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.contactUser {
+  padding: 10px;
+  max-width: 50px;
+  margin: auto;
+  position: fixed;
+  z-index: 1;
+  right: 50px;
+  top: 100px
+}
+.contactUser img {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+}
+
+/*basic info and bio*/
+
+.basicInfo {
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+.infoform {
+  border-radius: 10px;
+  border: 1px solid #d9d9d9;
+  box-shadow: 1px 1px 1px #d9d9d9;
+  margin-left: 0;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.infoformRow {
+  margin: 10px 3px;
+}
+
+.infoformLabel{
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+.infoformValue input:disabled,select:disabled{
+  width: 100%;
+  border: black;
+  background-color: #e6f2ff;
+  box-shadow: 1px 1px 3px #d9d9d9;
+  font-family: sans-serif;
+  color: black;
+  font-size: 15px;
+  padding: 3px 0;
+  padding-left: 10px;
+}
+
+p {
+  font-size: 18px;
+  margin: 3px;
+}
+
+.bio label, .gamePlay label {
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid #d9d9d9;
+  box-shadow: 1px 1px 1px #d9d9d9;
+  border-radius: 10px;
+  padding:5px 10px ;
+}
+
+.gamePlay img {
+  width: 60px;
+  height: 60px;
+  margin-left: 40px;
+
+}
+
+.gamePlay table tr td {
+  margin: 5px;
+  padding: 10px;
+  font-size: 13px;
+
 }
