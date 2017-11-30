@@ -1,0 +1,129 @@
+.search-event {
+  height: 44px;
+  width: 50%;
+  background-color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+  border-radius: 2px;
+  z-index: 2;
+  border-bottom: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .search-event {
+    width: 100%;
+  }
+}
+
+.background-evnt {
+  background-color: #fafafa;
+  z-index: -1;
+}
+
+.background-evnt.back1 {
+  padding-top: 28px;
+  padding-bottom: 4px;
+}
+
+.background-evnt.back2 {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.search-btn, .map-btn {
+  background: transparent;
+  border: 0;
+  float: right;
+  line-height: 44px;
+  outline: 0;
+  padding: 1px 16px 1px 6px;
+  position: relative;
+}
+
+.fa-search, .fa-map-marker {
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  vertical-align: middle;
+  color: #4285f4;
+}
+
+span.fa {
+  font-size: 18px;
+}
+
+.search-area {
+  height: 100%;
+  width: calc(100% - 46px);
+}
+
+.map-btn {
+  padding: 0 10px 0 16px;
+}
+
+span.fa-map-marker {
+  color: #eb2626;
+}
+
+.text-area {
+  height: 100%;
+  width: calc(100% - 40px);
+  padding: 5px 9px 0 16px;
+  vertical-align: middle;
+}
+
+.text-search {
+  border: none;
+  padding: 0px;
+  margin: 0px;
+  height: 34px;
+  width: inherit;
+}
+
+.tooltip.bs-tooltip-bottom .tooltip-inner {
+  border-radius: 0;
+  padding: 5px;
+  margin-top: 8px;
+}
+
+.tooltip .arrow:before {
+ margin-top: 8px;
+}
+
+.btn:focus, .btn:active, .form-control:focus, .form-control:active {
+   outline: none !important;
+   box-shadow: none;
+}
+
+.nav {
+  border-bottom: 0;
+  display: inline-flex;
+}
+
+a.nav-link {
+  padding: 24px 16px 12px 16px;
+  line-height: 24px;
+  color: #777;
+}
+
+.nav-tabs .nav-link {
+  border: 2px solid transparent;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.nav-tabs .nav-link:hover {
+  border-color: transparent;
+  color: #222;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: #4285f4;
+  background-color: transparent;
+  font-weight: bold;
+  border-color: transparent transparent #4285f4;
+}
+
+.container.tab-pane {
+  padding: 12px 16px 0 16px;
+}

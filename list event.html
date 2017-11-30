@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>List of event</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" style="text/css" href="list event.css">
+  </head>
+  <body>
+
+    <!--Search event part-->
+    <div class="container-fluid background-evnt back1">
+      <div class="container">
+        <div class="search-event">
+          <button type="button" class="btn search-btn">
+            <span class="fa fa-search" aria-hidden="true"></span>
+          </button>
+          <div class="search-area">
+            <button type="button" class="btn map-btn">
+              <span class="fa fa-map-marker" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Search by map"></span>
+            </button>
+            <div class="text-area">
+              <input type="text" class="form-control text-search" placeholder="Search here">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--List event part-->
+      <div class="events">
+        <!--Navigation tabs-->
+        <div class="container-fluid background-evnt back2">
+          <div class="container">
+            <ul class="nav nav-tabs" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#com-evnt">Comunity events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#per-evnt">Personal events</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--Tab panel-->
+        <div class="tab-content">
+          <div id="com-evnt" class="container tab-pane active">
+            『約束された勝利の剣』
+            ランク：EX　種別：？？？
+            エクスカリバー。
+            星を救う輝きの聖剣。
+            星を滅ぼす外敵を打ち倒すために作り上げられた、
+            およそあらゆる悪を退ける黄金の刃。
+            聖剣の「十三拘束」のうち六拘束が開放された姿。
+            半数である七拘束以上の開放ではないため、
+            未だ真の力を発揮できてはいないものの―――
+            それでも、巨悪を斃す苛烈の光には違いない。
+
+            本作に於いては「ベディヴィエール拘束」開放が 自動承認されており、
+            巨いなるものとの決戦が想定されていると思しい。
+          </div>
+          <div id="per-evnt" class="container tab-pane fade">
+            Excalibur - Sword of Promised Victory
+            Rank: EX
+            Type: ??
+            The shining holy sword that saves the planet.
+            A golden blade that repels pretty much any evil, built to defeat an outside enemy that destroys the planet.
+            The shape taken when six of the holy sword’s ｢Thirteen Seals｣ are released.
+            Although it still cannot display its true power, since over half of its seals (in other words, seven or more) have not been released───
+            Even so, this is unmistakably an intense light that defeats a great evil.
+            In this work, the release of the ｢Bedivere Seal｣ is being automatically acknowledged, making one consider the hypothesis of a decisive battle against a greater being.
+          </div>
+        </div>
+      </div>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+  </script>
+  </body>
+</html>
