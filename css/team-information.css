@@ -3,19 +3,28 @@
 	margin: auto;
 }
 
+/* Search fields*/
 .search-container {
 	display: block;
     margin: auto;
-    width: 207px;
+    width: 300px;
     padding-top: 10px;
+}
+
+.search-fields {
+	padding-right: 0px;
+}
+
+.button-search {
+	padding-left: 5px;
 }
 
 .row {
 	margin: auto;
 }
 
-
-img {
+/* Logo */
+.logo {
 	width: 100px;
     height: 120px;
     display: block;
@@ -38,5 +47,22 @@ img {
     margin-bottom: 5px;
 }
 
+/*Team logo*/
+.avatar {
+	width: 100px;
+	height: 100px;
+	 display: block;
+    margin: auto;
+}
 
+.upload-logo {
+	margin-top: 10px;
+}
 
+.create {
+	margin: auto;
+}
+
+.teamname {
+	width: 300px;
+}
