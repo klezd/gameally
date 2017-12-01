@@ -28,7 +28,7 @@
   border-bottom: 1px solid #e6e6e6;
 }
 
-.search-btn, .map-btn {
+.search-btn, .map-btn, .add-calendar-btn {
   background: transparent;
   border: 0;
   float: right;
@@ -38,7 +38,7 @@
   position: relative;
 }
 
-.fa-search, .fa-map-marker {
+.fa-search, .fa-map-marker, .fa-calendar-plus-o {
   display: inline-block;
   height: 24px;
   width: 24px;
@@ -79,9 +79,9 @@ span.fa-map-marker {
   width: inherit;
 }
 
-.tooltip.bs-tooltip-bottom .tooltip-inner {
+.tooltip.bs-tooltip-bottom .tooltip-inner, .tooltip.bs-tooltip-right .tooltip-inner {
   border-radius: 0;
-  padding: 5px;
+  padding: 5px 10px;
   margin-top: 8px;
 }
 
@@ -99,10 +99,13 @@ span.fa-map-marker {
   display: inline-flex;
 }
 
+a.nav-link, a.page-link {
+  color: #777;
+}
+
 a.nav-link {
   padding: 24px 16px 12px 16px;
   line-height: 24px;
-  color: #777;
 }
 
 .nav-tabs .nav-link {
@@ -112,7 +115,7 @@ a.nav-link {
   border-right: 0;
 }
 
-.nav-tabs .nav-link:hover {
+.nav-tabs .nav-link:hover, .page-link:hover {
   border-color: transparent;
   color: #222;
 }
@@ -125,5 +128,66 @@ a.nav-link {
 }
 
 .container.tab-pane {
-  padding: 12px 16px 0 16px;
+  padding: 28px 15px 0 15px;
+}
+
+.content {
+  padding: 0 16px;
+}
+
+div.result-quantity {
+  margin-bottom: 12px;
+  color: #777;
+}
+
+.add-calendar-btn {
+  line-height: inherit;
+  padding: 0;
+  float: none;
+}
+
+span.time {
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+.table {
+  margin-bottom: 6px;
+}
+
+.table td {
+  padding: 0 15px;
+  padding-bottom: 18px;
+  padding-top: 6px;
+}
+
+a.evnt-name {
+  color: #4285f4;
+}
+
+td.info {
+  width: 50%;
+  padding-left: 0;
+  text-align: left;
+}
+
+td.time-date {
+  width: 25%;
+}
+
+td.location {
+  width: 16.6667%;
+}
+
+td.calendar-btn, td.sport-act {
+  width: 8.3333%;
+}
+
+td.time-date, td.location, td.calendar-btn, td.sport-act {
+  padding-top: 36px;
+  text-align: left;
+}
+
+.pages-list {
+  padding: 0 16px;
 }
