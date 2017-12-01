@@ -38,7 +38,7 @@
   position: relative;
 }
 
-.fa-search, .fa-map-marker, .fa-calendar-plus-o {
+.fa-search, .fa-map-marker, .fa-calendar-plus-o, .fa-check {
   display: inline-block;
   height: 24px;
   width: 24px;
@@ -62,6 +62,30 @@ span.fa {
 
 span.fa-map-marker {
   color: #eb2626;
+}
+
+.fa-check, .fa-calendar-plus-o {
+  position: absolute;
+  top: -12px;
+}
+
+i.fa-check {
+  display: none;
+  color: #00cc33;
+}
+
+i.fa-calendar-plus-o {
+  display: inline;
+  color: #4285f4;
+}
+
+.checked {
+  display: inline;
+}
+
+.hide {
+  display: none;
+  color: black;
 }
 
 .text-area {
