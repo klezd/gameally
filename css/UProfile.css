@@ -153,12 +153,14 @@ a.editButton {
   box-shadow: 1px 1px 1px #2c3e50;
   text-decoration: none;
   color: black;
-  margin: 3px;
+  margin: 5px;
   font-size: 15px;
   padding: 10px;
+
 }
 
 a.cancelButton {
+
   padding-left: 5px;
   border-radius: 5px;
   border: solid 1px black;
@@ -290,6 +292,10 @@ span.locationSelect {
   text-align: center;
   margin: auto;
   margin-top: 20px;
+  margin-bottom: 10px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .sports {
