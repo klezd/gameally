@@ -6,7 +6,8 @@
 
 #header{
   background-color: #E0F2F1;
-  width: 100%
+  width: 100%;
+  overflow: hidden;
 }
 .row {
   box-sizing: border-box;
