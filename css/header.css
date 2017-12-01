@@ -1,6 +1,12 @@
 /*page*/
-body{
+*{
+  box-sizing: border-box;
+  font-family: 'Helvetica', FontAwesome, sans-serif;
+}
+
+#header{
   background-color: #E0F2F1;
+  width: 100%
 }
 .row {
   box-sizing: border-box;
@@ -11,10 +17,12 @@ ul {
 a:hover {
   text-decoration: none;
 }
+
 /*scroll bar of page*/
 ::-webkit-scrollbar {
     width: 10px;
     border-radius: 5px;
+
 }
 
 /* Track */
@@ -41,13 +49,14 @@ a:hover {
 #header {
   height: 90px;
 }
-.col-sm-3 {
+#header .col-sm-3 {
   padding: 10px;
 }
 .logo {
-  width : 180px;
+  width : 295px;
   height: 60px;
   float: left;
+  margin-left: 50px;
 }
 .pageTitle {
   font-size: 30px;
@@ -141,7 +150,8 @@ hr.header {
   color:#737373;
 }
 .container {
-  background-color: #E0F2F1;
+  width: 90%;
+  margin: auto;
   margin-top: 20px;
-  margin: 20px;
+
 }
