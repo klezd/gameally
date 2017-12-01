@@ -5,14 +5,15 @@
     <link rel="Shortcut Icon" href="logo/logo-icon.ico" type="image/x-icon">
     <title>GameAlly - User Profile</title>
     <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/UProfile.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="scripts.js"></script>
+    <script src="scripts/scripts.js"></script>
   </head>
-  <body style="width:90%; margin:auto">
+  <body >
     <!--header-->
     <div class="row" id = "header">
       <div class="col-sm-3">
@@ -20,7 +21,7 @@
       </div>
 
       <div class="col-sm-3 pageTitle">
-        User Profile
+        Set Up Profile
       </div>
 
       <div class="col-sm-6 menuButtons">
@@ -42,109 +43,127 @@
       </div>
     </div>
     <hr class="header">
-    <!-- contact user icons -->
-    <div class="contactUser">
-      <a href="#"><img src="icon/call.png" alt="Call me"></a>
-      <a href="#"><img src="icon/email.png" alt="Send me message"></a>
-      <a href="#"><img src="icon/add_friend.png" alt="Add me"></a>
-    </div>
-
-    <!--user profile-->
+    <!--edit user profile-->
 
     <div class="container">
-      <!--img and rank-->
       <div class="row">
-        <div class="col-sm-4">
-          <img src="images/avatar icon.png" alt="avatar" class="avatarImage">
-        </div>
-        <div class="col-sm-8">
-          <table class="personalAward">
-            <tr>
-                <td><img src="images/gold cup.png" alt="Gold Cup"></td>
+        <div class="col-sm-3">
 
-                <td><img src="images/silver cup.png" alt="Silver Cup"></td>
-                <td><img src="images/bronze cup.png" alt="Bronze Cup"></td>
-            </tr>
-            <tr>
-                <td class="numberofCups"><span class="star">&starf;</span></td>
-                <td class="numberofCups"><span class="star">&starf;</span><span class="star">&starf;</span></td>
-                <td class="numberofCups" style=":border-right: none"><span class="star">&starf;</span></td>
-            </tr>
-          </table>
-        </div>
-
-      </div>
-
-      <!--basic information-->
-      <div class="row basicInfo">
-        <div class="col-sm-4">
-                      <!--  <table class="info">
-                          <tr>
-                            <td class="title">Name</td>
-                            <td>John Smith</td>
-                          </tr>
-                          <tr>
-                            <td class="title">Gender</td>
-                            <td>Male</td>
-                          </tr>
-                        </table> -->
-          <form class="infoform">
-
-            <div class="row infoformRow">
-              <label class="infoformLabel col-3">Name</label>
-                <div class="col-9 infoformValue">
-                  <input type="text" class="form-control" id="name" value="John Smith">
-                </div>
+            <div class="avatar">
+              <img src="images/avatar icon.png" alt="" id="profilePic">
+              <div class="changePic">
+                <a href="#"><i class="fa fa-camera"></i> Change your profile picture</a>
+              </div>
             </div>
 
-            <div class="row infoformRow">
-              <label class="infoformLabel col-3">Gender</label>
-                <div class="col-9 infoformValue">
-                  <select class="gender">
+
+        </div>
+        <div class="col-sm-6">
+          <div class="row infoformRow">
+            <label class="infoformLabel col-3">Name</label>
+              <div class="col-9 infoformValue">
+                <input type="text" class="form-control" id="name" value="John Smith">
+              </div>
+          </div>
+
+          <div class="row infoformRow">
+            <label class="infoformLabel col-3">Gender</label>
+              <div class="col-9 infoformValue">
+                 <select class="gender">
+                  <div class="option">
                     <option value="female">Female</option>
                     <option value="male" selected>Male</option>
-                  </select>
+                  </div>
+                </select>
+              </div>
+          </div>
+
+          <div class="row infoformRow">
+            <label class="infoformLabel col-3">Birthday</label>
+              <div class="col-9 infoformValue">
+                <input type="date" class="form-control" id="bd" placeholder="dd/mm/yyyy">
+              </div>
+          </div>
+
+          <div class="row infoformRow">
+            <label class="infoformLabel col-3">Location</label>
+              <div class="col-9 infoformValue">
+                <input type="text" class="form-control"><span class="locationSelect">&#xf279;</span>
+              </div>
+          </div>
+
+          <div class="row infoformRow">
+            <label class="infoformLabel col-3">I Play</label>
+              <div class="col-9 infoformValue" id="sportField">
+                <div class="sports">
+                  <div class="sportIcon">
+                    <img src="icon/icehockey.svg" alt="">
+                  </div>
+                  <div class="sportLevel">
+                    0<input type="range" value=80 title="Adjust Your Level">10
+                  </div>
                 </div>
+                <div class="sports">
+                  <div class="sportIcon">
+                    <img src="icon/icehockey.svg" alt="">
+                  </div>
+                  <div class="sportLevel">
+                    0<input type="range" value=80 title="Adjust Your Level">10
+                  </div>
+                </div>
+                <div class="sports">
+                  <div class="sportIcon">
+                    <img src="icon/icehockey.svg" alt="">
+                  </div>
+                  <div class="sportLevel">
+                    0<input type="range" value=80 title="Adjust Your Level">10
+                  </div>
+                </div>
+                <div class="sports">
+                  <div class="sportIcon">
+                    <img src="icon/plus.png" alt="Add more sport" onclick="addsport()">
+                  </div>
+                  <div class="sportLevel">
+                    0<input type="range" value=80 title="Adjust Your Level">10
+                  </div>
+                </div>
+              </div>
+          </div>
+
+          <div class="row infoformRow">
+            <label class="infoformLabel col-3">Bio</label>
+              <div class="col-9 infoformValue bio-edit">
+                <textarea name="bio" cols="50" rows="3">
+                  I am an American man living in Oulu, Finland. I am interested in playing sports, especially, ice hockey.
+                  I am looking for friends to connect and play with me.
+                </textarea>
+              </div>
+          </div>
+
+          <div class="buttonGroup">
+            <a href="user_profile.html" class="editButton" title="Save Your Changes">Save Changes</a>
+            <a href="user_profile.html" class="cancelButton" title="Discard Your Changes">Cancel</a>
+          </div>
+
+        </div>
+        <!--external info field -->
+        <div class="col-sm-3">
+          <fieldset class="externalfield">
+            <legend style="font-size: 22px; font-weight:bold; text-align:center; font-style: oblique;">External links</legend>
+            <div class="externalinfo">
+              <label> Facebook</label>
+              <input type="text" name="fblink" value="" >
+              <label> Instagram</label>
+              <input type="text" name="fblink" value="" >
+              <label> Whatsapp</label>
+              <input type="text" name="fblink" value="" >
+              <label> Mobile number</label>
+              <input type="phone" name="fblink" value="" >
             </div>
-
-          </form>
-
-        </div>
-        <div class="col-sm-8 bio ">
-          <label>Bio</label>
-          <br>
-          <textarea name="bio" rows="3" cols="75">
-            I am an American man living in Oulu, Finland. I am interested in playing sports, especially, ice hockey.
-            I am looking for friends to connect and play with me.
-          </textarea>
+            </div>
+          </fieldset>
         </div>
       </div>
-      <!-- team and game -->
-      <div class="row basicInfo">
-        <div class="col-sm-4 editprofile">
-          <a href="edit_user_profile.html" class="editButton" title="Save">Save Changes</a>
-          <a href="edit_user_profile.html" class="cancelButton" title="Cancel">Cancel</a>
-        </div>
-        <div class="col-sm-8 gamePlay">
-          <label>I Play</label>
-          <table>
-            <tr>
-              <td><img src="icon/icehockey.svg" alt="Ice Hockey" title="Ice Hockey"></td>
-              <td><img src="icon/swimming.png" alt="Swimming" title="Swimming"></td>
-              <td> <img src="icon/tennis.png" alt="Tennis" title="Tennis"></td>
-            </tr>
-            <tr>
-              <td>0<input type="range" value=80 title="Adjust Your Skill Level">10</td>
-              <td>0<input type="range" value=50 title="Adjust Your Skill Level">10</td>
-              <td>0<input type="range" value=30 title="Adjust Your Skill Level" >10</td>
-            </tr>
-          </table>
-
-
-
-        </div>
-      </div>
-
 
     </div>
   </body>
