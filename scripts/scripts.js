@@ -14,3 +14,7 @@ $(document).ready(function() {
                    }
                });
            });
+
+// add sport to sport sportField
+
+addsport()
