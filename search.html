@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Search</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	    <!-- Bootstrap CSS -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	</head>
+
+	<style type="text/css">
+		.image-search {
+			width: 45px;
+			height: 45px;
+		}
+
+		#people, #team, #event {
+			margin: auto;
+			border-bottom: 1px solid #e9ecef;
+			margin-bottom: 10px;
+    		padding: 10px;
+		}
+
+		#team, #event {
+			border-top: 1px solid #e9ecef;
+		}
+
+		#people-field, #team-field, #event-field {
+			margin-top: 20px;
+		}
+	</style>
+
+	<body>
+		<div class="container">
+			<div class="search row">
+				<div class="col-sm-3">
+					<input type="text" class="form-control" placeholder="Search...">
+				</div>
+				<!-- Button to Open the Modal -->
+	  			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Open modal</button>
+			</div>
+			
+
+			<!-- The Modal -->
+		  	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			    <div class="modal-dialog" role="document">
+				      	<div class="modal-content">
+				      
+					        <!-- Modal Header -->
+						    <div class="modal-header">
+						    	<h5 class="modal-title" id="exampleModalLabel">Search Result</h5>
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						        	<span aria-hidden="true">&times;</span>
+						        </button>
+						    </div>
+
+							<!-- Modal body -->
+					        <div class="modal-body">							
+					        	<!--Tab filter-->
+								<ul class="nav nav-tabs" id="myTab" role="tablist">
+								  <li class="nav-item">
+								    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">All</a>
+								  </li>
+								  <li class="nav-item">
+								    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">People</a>
+								  </li>
+								  <li class="nav-item">
+								    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Team</a>
+								  </li>
+								  <li class="nav-item">
+								    <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Event</a>
+								  </li>
+								</ul>
+
+								<!-- Search content -->
+								<div class="tab-content" id="myTabContent">
+									<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+										<div class="search-content">
+											<!--People -->
+								        	<div class="people">
+								        		<p id="people">People</p>
+								        		<div class="row">
+								        			<div class="col-sm-2">
+								        				<img src="" class="image-search">
+								        			</div>
+								        			<div class="col-sm-10">
+								        				<p>Lorem ipsum.</p>
+								        				<p>Lorem ipsum dolor.</p>
+								        				<p>Lorem ipsum dolor sit amet.</p>
+								        			</div>
+								        		</div>
+								        	</div>
+
+								        	<!--Team -->
+								        	<div class="team">
+								        		<p id="team">Team</p>
+								        		<div class="row">
+								        			<div class="col-sm-2">
+								        				<img src="" class="image-search">
+								        			</div>
+								        			<div class="col-sm-6">
+								        				<p>Lorem ipsum.</p>
+								        				<p>Lorem ipsum dolor.</p>
+								        				<p>Lorem ipsum dolor sit amet.</p>
+								        			</div>
+								        			<div class="col-sm-4">
+								        				<button class="btn btn-primary">list all teams</button>
+								        			</div>
+								        		</div>
+								        	</div>
+
+								        	<!--Event -->
+								        	<div class="event">
+								        		<p id="event">Event</p>
+								        		<div class="row">
+								        			<div class="col-sm-2">
+								        				<img src="" class="image-search">
+								        			</div>
+								        			<div class="col-sm-6">
+								        				<p>Lorem ipsum.</p>
+								        				<p>Lorem ipsum dolor.</p>
+								        				<p>Lorem ipsum dolor sit amet.</p>
+								        			</div>
+								        			<div class="col-sm-4">
+								        				<button class="btn btn-primary">list all events</button>
+								        			</div>
+								        		</div>
+								        	</div>
+										</div>									
+									</div>
+
+									<!-- People field-->
+									<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+										<div class="row" id="people-field">
+								        			<div class="col-sm-2">
+								        				<img src="" class="image-search">
+								        			</div>
+								        			<div class="col-sm-10">
+								        				<p>Lorem ipsum.</p>
+								        				<p>Lorem ipsum dolor.</p>
+								        				<p>Lorem ipsum dolor sit amet.</p>
+								        			</div>
+								        </div>
+									</div>
+
+									<!-- Team field-->
+									<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+												<div class="row" id="team-field">
+													<div class="col-sm-2">
+								        				<img src="" class="image-search">
+								        			</div>
+								        			<div class="col-sm-10">
+								        				<p>Lorem ipsum.</p>
+								        				<p>Lorem ipsum dolor.</p>
+								        				<p>Lorem ipsum dolor sit amet.</p>
+								        			</div>
+												</div>			
+									</div>
+
+									<!-- Event field-->
+									<div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+													<div class="row" id="event-field">
+														<div class="col-sm-2">
+									        				<img src="" class="image-search">
+									        			</div>
+									        			<div class="col-sm-10">
+									        				<p>Lorem ipsum.</p>
+									        				<p>Lorem ipsum dolor.</p>
+									        				<p>Lorem ipsum dolor sit amet.</p>
+									        			</div>
+													</div>
+									</div>
+								</div>
+
+					        </div>
+
+							<!-- Modal footer-->
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondaryr" data-dismiss="modal">Close</button>
+							</div>
+				      	</div>
+			    </div>
+		  	</div>			
+		</div>
+
+
+
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	</body>
+</html>
