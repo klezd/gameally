@@ -1,0 +1,214 @@
+.modal {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.modal-content {
+  width: 375px;
+}
+
+.matchgame .modal-content {
+  width: 500px;
+}
+
+.modal-header, .modal-footer, .modal-body {
+  border-radius: 0px;
+  width: inherit;
+}
+
+.modal-header, .modal-footer {
+  border: none;
+}
+
+.modal-footer {
+  padding-top: 0;
+}
+
+#Sign-in .modal-footer {
+  justify-content: space-between;
+}
+
+.modal-header {
+  justify-content: center;
+  background-color: #EB9532;
+  color: #fff;
+}
+
+input.form-control {
+  margin-bottom: 16px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  background-color: transparent;
+}
+
+.remember-me, .signin-btn, .signup-btn {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+div.signin-btn .btn, div.signup-btn .btn {
+  padding: 6px 42px;
+  border-radius: 2px;
+  margin-top: 6px;
+  margin-bottom: 0;
+  background-color: #EB9532;
+  color: #fff;
+}
+
+i.fa {
+  color: #EB9532;
+}
+
+a.forgot-pass {
+  color: #EB9532;
+}
+
+a:hover {
+  color: #EB9532;
+  text-decoration: none;
+}
+
+div.signin-btn .btn:hover, div.signup-btn .btn:hover {
+  background-color: #FF7416;
+  color: #fff;
+}
+
+.btn:focus, .btn:active, .form-control:focus, .form-control:active {
+   outline: none !important;
+   box-shadow: none;
+}
+
+.logo-part {
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+img.logoinModal {
+  height: 42px;
+  width: auto;
+}
+
+.notify {
+  text-align: center;
+  padding: 6px 12px;
+  margin-top: 6px;
+}
+
+.notify-verification {
+  height: 0px;
+  opacity: 0;
+  transition: all 400ms cubic-bezier(0.745, -0.340, 0.425, 1.430);
+  transform-origin: 0% 0%;
+  transform: rotateX(-90deg);
+}
+
+.show-more {
+  height: 60px;
+  opacity: 1;
+  transform: rotateX(0deg);
+}
+
+#Forgot-password .modal-footer {
+  padding-bottom: 0;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+/*match game part*/
+.sport-list {
+  scroll-behavior: smooth;
+  overflow: auto;
+
+  width: auto;
+  height: 60px;
+}
+.sport-icon {
+  display: inline-block;
+}
+.sport-list img {
+  width: 60px;
+  height: 60px;
+  margin-left: 10px;
+}
+.location-choice {
+  margin-top: 10px;
+}
+.choose-area {
+  width: 100%;
+  border: 1px solid #BDBDBD;
+  box-shadow: 1px 1px 1px #BDBDBD;
+  padding: 0;
+}
+.choose-area input {
+  margin-left: 20px;
+  width: 210px;
+  height: 43px;
+  border: none;
+  padding: 3px 0 3px 5px;
+}
+.choose-area input:focus {
+  border: none;
+  outline: none;
+}
+.choose-area button {
+  color: red;
+  margin-left: 0;
+}
+.map-btn {
+  background: transparent;
+  border: 0;
+  float: right;
+  line-height: 44px;
+  outline: 0;
+  padding: 1px 16px 1px 6px;
+  position: relative;
+}
+.applyButtons {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff8c1a;
+  box-shadow: 1px 1px 1px #FBE9E7;
+  margin-top: 10px;
+  text-align: center;
+}
+.applyButtons a {
+  color: black;
+}
+.applyButtons:hover, .applyButtons a:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+.match-info input {
+  width: 100%;
+  padding: 3px 5px;
+  outline: #BDBDBD 1px solid;
+  box-shadow: none !important;
+}
+
+.match-info input:hover {
+  outline: none !important;
+}
+
+#create-match .row {
+  margin-left: 0;
+  margin-top: 10px;
+}

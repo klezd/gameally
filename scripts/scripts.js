@@ -13,8 +13,11 @@ $(document).ready(function() {
                        menu.reverse();
                    }
                });
-           });
+});
+//signin in forgot password
+function showmore() {
+ document.getElementById("flip").classList.add("show-more");
+ document.getElementById("verify-btn").textContent = "Resend";
+}
 
 // add sport to sport sportField
-
-addsport()

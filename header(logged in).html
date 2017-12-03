@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>GameAlly</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="Shortcut Icon" href="logo/logo-icon.ico" type="image/x-icon">
-    <title>GameAlly - User Profile</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/UProfile.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    <!--self modify css and scripts-->
+    <link rel="stylesheet" style="text/css" href="css/menubar.css">
+    <link rel="stylesheet" href="css/header.css">
     <script src="scripts/scripts.js"></script>
+    <script type="text/javascript" src="scripts/tooltip.js"></script>
   </head>
+
   <body>
     <!--header-->
     <div class="all-header">
@@ -39,7 +46,7 @@
         </div>
 
         <div class="col-sm-3 pageTitle">
-          User Profile
+
         </div>
 
         <div class="col-sm-6 menuButtons">
@@ -57,7 +64,13 @@
                 </div>
               </div>
             </li>
-            <li class="link"><a href="matchgame.html" class="menuLink" title="Find a Match or Create a Match Yourself">Match Game</a></li>
+            <li class="link">
+              <a class="menuLink" data-toggle="modal" data-target="#match-game">
+                <span data-toggle="tootltip" data-placement="bottom" title="Find a Match or Create a Match Yourself">
+                  Match Game
+                </span>
+              </a>
+            </li>
             <li class="link"><a href="contactus.html" class="menuLink" title="Contact Us">Contact Us</a></li>
           </ul>
         </div>
@@ -66,6 +79,156 @@
 
     </div>
 
+    <!--match game modal -->
+    <div class="modal fade matchgame" id="match-game">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            MATCH GAME
+          </div>
+          <div class="modal-body">
+            <div class="back2">
+              <div class="container">
+                <ul class="nav nav-tabs" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#find-match">Find Match</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#create-match">Create Match</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+              <!--tab-->
+            <div class="tab-content">
+              <!--find match-->
+              <div id="find-match" class="container tab-pane active">
+                <div class="row">
+                  <label>Choose Your Sport</label>
+                  <div class="sport-list">
+                    <div class="sport-icon">
+                      <img src="icon/baseball.png" alt="baseball">
+                    </div>
+                    <div class="sport-icon">
+                      <img src="icon/football.png" alt="football">
+                    </div>
+                    <div class="sport-icon">
+                      <img src="icon/icehockey.svg" alt="ichockey">
+                    </div>
+                    <div class="sport-icon">
+                      <img src="icon/swimming.png" alt="swimming">
+                    </div>
+                    <div class="sport-icon">
+                      <img src="icon/tennis.png" alt="tennis">
+                    </div>
+                    <div class="sport-icon">
+                      <img src="icon/basketball.png" alt="basketball">
+                    </div>
+                  </div>
+                </div>
+                <div class="row location-choice">
+                  <label style="margin-top: 10px;">Choose Your Location</label>
+                  <div class="choose-area">
+                    <input type="text" name="location" value="Oulu, Finland">
+                    <button type="button" class="btn map-btn">
+                      <span class="fa fa-map-marker" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Locate me!"></span>
+                    </button>
+                  </div>
+                  <!-- map -->
+                  <div class="row">
+
+                  </div>
+                </div>
+                <div class="applyButtons">
+                  <a href="#">Find Your Match</a>
+                </div>
+
+              </div>
+              <!--create match-->
+              <div id="create-match" class="container tab-pane">
+                <div class="row">
+                  <label>Choose Your Sport</label>
+                  <div class="sport-list">
+                    <div class="sport-icon">
+                      <img src="icon/baseball.png"  data-toggle="tooltip" title="baseball">
+                    </div>
+                    <div class="sport-icon">
+                      <img src="icon/football.png"  data-toggle="tooltip" title="football">
+                    </div>
+                    <div class="sport-icon">
+                      <img src="icon/icehockey.svg" data-toggle="tooltip" title="ichockey">
+                    </div>
+                    <div class="sport-icon">
+                      <img src="icon/swimming.png" data-toggle="tooltip" title="swimming">
+                    </div>
+                    <div class="sport-icon">
+                      <img src="icon/tennis.png" data-toggle="tooltip" title="tennis">
+                    </div>
+                    <div class="sport-icon">
+                      <img src="icon/basketball.png" data-toggle="tooltip" title="basketball">
+                    </div>
+                  </div>
+                </div>
+                <div class="row location-choice">
+                  <label style="margin-top: 10px;">Choose Your Location</label>
+                  <div class="choose-area">
+                    <input type="text" name="location" value="Oulu, Finland">
+                    <button type="button" class="btn map-btn">
+                      <span class="fa fa-map-marker" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Locate me!"></span>
+                    </button>
+                  </div>
+                  <!-- map -->
+                  <div class="row">
+
+                  </div>
+                </div>
+                <div class="match-info">
+                  <div class="row">
+                    <div class="col-6">
+                      <label>Name Of Your Match</label>
+                    </div>
+                    <div class="col-6">
+                      <input type="text"  data-toggle="tooltip" title="name of your match" value="">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <label>Date</label>
+                    </div>
+                    <div class="col-6">
+                      <input type="date" data-toggle="tooltip" title="date of your match">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <label>Time</label>
+                    </div>
+                    <div class="col-6">
+                      <input type="time" data-toggle="tooltip" title="time of your match">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <label>Number Of Players</label>
+                    </div>
+                    <div class="col-6">
+                      <input type="number" data-toggle="tooltip" title="number of players needed" style="text-align: center" value="">
+                    </div>
+                  </div>
+                </div>
+                <div class="applyButtons">
+                  <a href="#">Create Your Match</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="modal-footer">
+
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 

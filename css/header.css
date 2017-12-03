@@ -3,12 +3,9 @@
   box-sizing: border-box;
   font-family: "LG Smart Light",Tahoma,Arial, FontAwesome, sans-serif;
 }
-
-
 #header{
   background-color: #a6a6a6;
   width: 100%;
-
 }
 .row {
   box-sizing: border-box;
@@ -24,34 +21,33 @@ a:hover {
 ::-webkit-scrollbar {
     width: 10px;
     border-radius: 5px;
-
 }
 
 a {
-  color: #fff;
+  color:#9E9E9E;
   text-decoration: none;
 }
 
-/* Track */
+    /* Track */
 ::-webkit-scrollbar-track {
     background: #ECEFF1;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	   border-radius: 10px;
-
 }
-/* Handle */
+    /* Handle */
 ::-webkit-scrollbar-thumb {
     background:#B0BEC5;
     border-radius: 10px;
 }
 
-/* Handle on hover */
+    /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background:#FF8A65;
 }
 ::-webkit-scrollbar-thumb:active {
     background: #E64A19;
 }
+
 /*header*/
 #header {
   height: 80px;
@@ -60,6 +56,10 @@ a {
 }
 #header .col-sm-3 {
   padding: 5px;
+}
+
+#header a {
+    color: #fff;
 }
 .logo {
   width : 295px;
@@ -169,6 +169,11 @@ li.link:hover, a.menuLink:hover{
   min-width: 768px;
   z-index: 1;
 }
+
+.red_tab a {
+  color: #fff;
+}
+
 .red_tab > .container {
   margin: 0;
 }
@@ -193,11 +198,12 @@ ul.global> li a.language {
 .fa-globe {
   font-size: 25px;
   margin-right: 5px;
+  color: #fff !important;
 }
 
 .global a.language:hover {
   color: #333;
-  text-decoration: underline;
+  text-decoration:none ;
 }
 
 .container {
