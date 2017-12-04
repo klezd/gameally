@@ -316,6 +316,7 @@
       <div class="row basicInfo">
         <div class="col-sm-4 editprofile">
           <a href="edit_user_profile.html" class="editButton" title="Edit Your Profile">Edit Profile</a>
+          <a data-toggle="modal" data-target="#calendar" class="editButton" title="Show Events Calendar">Event Calendar</a>
           <div class="teamofUser">
             <h4> Member Of Team </h4>
             <a class="memberofTeam" style="color: #D84315;" href="#" title="Click to view team information">Team A</a>
@@ -337,44 +338,51 @@
           </table>
         </div>
       </div>
-      <!-- event calendar -->
-      <div class="row">
-        <div class="col-sm-4">
-        </div>
+      <!-- event calendar modal-->
+      <div class="modal fade" id="calendar">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              Calendar
+            </div>
+            <div class="modal-body">
+              <div class="" id="caleandar">
+              </div>
+            </div>
+            <div class="modal-footer">
 
-        <div class="col-sm-8 text-center" style=" margin: auto">
-          <div class="" id="caleandar">
-            <script type="text/javascript">
-            // calendar
-
-            var events = [
-                {'Date': new Date(2017, 12, 8), 'Title 1': 'Soccer Match at Ouluhalli at 4pm'},
-                {'Date': new Date(2017, 1, 10), 'Title 2': 'Ice Hockey between team A and B at 9pm'},
-            ];
-            var settings = {
-                Color: '',
-                LinkColor: '',
-                NavShow: true,
-                NavVertical: false,
-                NavLocation: '',
-                DateTimeShow: true,
-                DateTimeFormat: 'mmm, yyyy',
-                DatetimeLocation: '',
-                EventClick: '',
-                EventTargetWholeDay: false,
-                DisabledDays: [],
-
-            };
-
-            //add events
-            var element = document.getElementById('caleandar');
-            caleandar(element, events, settings);
-
-            </script>
-
+            </div>
           </div>
         </div>
       </div>
+
+
+      <script type="text/javascript">
+      // calendar
+
+      var events = [
+          {'Date': new Date(2017, 12, 8), 'Title 1': 'Soccer Match at Ouluhalli at 4pm'},
+          {'Date': new Date(2017, 1, 10), 'Title 2': 'Ice Hockey between team A and B at 9pm'},
+      ];
+      var settings = {
+          Color: '',
+          LinkColor: '',
+          NavShow: true,
+          NavVertical: false,
+          NavLocation: '',
+          DateTimeShow: true,
+          DateTimeFormat: 'mmm, yyyy',
+          DatetimeLocation: '',
+          EventClick: '',
+          EventTargetWholeDay: false,
+          DisabledDays: [],
+
+      };
+
+      //add events
+      var element = document.getElementById('caleandar');
+      caleandar(element, events, settings);
+    </script>
 
 
     </div>
