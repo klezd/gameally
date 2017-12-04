@@ -5,51 +5,8 @@
   color: #fff;
 }
 
-@media screen and (min-width: 768px) {
-  .modal:before {
-    display: inline-block;
-    vertical-align: middle;
-    content: " ";
-    height: 100%;
-  }
-}
-
-.modal-dialog {
-  display: inline-block;
-  text-align: left;
-  vertical-align: middle;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.modal-content {
-  width: 375px;
-}
-
-.matchgame .modal-content {
-  width: 500px;
-}
-
-.modal-header, .modal-footer, .modal-body {
-  border-radius: 0px;
-  width: inherit;
-}
-
-.modal-header, .modal-footer {
-  border: none;
-}
-
-.modal-footer {
-  padding-top: 0;
-}
-
 #Sign-in .modal-footer {
   justify-content: space-between;
-}
-
-.modal-header {
-  justify-content: center;
-  background-color: #EB9532;
-  color: #fff;
 }
 
 input.form-control {
@@ -90,11 +47,6 @@ a:hover {
 div.signin-btn .btn:hover, div.signup-btn .btn:hover {
   background-color: #FF7416;
   color: #fff;
-}
-
-.btn:focus, .btn:active, .form-control:focus, .form-control:active {
-   outline: none !important;
-   box-shadow: none;
 }
 
 .logo-part {
@@ -140,41 +92,8 @@ p {
   text-align: center;
 }
 
-@media screen and (min-width: 768px) {
-  .modal:before {
-    display: inline-block;
-    vertical-align: middle;
-    content: " ";
-    height: 100%;
-  }
-}
-
-.modal-dialog {
-  display: inline-block;
-  text-align: left;
-  vertical-align: middle;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.modal-content {
-  width: 375px;
-}
-
 .matchgame .modal-content {
   width: 500px;
-}
-
-.modal-header, .modal-footer, .modal-body {
-  border-radius: 0px;
-  width: inherit;
-}
-
-.modal-header, .modal-footer {
-  border: none;
-}
-
-.modal-footer {
-  padding-top: 0;
 }
 
 #Sign-in .modal-footer {
