@@ -13,6 +13,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 
+
+
     <!--self modify css and scripts-->
 
     <link rel="stylesheet" style="text/css" href="css/menubar.css">
@@ -20,6 +22,8 @@
     <link rel="stylesheet" href="css/UProfile.css">
     <script src="scripts/scripts.js"></script>
     <script type="text/javascript" src="scripts/tooltip.js"></script>
+    <!--API map-->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbAwCfP9dMc5VIcxi200_aD_jDQv4Nj5Y&callback=initAutocomplete"></script>
   </head>
   <body >
 
@@ -276,8 +280,28 @@
           <div class="row infoformRow">
             <label class="infoformLabel col-3">Location</label>
               <div class="col-9 infoformValue">
-                <input type="text" class="form-control"><span class="locationSelect">&#xf279;</span>
+                <input type="text" class="form-control"><span class="locationSelect" data-toggle="modal" data-target="#locationByMap">&#xf279;</span>
               </div>
+          </div>
+
+          <!--map for choosing location -->
+          <div class="modal fade" id="locationByMap">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  Choose your location
+                </div>
+                <div class="modal-body">
+                  <div class="" id="searchBox">
+                    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+                  </div>
+                  <div class="" id="map">
+                  </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="row infoformRow">
@@ -311,7 +335,7 @@
                   <div class="sportIcon">
                     <span  data-toggle="tooltip" data-placement="bottom" title = "Add more sport">
                       <img src="icon/plus.png" onclick="addsport()">
-                    </span>                    
+                    </span>
                   </div>
                   <div class="sportLevel">
                     0<input type="range" value=80 title="Add sport to adjust level" data-toggle="tooltip" data-placement="bottom" disabled>10
