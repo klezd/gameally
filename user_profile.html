@@ -17,8 +17,13 @@
   <link rel="stylesheet" style="text/css" href="css/menubar.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/UProfile.css">
+
   <script src="scripts/scripts.js"></script>
   <script type="text/javascript" src="scripts/tooltip.js"></script>
+  <!-- calendar -->
+  <link rel="stylesheet" href="css/calendar.css">
+  <script src="scripts/caleandar.js"></script>
+
 </head>
 
   <body>
@@ -337,20 +342,36 @@
         <div class="col-sm-4">
         </div>
 
-        <div class="col-sm-8">
-          <div class="calendar">
-            <div class="calendarMonth">
-              <ul>
-                <li class="prev" onclick="prevmonth()">&#10094;</li>
-                <li class="next" onclick="nextmonth()">&#10095;</li>
-                <li class="monthdescription" id="monthdescription">
-                </li>
-              </ul>
-            </div>
+        <div class="col-sm-8 text-center" style=" margin: auto">
+          <div class="" id="caleandar">
+            <script type="text/javascript">
+            // calendar
 
-            <div class="calendarDays">
+            var events = [
+                {'Date': new Date(2017, 12, 8), 'Title 1': 'Soccer Match at Ouluhalli at 4pm'},
+                {'Date': new Date(2017, 1, 10), 'Title 2': 'Ice Hockey between team A and B at 9pm'},
+            ];
+            var settings = {
+                Color: '',
+                LinkColor: '',
+                NavShow: true,
+                NavVertical: false,
+                NavLocation: '',
+                DateTimeShow: true,
+                DateTimeFormat: 'mmm, yyyy',
+                DatetimeLocation: '',
+                EventClick: '',
+                EventTargetWholeDay: false,
+                DisabledDays: [],
 
-            </div>
+            };
+
+            //add events
+            var element = document.getElementById('caleandar');
+            caleandar(element, events, settings);
+
+            </script>
+
           </div>
         </div>
       </div>
