@@ -35,9 +35,7 @@ td.numberofCups {
   padding: 0;
   font-style: normal;
   font-weight: bold;
-  color:#3366ff;
-  border-right:  #E0F2F1 solid 10px;
-
+  color:#FF8F00;
 }
 .star {
   margin: 2px;
@@ -56,7 +54,7 @@ td.numberofCups:hover .star{
   position: fixed;
   z-index: 1;
   right: 50px;
-  top: 100px
+  top: 120px
 }
 .contactUser img {
   width: 30px;
@@ -93,13 +91,15 @@ td.numberofCups:hover .star{
 .infoformValue input:disabled,select:disabled{
   width: 100%;
   border: black;
-  background-color: #e6f2ff;
+  border-radius: 5px;
+  background-color: #F5F5F5;
   box-shadow: 1px 1px 3px #d9d9d9;
   font-family: sans-serif;
   color: black;
   font-size: 15px;
   padding: 3px 0;
   padding-left: 10px;
+  cursor: no-drop;
 }
 
 .bio textarea {
@@ -110,9 +110,10 @@ td.numberofCups:hover .star{
   text-align: justify;
 }
 .bio textarea:disabled {
-  background-color: #e6f2ff;
+  background-color: #F5F5F5;
   box-shadow: 1px 1px 6px #d9d9d9;
   border: #d9d9d9 solid 1px;
+  cursor: no-drop;
 }
 .bio label, .gamePlay label {
   font-size: 20px;
@@ -140,7 +141,6 @@ td.numberofCups:hover .star{
 .editprofile {
   padding: 10px 10px;
   text-align: center;
-
 }
 
 a.editButton {
@@ -149,7 +149,7 @@ a.editButton {
   border: solid 1px black;
   border-top: none;
   border-left: none;
-  background: linear-gradient(#00796B, #80CBC4);
+  background: linear-gradient(#F4511E, #FFAB91);
   box-shadow: 1px 1px 1px #2c3e50;
   text-decoration: none;
   color: black;
@@ -160,7 +160,6 @@ a.editButton {
 }
 
 a.cancelButton {
-
   padding-left: 5px;
   border-radius: 5px;
   border: solid 1px black;
@@ -177,7 +176,7 @@ a.cancelButton {
 
 .editButton:hover {
   color: white;
-  background: #00796B;
+  background: #E64A19;
   text-decoration: none;
 }
 
@@ -248,7 +247,7 @@ a.cancelButton {
   color: black;
 }
 
-.infoformValue input, .infoformValue select, .map input {
+.infoformRow input, .infoformRow select:not(:disabled), .map input {
   width: 330px;
   border: 1px solid #9E9E9E;
   border-radius: 5px;
@@ -263,7 +262,7 @@ a.cancelButton {
 }
 
 .infoformValue input:focus, .infoformValue select:focus {
-  width: 330px;
+
   border: solid 3px #80b3ff;
   border-radius: 5px;
   background-color:#F5F5F5;
@@ -288,7 +287,7 @@ span.locationSelect {
 
 
 .buttonGroup {
-  width: 80%;
+  width: 100%;
   text-align: center;
   margin: auto;
   margin-top: 20px;
