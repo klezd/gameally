@@ -1,0 +1,47 @@
+.modal {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.modal-content, .modal-header, .modal-footer, .modal-body {
+  border-radius: 0px;
+  width: 375px;
+}
+
+.modal-header, .modal-footer {
+  border: none;
+}
+
+.modal-footer {
+  padding-top: 0;
+}
+
+.btn:focus, .btn:active, .form-control:focus, .form-control:active {
+   outline: none !important;
+   box-shadow: none;
+}
+
+.tooltip.bs-tooltip-bottom .tooltip-inner, .tooltip.bs-tooltip-right .tooltip-inner {
+  border-radius: 0;
+  padding: 5px 10px;
+  margin-top: 8px;
+}
+
+.tooltip .arrow:before {
+ margin-top: 8px;
+}
