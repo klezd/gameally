@@ -103,21 +103,6 @@ i.fa-calendar-plus-o {
   width: inherit;
 }
 
-.tooltip.bs-tooltip-bottom .tooltip-inner, .tooltip.bs-tooltip-right .tooltip-inner {
-  border-radius: 0;
-  padding: 5px 10px;
-  margin-top: 8px;
-}
-
-.tooltip .arrow:before {
- margin-top: 8px;
-}
-
-.btn:focus, .btn:active, .form-control:focus, .form-control:active {
-   outline: none !important;
-   box-shadow: none;
-}
-
 .nav {
   border-bottom: 0;
   display: inline-flex;

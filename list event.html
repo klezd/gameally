@@ -10,10 +10,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" style="text/css" href="css/list event.css">
+    <link rel="stylesheet" style="text/css" href="css/common-ele.css">
     <script type="text/javascript" src="scripts/tooltip.js"></script>
   </head>
   <body>
-
     <!--Search event part-->
     <div class="container-fluid background-evnt back1">
       <div class="container">
@@ -255,10 +255,22 @@
     </div>
 
     <script>
-      $(document).ready(function(){
-        $(".fa-calendar-plus-o, .fa-check").click(function(){
-          $('.fa-calendar-plus-o').css({"display":"none"});
-          $('.fa-check').css({"display":"inline"});
+      $(document).ready(function() {
+        $(".fa-calendar-plus-o").click(function() {
+          $(this).css({
+            "display": "none"
+          });
+          $(this).next('.fa-check').css({
+            "display": "inline"
+          });
+        });
+        $(".fa-check").click(function() {
+          $(this).css({
+            "display": "none"
+          });
+          $(this).prev('.fa-calendar-plus-o').css({
+            "display": "inline"
+          });
         });
       });
     </script>
