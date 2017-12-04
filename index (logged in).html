@@ -4,84 +4,86 @@
     <title>GameAlly</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-     <meta name="description" content="GameAlly">
+    <meta name="description" content="GameAlly">
     <meta name="author" content="GameAlly">
-
     <link rel="Shortcut Icon" href="logo/logo-icon.ico" type="image/x-icon">
-
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     
     <!--self modify css and scripts-->
     <link href="css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" style="text/css" href="css/menubar.css">
     
- 
+    
   </head>
-
   <body>
-    <!--header-->
-    <div class="all-header">
-      <div class="red_tab">
-        <div class="container">
-          <div>
-            <ul class="global">
-              <li>
-                <a class="language" href="#">
-                  <i class="fa fa-globe"></i>
-                  <span>Global</span>
-                  <span>/</span>
-                  <span>English</span>
-                </a>
-              </li>
-            </ul>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a href="#" title="Home"><img src="logo/logo.png" alt="GameAlly" class="logo"></a>
+        
+        <!--    <div class="red_tab">
+          <div class="container">
+            <div>
+              <ul class="global">
+                <li>
+                  <a class="language" href="#">
+                    <i class="fa fa-globe"></i>
+                    <span>Global</span>
+                    <span>/</span>
+                    <span>English</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </div>
+        </div> -->
 
-      <div class="row" id = "header">
-        <div class="col-sm-3">
-          <a href="home.html" title="Home"><img src="logo/logo.png" alt="GameAlly" class="logo"></a>
-        </div>
 
-        <div class="col-sm-3 pageTitle">
-
-        </div>
-
-        <div class="col-sm-6 menuButtons">
-          <ul>
-            <li class="info link">
-              <div id="userInfo">
-                <span style="font-size:25"> Welcome ABC!</span>
-                <img src="images/avatar icon.png" width="30" height="30" style="padding: auto" id="userInfoIcon">
-              </div>
-              <div class="infoMenu">
-                <div class="menu">
-                  <a href="edit_user_profile.html" title="Edit My Profile">Edit My Profile</a>
-                  <a href="my_team_profile.html" title="My Team's Profile">Your Team</a>
-                  <a title="Sign Out" href="#">Sign Out</a>
-                </div>
+        <!-- Toggle icon when in mobile view -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          
+          <ul class="navbar-nav ml-auto">
+            <!-- ////Dropdown menu  !!! make it  obvious that it's a dropdown
+            -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span style="font-size:25">Welcome ABC!</span>
+                <img src="images/avatar icon.png" width="30" height="30" style="padding: auto" id="userInfoIcon"></a>
+              
+              <div class="dropdown-menu" aria-labelledby="dropdown01">
+                
+                  <a class="dropdown-item" href="edit_user_profile.html" title="Edit My Profile">Edit My Profile</a>
+                  <a class="dropdown-item" href="my_team_profile.html" title="My Team's Profile">Your Team</a>
+                  <a class="dropdown-item" title="Sign Out" href="#">Sign Out</a>
+                
               </div>
             </li>
-            <li class="link">
-              <a class="menuLink" data-toggle="modal" data-target="#match-game">
+
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="modal" data-target="#match-game">
                 <span data-toggle="tootltip" data-placement="bottom" title="Find a Match or Create a Match Yourself">
                   Match Game
                 </span>
               </a>
             </li>
-            <li class="link"><a href="contactus.html" class="menuLink" title="Contact Us">Contact Us</a></li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="contact us.html" title="Contact us">Contact us</a>
+            </li>
           </ul>
-        </div>
-      </div>
+          
+            </div>
+      </nav>
+    </header>
 
+        <!--Match game MODAL -->
 
-    </div>
-
-    <!--match game modal -->
     <div class="modal fade matchgame" id="match-game">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -232,26 +234,20 @@
       </div>
     </div>
 
+   <!--  MODAL ends  -->
 
+        <main role="main">
 
-    <!--user profile-->
-
-    <main role="main">
-
-     <!-- Carousel starts -->
-
+      <!-- Carousel starts -->
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
-
         <!-- Indicators -->
         <ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
           <li data-target="#myCarousel" data-slide-to="1"></li>
           <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
-
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
-
           <div class="carousel-item active">
             <img class="first-slide" src="images/items.jpg" alt="Hockey">
             <div class="container">
@@ -261,28 +257,25 @@
               </div>
             </div>
           </div>
-
           <div class="carousel-item">
             <img class="second-slide" src="images/sports-cancun.jpg" alt="Soccer">
             <div class="container">
               <div class="carousel-caption">
-              <h1>Events happening now.</h1>
+                <h1>Events happening now.</h1>
                 <p><a class="btn btn-lg btn-primary" href="list event.html" role="button">Browse all events</a></p>
               </div>
             </div>
           </div>
-
           <div class="carousel-item">
             <img class="third-slide" src="images/OS1st-Sports.jpg" alt="Volleyball">
             <div class="container">
               <div class="carousel-caption text-right">
-             <h1>Events happening now.</h1>
+                <h1>Events happening now.</h1>
                 <p><a class="btn btn-lg btn-primary" href="list event.html" role="button">Browse all events</a></p>
               </div>
             </div>
           </div>
         </div>
-
         <!-- Left and right carousel controls -->
         <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -293,18 +286,12 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
-
-
       <!-- Features
       ================================================== -->
       <!-- Wrap the rest of the page in another container to center all the content. -->
-
       <div class="container">
-
         <!-- START THE FEATURES -->
-
         <hr class="featurette-divider">
-
         <div class="row featurette">
           <div class="col-md-7">
             <h2 class="featurette-heading">Our features <br></h2>
@@ -315,9 +302,7 @@
             <img class="featurette-image img-fluid mx-auto" src="images/sports-textile.png" alt="Feature 1">
           </div>
         </div>
-
         <hr class="featurette-divider">
-
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
             <h2 class="featurette-heading">And some more...</h2>
@@ -327,9 +312,7 @@
             <img class="featurette-image img-fluid mx-auto" src="images/volleyball.jpg" alt="Feature 2">
           </div>
         </div>
-
         <hr class="featurette-divider">
-
         <div class="row featurette">
           <div class="col-md-7">
             <h2 class="featurette-heading">Stuff goes here...</h2>
@@ -339,36 +322,24 @@
             <img class="featurette-image img-fluid mx-auto" src="images/hockey.jpg" alt="Feature 3">
           </div>
         </div>
-
         <hr class="featurette-divider">
-
         <!-- /END THE FEATURETTES -->
-
-      </div><!-- /.container -->
-
-
-      <!-- FOOTER -->
-      <footer class="container">
-        <p class="float-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2017 GameAlly, Inc. &middot;</p>
-      </footer>
-
-    </main>
-
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
-
-
-     <!--self modify css and scripts-->
-    <script src="scripts/scripts.js"></script>
-    <script type="text/javascript" src="scripts/tooltip.js"></script>
-
-  </body>
-</html>
+        </div><!-- /.container -->
+        <!-- FOOTER -->
+        <footer class="container">
+          <p class="float-right"><a href="#">Back to top</a></p>
+          <p>&copy; 2017 GameAlly, Inc. &middot;</p>
+        </footer>
+      </main>
+          <!-- Bootstrap core JavaScript
+          ================================================== -->
+          <!-- Placed at the end of the document so the pages load faster -->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+          <!--self modify scripts-->
+          <script src="scripts/scripts.js"></script>
+          <script type="text/javascript" src="scripts/tooltip.js"></script>
+        </body>
+      </html>
