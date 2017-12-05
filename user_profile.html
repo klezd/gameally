@@ -1,89 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-  <title>GameAlly - Edit Profile</title>
+  <title>GameAlly - User Profile</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="GameAlly">
+    <meta name="author" content="GameAlly">
   <link rel="Shortcut Icon" href="logo/logo-icon.ico" type="image/x-icon">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+  
 
-  <!--self modify css and scripts-->
+  <!--self modify css-->
+  <link href="css/index.css" rel="stylesheet">
   <link rel="stylesheet" style="text/css" href="css/menubar.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/UProfile.css">
 
-  <script src="scripts/scripts.js"></script>
-  <script type="text/javascript" src="scripts/tooltip.js"></script>
-  <!-- calendar -->
+   <!-- calendar -->
   <link rel="stylesheet" href="css/calendar.css">
-  <script src="scripts/caleandar.js"></script>
+ 
 
 </head>
 
   <body>
-    <!--header-->
-    <div class="all-header">
-      <div class="red_tab">
-        <div class="container">
-          <div>
-            <ul class="global">
-              <li>
-                <a class="language" href="#" style="color:#fff;">
-                  <i class="fa fa-globe"></i>
-                  <span>Global</span>
-                  <span>/</span>
-                  <span>English</span>
-                </a>
-              </li>
-            </ul>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a href="index(logged_in)" title="Home"><img src="logo/logo.png" alt="GameAlly" class="logo"></a>
+        
+        <!-- Change language bar -->
+
+      <!--      <div class="red_tab">
+          <div class="container">
+            <div>
+              <ul class="global">
+                <li>
+                  <a class="language" href="#">
+                    <i class="fa fa-globe"></i>
+                    <span>Global</span>
+                    <span>/</span>
+                    <span>English</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </div>
+        </div> -->
 
-      <div class="row" id = "header">
-        <div class="col-sm-3">
-          <a href="home.html" title="Home"><img src="logo/logo.png" alt="GameAlly" class="logo"></a>
-        </div>
 
-        <div class="col-sm-3 pageTitle">
-          User Profile
-        </div>
-
-        <div class="col-sm-6 menuButtons">
-          <ul>
-            <li class="info link">
-              <div id="userInfo">
-                <span style="font-size:25"> Welcome ABC!</span>
-                <img src="images/avatar icon.png" width="30" height="30" style="padding: auto" id="userInfoIcon">
-              </div>
-              <div class="infoMenu">
-                <div class="menu">
-                  <a href="edit_user_profile.html" title="Edit My Profile">Edit My Profile</a>
-                  <a href="my_team_profile.html" title="My Team's Profile">Your Team</a>
-                  <a title="Sign Out" href="#">Sign Out</a>
-                </div>
+        <!-- Toggle icon when in mobile view -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          
+          <ul class="navbar-nav ml-auto">
+          
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span style="font-size:25">Welcome ABC!</span>
+                <img src="images/avatar icon.png" width="30" height="30" style="padding: auto" id="userInfoIcon"></a>
+              
+              <div class="dropdown-menu" aria-labelledby="dropdown01">
+                
+                  <a class="dropdown-item" href="edit_user_profile.html" title="Edit My Profile">Edit My Profile</a>
+                  <a class="dropdown-item" href="Team-profile.html" title="My Team's Profile">Your Team</a>
+                  <a class="dropdown-item" title="Sign Out" href="#">Sign Out</a>
+                
               </div>
             </li>
-            <li class="link">
-              <a class="menuLink" data-toggle="modal" data-target="#match-game">
+
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="modal" data-target="#match-game">
                 <span data-toggle="tootltip" data-placement="bottom" title="Find a Match or Create a Match Yourself">
                   Match Game
                 </span>
               </a>
             </li>
-            <li class="link"><a href="contactus.html" class="menuLink" title="Contact Us">Contact Us</a></li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="contact us.html" title="Contact us">Contact us</a>
+            </li>
           </ul>
-        </div>
-      </div>
+          
+            </div>
+      </nav>
+    </header>
 
-    </div>
-    <!--match game modal -->
+        <!--Match game MODAL -->
     <div class="modal fade matchgame" id="match-game">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -386,5 +392,18 @@
 
 
     </div>
+
+    <!-- Bootstrap core JavaScript
+          ================================================== -->
+          <!-- Placed at the end of the document so the pages load faster -->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+
+          <!--self modify scripts-->
+          <script src="scripts/scripts.js"></script>
+          <script type="text/javascript" src="scripts/tooltip.js"></script>
+          <script src="scripts/caleandar.js"></script>
   </body>
 </html>
