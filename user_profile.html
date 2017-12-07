@@ -10,7 +10,7 @@
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
+
 
   <!--self modify css-->
   <link href="css/index.css" rel="stylesheet">
@@ -20,7 +20,8 @@
 
    <!-- calendar -->
   <link rel="stylesheet" href="css/calendar.css">
- 
+  <script src="scripts/caleandar.js"></script>
+  <script type="text/javascript" src="scripts/myscripts.js"></script>
 
 </head>
 
@@ -28,7 +29,7 @@
     <header>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <a href="index(logged_in)" title="Home"><img src="logo/logo.png" alt="GameAlly" class="logo"></a>
-        
+
         <!-- Change language bar -->
 
       <!--      <div class="red_tab">
@@ -53,22 +54,22 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
-        
+
         <div class="collapse navbar-collapse" id="navbarCollapse">
-          
+
           <ul class="navbar-nav ml-auto">
-          
+
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span style="font-size:25">Welcome ABC!</span>
                 <img src="images/avatar icon.png" width="30" height="30" style="padding: auto" id="userInfoIcon"></a>
-              
+
               <div class="dropdown-menu" aria-labelledby="dropdown01">
-                
+
                   <a class="dropdown-item" href="edit_user_profile.html" title="Edit My Profile">Edit My Profile</a>
                   <a class="dropdown-item" href="Team-profile.html" title="My Team's Profile">Your Team</a>
                   <a class="dropdown-item" title="Sign Out" href="#">Sign Out</a>
-                
+
               </div>
             </li>
 
@@ -79,12 +80,12 @@
                 </span>
               </a>
             </li>
-            
+
             <li class="nav-item">
               <a class="nav-link" href="contact us.html" title="Contact us">Contact us</a>
             </li>
           </ul>
-          
+
             </div>
       </nav>
     </header>
@@ -322,7 +323,7 @@
       <div class="row basicInfo">
         <div class="col-sm-4 editprofile">
           <a href="edit_user_profile.html" class="editButton" title="Edit Your Profile">Edit Profile</a>
-          <a data-toggle="modal" data-target="#calendar" class="editButton" title="Show Events Calendar">Event Calendar</a>
+          <a data-toggle="modal" data-target="#calendar" style="color: #D84315;" class="editButton" title="Show Events Calendar">Event Calendar</a>
           <div class="teamofUser">
             <h4> Member Of Team </h4>
             <a class="memberofTeam" style="color: #D84315;" href="#" title="Click to view team information">Team A</a>
@@ -345,50 +346,35 @@
         </div>
       </div>
       <!-- event calendar modal-->
-      <div class="modal fade" id="calendar">
+      <div class="modal fade" id="calendar" onload="caleandar(element, events, settings)">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
               Calendar
             </div>
             <div class="modal-body">
-              <div class="" id="caleandar">
+              <div id="caleandar" style="margin:auto">
               </div>
             </div>
             <div class="modal-footer">
 
             </div>
+            <script type="text/javascript">
+              // calendar
+              var element = document.getElementById('caleandar');
+              var events = [
+                  {'Date': new Date(2017, 12, 8), 'Title 1': 'Soccer Match at Ouluhalli at 4pm'},
+                  {'Date': new Date(2017, 10, 10), 'Title 2': 'Ice Hockey between team A and B at 9pm'},
+              ];
+              var settings = {};
+              caleandar(element, events, settings);
+            </script>
           </div>
         </div>
       </div>
 
 
-      <script type="text/javascript">
-      // calendar
 
-      var events = [
-          {'Date': new Date(2017, 12, 8), 'Title 1': 'Soccer Match at Ouluhalli at 4pm'},
-          {'Date': new Date(2017, 1, 10), 'Title 2': 'Ice Hockey between team A and B at 9pm'},
-      ];
-      var settings = {
-          Color: '',
-          LinkColor: '',
-          NavShow: true,
-          NavVertical: false,
-          NavLocation: '',
-          DateTimeShow: true,
-          DateTimeFormat: 'mmm, yyyy',
-          DatetimeLocation: '',
-          EventClick: '',
-          EventTargetWholeDay: false,
-          DisabledDays: [],
-
-      };
-
-      //add events
-      var element = document.getElementById('caleandar');
-      caleandar(element, events, settings);
-    </script>
 
 
     </div>
@@ -403,7 +389,7 @@
 
           <!--self modify scripts-->
           <script src="scripts/scripts.js"></script>
-          <script type="text/javascript" src="scripts/tooltip.js"></script>
-          <script src="scripts/caleandar.js"></script>
+
+
   </body>
 </html>

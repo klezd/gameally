@@ -1,3 +1,6 @@
+.container {
+  margin-top: 40px;
+}
 /*avatar rank table and contact user*/
 .avatarImage {
   border-radius: 50%;
@@ -152,7 +155,7 @@ a.editButton {
   background: linear-gradient(#F4511E, #FFAB91);
   box-shadow: 1px 1px 1px #2c3e50;
   text-decoration: none;
-  color: black;
+  color: black !important;
   margin: 5px;
   font-size: 15px;
   padding: 10px;
@@ -175,10 +178,11 @@ a.cancelButton {
   font-weight: bold;
 }
 
-.editButton:hover {
-  color: white;
+a.editButton:hover {
+  color: white!important;
   background: #E64A19;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .cancelButton:hover{
