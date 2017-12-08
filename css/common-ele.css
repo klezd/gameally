@@ -27,6 +27,12 @@
   border: none;
 }
 
+.modal-header {
+  justify-content: center;
+  background-color: #EB9532;
+  color: #fff;
+}
+
 .modal-footer {
   padding-top: 0;
 }

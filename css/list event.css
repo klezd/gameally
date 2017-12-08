@@ -103,6 +103,39 @@ i.fa-calendar-plus-o {
   width: inherit;
 }
 
+#search-map .search-event {
+  width: 100%;
+  height: auto;
+  box-shadow: none;
+  border: 1px solid rgba(0,0,0,0.16);
+}
+
+#search-map .search-event.ser-date {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#search-map .search-area.search-date {
+  width: 100%;
+  margin-right: 0;
+  padding: 0;
+}
+
+#search-map .search-date .text-area {
+  margin-right: 0;
+  padding-bottom: 5px;
+  width: 100%;
+}
+
+#search-map .search-date .text-area .text-search {
+  width: 100%;
+  height: auto;
+  color: #495057;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
 .nav {
   border-bottom: 0;
   display: inline-flex;
