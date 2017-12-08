@@ -17,7 +17,7 @@
   <link rel="stylesheet" style="text/css" href="css/menubar.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/UProfile.css">
-
+  <link rel="stylesheet" href="css/map.css">
 
   </head>
   <body >
@@ -135,13 +135,15 @@
                 <div class="row location-choice">
                   <label style="margin-top: 10px;">Choose Your Location</label>
                   <div class="choose-area">
-                    <input type="text" name="location" value="Oulu, Finland">
+                    <input type="text" name="location" class="searchbox" id="locationforFind" placeholder="Search...">
                     <button type="button" class="btn map-btn">
                       <span class="fa fa-map-marker" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Locate me!"></span>
                     </button>
                   </div>
                   <!-- map -->
                   <div class="row">
+                    <div class="" id="map01" >
+                    </div>
 
                   </div>
                 </div>
@@ -177,15 +179,12 @@
                 </div>
                 <div class="row location-choice">
                   <label style="margin-top: 10px;">Choose Your Location</label>
-                  <div class="choose-area">
-                    <input type="text" name="location" value="Oulu, Finland">
-                    <button type="button" class="btn map-btn">
-                      <span class="fa fa-map-marker" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Locate me!"></span>
-                    </button>
-                  </div>
+                  <input type="text" name="location" class="searchbox" id="locationforCreate" placeholder="Search...">
+                  <button type="button" class="btn map-btn choose-area">
+                    <span class="fa fa-map-marker" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Locate me!"></span>
+                  </button>
                   <!-- map -->
-                  <div class="row">
-
+                  <div class="map02" id="map02">
                   </div>
                 </div>
                 <div class="match-info">
@@ -226,11 +225,9 @@
                   <a href="#">Create Your Match</a>
                 </div>
               </div>
-
             </div>
           </div>
           <div class="modal-footer">
-
           </div>
         </div>
       </div>
@@ -243,13 +240,36 @@
         <div class="col-sm-3">
 
             <div class="avatar">
-              <img src="images/avatar icon.png" alt="" id="profilePic" data-toggle="popover" data-placement="bottom" data-content="<div class='changePic'><a href='#'><i class='fa fa-camera'></i> Change your profile picture</a></div>">
+              <img src="images/avatar icon.png" alt="" id="profilePic">
               <div class="changePic">
-                <a href="#"><i class="fa fa-camera"></i> Change your profile picture</a>
+                <a href="#" data-toggle="modal" data-target="#changePic"><i class="fa fa-camera"></i> Change your profile picture</a>
               </div>
             </div>
+            <!--change pic modal-->
+            <div class="modal fade" id="changePic">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    Change profile picture
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-6">
+                        <img src="images/avatar icon.png" alt="" width="150px" >
+                      </div>
+                      <div class="col-6">
+                        <label>Select profile picture</label>
+                        <input type="file" name="profilePicture" style="border-radius: 5px; padding: 5px; width: 100%">
+                        <a href="#" class="editButton" style="width:100%; margin-top:20px">Submit</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                  </div>
 
-
+                </div>
+              </div>
+            </div>
         </div>
         <div class="col-sm-6 " style="border-left: 1px solid #9E9E9E; border-right: 1px solid #9E9E9E; padding: 0 5px 10px 0; border-radius:5px">
           <div class="row infoformRow">
@@ -293,10 +313,10 @@
                   Choose your location
                 </div>
                 <div class="modal-body">
-                  <div class="" id="searchBox">
-                    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
-                  </div>
-                  <div class="" id="map">
+
+                  <input id="pac-input" class="controls pac-input searchbox" type="text" placeholder="Search Box">
+
+                  <div class="" id="map" >
                   </div>
                 </div>
                 <div class="modal-footer">
@@ -400,6 +420,9 @@
     <script src="scripts/scripts.js"></script>
     <script type="text/javascript" src="scripts/tooltip.js"></script>
     <!--API map-->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbAwCfP9dMc5VIcxi200_aD_jDQv4Nj5Y&callback=initAutocomplete"></script>
+    <script src="scripts/mapscripts.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbOShWjpquyii-cNH0euq2d-WCG676718&libraries=places&callback=initAutocomplete" async defer></script>
+
+
   </body>
 </html>

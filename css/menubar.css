@@ -226,7 +226,7 @@ p {
   border: none;
   outline: none;
 }
-.choose-area button {
+ button.choose-area {
   color: red;
   margin-left: 0;
 }
