@@ -20,7 +20,6 @@
 
 .modal-content, .modal-header, .modal-footer, .modal-body {
   border-radius: 0px;
-  width: 375px;
 }
 
 .modal-header, .modal-footer {
