@@ -103,6 +103,11 @@ i.fa-calendar-plus-o {
   width: inherit;
 }
 
+#search-map .modal-content, #search-map .modal-header, #search-map .modal-footer, #search-map .modal-body {
+  border-radius: 0px;
+  width: 425px;
+}
+
 #search-map .search-event {
   width: 100%;
   height: auto;
