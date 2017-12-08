@@ -215,20 +215,11 @@ p {
   box-shadow: 1px 1px 1px #BDBDBD;
   padding: 0;
 }
-.choose-area input {
-  margin-left: 20px;
-  width: 210px;
-  height: 43px;
-  border: none;
-  padding: 3px 0 3px 5px;
-}
-.choose-area input:focus {
-  border: none;
-  outline: none;
-}
+
  button.choose-area {
   color: red;
   margin-left: 0;
+  display: inline;
 }
 .map-btn {
   background: transparent;

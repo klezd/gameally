@@ -83,11 +83,12 @@
 }
 #map01, #map02 {
   height: 200px;
-  width: 80%;
+  width: 95%;
   margin: auto;
 }
 input.searchBox {
-  padding: 3px 10px 3px 5px;
+  padding: 3px 10px 3px 5px !important;
+  margin-top: 3px;
   box-shadow: 1px 1px 1px #9E9E9E;
   text-overflow: ellipsis;
   font-size: 15px;
