@@ -86,10 +86,11 @@
   width: 95%;
   margin: auto;
 }
-input.searchBox {
+input.searchBox, input#locationforFind, input#locationforCreate {
   padding: 3px 10px 3px 5px !important;
-  margin-top: 3px;
-  box-shadow: 1px 1px 1px #9E9E9E;
+  margin-top: 3px !important;
+  margin-left: 10px !important;
+
   text-overflow: ellipsis;
   font-size: 15px;
 }

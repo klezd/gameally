@@ -1,7 +1,7 @@
 /*page*/
 *{
   box-sizing: border-box;
-  font-family: "LG Smart Light",Tahoma,Arial, FontAwesome, sans-serif;
+  font-family: "LG Smart Light",Tahoma,Arial, FontAwesome, sans-serif !important;
 }
 #header{
   background-color: #a6a6a6;
