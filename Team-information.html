@@ -4,26 +4,220 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	    <!-- Bootstrap CSS -->
-	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
 	    <!-- Link icon -->
 	    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
 		<title>Team information</title>
 		<link rel="stylesheet" href="css/team-information.css">
+
+		<meta name="description" content="GameAlly">
+	    <meta name="author" content="GameAlly">
+	    <link rel="Shortcut Icon" href="logo/logo-icon.ico" type="image/x-icon">
+	    <!-- Latest compiled and minified CSS -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	    <!--self modify css and scripts-->
+	    <link href="css/index.css" rel="stylesheet">
+	    <link rel="stylesheet" href="css/header.css">
+	    <link rel="stylesheet" href="css/menubar.css">
+	    <link rel="stylesheet" href="css/map.css">
+	    <link rel="stylesheet" href="css/common-ele.css">
 	</head>
 
 	<body>
 		<!-- Navigation bars-->
+	<header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a href="index(logged_in)" title="Home"><img src="logo/logo.png" alt="GameAlly" class="logo"></a>
+
+        <!-- Toggle icon when in mobile view -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+
+          <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span style="font-size:25">Welcome ABC!</span>
+                <img src="images/avatar icon.png" width="30" height="30" style="padding: auto" id="userInfoIcon"></a>
+
+              <div class="dropdown-menu" aria-labelledby="dropdown01">
+
+                  <a class="dropdown-item" href="edit_user_profile.html" title="Edit My Profile">Edit My Profile</a>
+                  <a class="dropdown-item" href="Team-profile.html" title="My Team's Profile">Your Team</a>
+                  <a class="dropdown-item" title="Sign Out" href="#">Sign Out</a>
+
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="modal" data-target="#match-game">
+                <span data-toggle="tootltip" data-placement="bottom" title="Find a Match or Create a Match Yourself">
+                  Match Game
+                </span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact us.html" title="Contact us">Contact us</a>
+            </li>
+          </ul>
+
+            </div>
+      </nav>
+    </header>
+
+      <!--Match game MODAL -->
+      <div class="modal fade matchgame" id="match-game">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              MATCH GAME
+            </div>
+            <div class="modal-body">
+              <div class="back2">
+                <div class="container">
+                  <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" data-toggle="tab" href="#find-match">Find Match</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="tab" href="#create-match">Create Match</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+                <!--tab-->
+              <div class="tab-content">
+                <!--find match-->
+                <div id="find-match" class="container tab-pane active">
+                  <div class="row">
+                    <label>Choose Your Sport</label>
+                    <div class="sport-list">
+                      <div class="sport-icon">
+                        <img src="icon/baseball.png" alt="baseball">
+                      </div>
+                      <div class="sport-icon">
+                        <img src="icon/football.png" alt="football">
+                      </div>
+                      <div class="sport-icon">
+                        <img src="icon/icehockey.svg" alt="ichockey">
+                      </div>
+                      <div class="sport-icon">
+                        <img src="icon/swimming.png" alt="swimming">
+                      </div>
+                      <div class="sport-icon">
+                        <img src="icon/tennis.png" alt="tennis">
+                      </div>
+                      <div class="sport-icon">
+                        <img src="icon/basketball.png" alt="basketball">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row location-choice">
+                    <label style="margin-top: 10px;">Choose Your Location</label>
+                    <input type="text" name="location" class="searchbox" id="locationforFind" placeholder="Search...">
+                    <!-- map -->
+                    <div class="map01" id="map01">
+                    </div>
+                  </div>
+                  <div class="applyButtons">
+                    <a href="#">Find Your Match</a>
+                  </div>
+
+                </div>
+                <!--create match-->
+                <div id="create-match" class="container tab-pane">
+                  <div class="row">
+                    <label>Choose Your Sport</label>
+                    <div class="sport-list">
+                      <div class="sport-icon">
+                        <img src="icon/baseball.png"  data-toggle="tooltip" title="baseball">
+                      </div>
+                      <div class="sport-icon">
+                        <img src="icon/football.png"  data-toggle="tooltip" title="football">
+                      </div>
+                      <div class="sport-icon">
+                        <img src="icon/icehockey.svg" data-toggle="tooltip" title="ichockey">
+                      </div>
+                      <div class="sport-icon">
+                        <img src="icon/swimming.png" data-toggle="tooltip" title="swimming">
+                      </div>
+                      <div class="sport-icon">
+                        <img src="icon/tennis.png" data-toggle="tooltip" title="tennis">
+                      </div>
+                      <div class="sport-icon">
+                        <img src="icon/basketball.png" data-toggle="tooltip" title="basketball">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row location-choice">
+                    <label style="margin-top: 10px;">Choose Your Location</label>
+                    <input type="text" name="location" class="searchbox" id="locationforCreate" placeholder="Search...">
+                    <!-- map -->
+                    <div class="map02" id="map02">
+                    </div>
+                  </div>
+                  <div class="match-info">
+                    <div class="row">
+                      <div class="col-6">
+                        <label>Name Of Your Match</label>
+                      </div>
+                      <div class="col-6">
+                        <input type="text"  data-toggle="tooltip" title="name of your match" value="">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6">
+                        <label>Date</label>
+                      </div>
+                      <div class="col-6">
+                        <input type="date" data-toggle="tooltip" title="date of your match">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6">
+                        <label>Time</label>
+                      </div>
+                      <div class="col-6">
+                        <input type="time" data-toggle="tooltip" title="time of your match">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6">
+                        <label>Number Of Players</label>
+                      </div>
+                      <div class="col-6">
+                        <input type="number" data-toggle="tooltip" title="number of players needed" style="text-align: center" value="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="applyButtons">
+                    <a href="#">Create Your Match</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  MODAL ends  -->
 
 		<!-- Content-->		
 		<!-- Title & Search box-->
-		<div>
+		<div id="team-info">
 			<h1 class="text-center">Team information</h1>
 
 			<!--Create a team-->
-			<button type="button" data-toggle="modal" data-target="#myModal" class="create-team btn btn-primary">Create a team</button>
+			<button type="button" data-toggle="modal" data-target="#myModal" class="create-team btn btn-primary d-flex justify-content-center">Create a team</button>
 			<!-- Modal -->
 		  	<div class="modal fade" id="myModal" role="dialog">
 			    <div class="modal-dialog">
@@ -77,7 +271,7 @@
 					</div>					
 				</form>
 			</div>
-		</div>
+
 
 		<!-- Teams information -->
 		<div class="container">
@@ -85,8 +279,8 @@
 				<div class="team col-sm-5">
 					<div class="row">
 						<div class="col-sm-4">
-						<img class="img-responsive logo" src="kraken.jpg" alt="">
-						<a href="" data-toggle="modal" data-target="#join"><button class="join btn btn-primary">Join</button></a>
+						<img class="img-responsive logo-team" src="kraken.jpg" alt="">
+						<a href="" data-toggle="modal" data-target="#join"><button class="join btn btn-primary d-flex justify-content-center">Join</button></a>
 						</div>
 						<div class="paragraph col-sm-8 text-center">
 							<h3>The A Team</h3>
@@ -101,8 +295,8 @@
 				<div class="team col-sm-5">
 					<div class="row">
 						<div class="col-sm-4">
-						<img class="img-responsive logo" src="kraken.jpg" alt="">
-						<a href="" data-toggle="modal" data-target="#join"><button class="join btn btn-primary">Join</button></a>
+						<img class="img-responsive logo-team" src="kraken.jpg" alt="">
+						<a href="" data-toggle="modal" data-target="#join"><button class="join btn btn-primary d-flex justify-content-center">Join</button></a>
 						</div>
 						<div class="paragraph col-sm-8 text-center">
 							<h3>The A Team</h3>
@@ -117,8 +311,8 @@
 				<div class="team col-sm-5">
 					<div class="row">
 						<div class="col-sm-4">
-						<img class="img-responsive logo" src="kraken.jpg" alt="">
-						<a href="" data-toggle="modal" data-target="#join"><button class="join btn btn-primary">Join</button></a>
+						<img class="img-responsive logo-team" src="kraken.jpg" alt="">
+						<a href="" data-toggle="modal" data-target="#join"><button class="join btn btn-primary d-flex justify-content-center">Join</button></a>
 
 						<div class="modal fade" id="join">
 									    <div class="modal-dialog">
@@ -176,8 +370,8 @@
 				<div class="team col-sm-5">
 					<div class="row">
 						<div class="col-sm-4">
-						<img class="img-responsive logo" src="kraken.jpg" alt="">
-						<a href="" data-toggle="modal" data-target="#join"><button class="join btn btn-primary">Join</button></a>
+						<img class="img-responsive logo-team" src="kraken.jpg" alt="">
+						<a href="" data-toggle="modal" data-target="#join"><button class="join btn btn-primary d-flex justify-content-center">Join</button></a>
 						</div>
 						<div class="paragraph col-sm-8 text-center">
 							<h3>The A Team</h3>
@@ -203,6 +397,7 @@
 		    </li>
 		  	</ul>
 		</nav>
+	</div>
 		
 		<!-- Optional JavaScript -->
 	    <!-- jQuery first, then Popper.js, then Bootstrap JS -->

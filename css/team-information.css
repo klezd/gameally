@@ -1,3 +1,7 @@
+#team-info {
+	margin-top: 30px;
+}
+
 .create-team {
 	display: block;
 	margin: auto;
@@ -24,7 +28,7 @@
 }
 
 /* Logo */
-.logo {
+.logo-team {
 	width: 100px;
     height: 120px;
     display: block;
@@ -66,5 +70,3 @@
 .teamname {
 	width: 300px;
 }
-
-
