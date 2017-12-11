@@ -14,6 +14,10 @@
   }
 }
 
+.list.container{
+  margin-top: 0;
+}
+
 .background-evnt {
   background-color: #fafafa;
   z-index: -1;
@@ -69,7 +73,7 @@ span.fa-map-marker {
   top: -12px;
 }
 
-i.fa-check {
+#listevnt i.fa-check {
   display: none;
   color: #00cc33;
 }
