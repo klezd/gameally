@@ -19,7 +19,7 @@
      <!-- <link rel="stylesheet" style="text/css" href="css/common-ele.css">      - Breaks the modal-->
 
     <link rel="stylesheet" style="text/css" href="css/menubar.css">
-    
+
 
 
   </head>
@@ -27,7 +27,7 @@
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <a href="index(logged_in).html" title="Home"><img src="logo/logo.png" alt="GameAlly" class="logo"></a>
-        
+
         <!-- Change language bar -->
 
       <!--      <div class="red_tab">
@@ -52,22 +52,22 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
-        
+
         <div class="collapse navbar-collapse" id="navbarCollapse">
-          
+
           <ul class="navbar-nav ml-auto">
-          
+
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="user_profile.html" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span style="font-size:25">Welcome ABC!</span>
                 <img src="images/avatar icon.png" width="30" height="30" style="padding: auto" id="userInfoIcon"></a>
-              
+
               <div class="dropdown-menu" aria-labelledby="dropdown01">
-                
+
                   <a class="dropdown-item active" href="#" title="Edit My Profile">Edit My Profile</a>
                   <a class="dropdown-item" href="Team-profile.html" title="My Team's Profile">Your Team</a>
                   <a class="dropdown-item" title="Sign Out" href="#">Sign Out</a>
-                
+
               </div>
             </li>
 
@@ -78,12 +78,12 @@
                 </span>
               </a>
             </li>
-            
+
             <li class="nav-item">
               <a class="nav-link active" href="contact us.html" title="Contact us">Contact us</a>
             </li>
           </ul>
-          
+
         </div>
       </nav>
     </header>
@@ -241,7 +241,7 @@
     </div>
 
 
-    <div class="container">
+    <div class="contactus container">
       <div class="row">
         <div class="col-sm-6">
           <div class="our-info">
@@ -309,21 +309,12 @@
           </div>
         </div>
         <div class="col-sm-6">
-          <div id="map" style="width:100%;height:500px"></div>
+          <div style="width:100%;height:600px">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1685.5653444041318!2d25.459612093360644!3d65.009581747094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468032bac1ee6457%3A0xd7f1c00cb15ecc00!2sUrheilutalo!5e0!3m2!1svi!2sfi!4v1512996417807" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
     </div>
-
-    <script type="text/javascript">
-      function initMap() {
-        var myCenter = new google.maps.LatLng(65.001700, 25.510870);
-        var canvas = document.getElementById('map');
-        var mapOptions = {center: myCenter, zoom: 11};
-        var map = new google.maps.Map(canvas, mapOptions);
-        var marker = new google.maps.Marker({position: myCenter});
-        marker.setMap(map);
-      }
-    </script>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbAwCfP9dMc5VIcxi200_aD_jDQv4Nj5Y&callback=initMap"></script>
 
