@@ -1,37 +1,62 @@
-.avatar {
-    width: 170px;
-    height: 170px;
-    display: block;
-    margin: auto;
-}
-
-.option-about {
-	margin-top: 10px;
-	border-left: 1px solid black;
-}
-
-.invite {
-	margin-top: 80px;
-}
-
-.personal {
-	margin: 20px;
-}
-
-.external-link {
-	border-left: 1px solid black;
-}
-
-.update {
+.content {
 	margin-top: 20px;
 }
 
-.social {
-	margin-top: 10px;
+.team-logo {
+	width: 230px;
 }
 
-.save {
-	display: block !important;
-	margin: auto;
-	margin-top: 10px;
+.trophy-logo {
+	width: 80px;
+	height: 100px;
+}
+
+.star-logo {
+	width: 80px;
+}
+
+.reward .row {
+	border: 5px solid lightgray;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.icon-button i, .icon-button button {
+	margin: 10px;
+}
+
+.icon-button i {
+	font-size: 30px;
+}
+
+.title {
+	font-weight: bold;
+}
+
+.info-team, .title {
+	padding: 10px;
+}
+
+.sport-name img {
+	max-width: 50px;
+}
+
+.ranking {
+	margin-top: 5px;
+}
+
+.team-members {
+	margin-top: 45px;
+}
+
+.name-button {
+	margin: 30px;
+}
+
+.member-name {
+	border: 1px solid black;
+}
+
+.member-buttons {
+	margin-top: 3px;
 }

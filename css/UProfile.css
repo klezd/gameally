@@ -256,8 +256,8 @@ a.editButton:hover {
   color: black;
 }
 
-.infoformRow input, .infoformRow select:not(:disabled), .map input {
-  width: 330px;
+.infoformRow input:not([type="range"]), .infoformRow select:not(:disabled), .map input {
+  width: 330px!important;
   border: 1px solid #9E9E9E;
   border-radius: 5px;
   background-color: #FAFAFA;
@@ -377,4 +377,9 @@ span.locationSelect {
 /*edit profile picture*/
 #changePic .modal-dialog {
   width: 500px;
+}
+input.searchbox {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 10px;
 }
