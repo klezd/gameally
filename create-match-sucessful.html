@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Creat match sucessful</title>
+	<link rel="stylesheet" type="text/css" href="css/create-match-sucessful.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+	    <!-- Link icon -->
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<!-- Navigation bars  -->
+
+	<!-- Container -->
+	<div class="container">
+		<h2 class="text-center">Your match was created sucessfully</h2>
+		<hr>
+		<!-- Match information -->
+		<h1 class="text-center">World Cup here</h1>
+		<div class="row">
+			<div class="col-sm-6">
+				<!-- Information of match -->
+				<div class="info-match">
+					<p>Time: 11:30 18th August</p>
+					<p>Activity: Baseball</p>
+					<p>Location: K-market square</p>
+					<p>Number of players: 5</p>
+					<div class="text-center">
+						<button class="button btn btn-primary" data-toggle="modal" data-target="#edit">Edit</button>
+					</div>
+
+					<!-- The Modal edit -->
+					<div class="modal fade" id="edit">
+					    <div class="modal-dialog">
+					      	<div class="modal-content">
+					      
+						        <!-- Modal Header -->
+						        <div class="modal-header">
+						          <h4 class="modal-title">Edit</h4>
+						          <button type="button" class="close" data-dismiss="modal">&times;</button>
+						        </div>
+						        
+						        <!-- Modal body -->
+						        <div class="modal-body edit align-self-center">
+									<div class="container">
+										<div>
+											<label for="">Time:</label>
+											<div>			
+												<input type="datetime-local" name="bdaytime">
+											</div>				
+										</div>
+
+										<div>
+											<label>Activity</label>
+											<div>
+												<input type="text" placeholder="Sport">
+											</div>
+										</div>
+
+										<div>
+											<label for="">Location</label>
+											<div>
+												<input type="text" placeholder="Location">
+											</div>
+										</div>
+
+										<div>
+											<label>Number of players</label>
+											<div>
+												<input type="number" min="1" max="20" value="1">		
+											</div>
+										</div>
+
+									</div>								
+						        </div>
+
+						        <!-- Modal footer -->
+						        <div class="modal-footer align-self-center">
+						        	<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+						        	<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						        </div>					     
+					      	</div>
+					    </div>
+					</div>					
+				</div>
+
+				<!-- Invite & Share -->
+				<div class="row invite-share">
+					<div class="col-sm-5 text-center">
+						<button class="btn btn-primary btn-block invite" data-toggle="modal" data-target="#invite">Invite</button>
+					</div>
+
+					<!-- The Modal invite -->
+					<div class="modal fade" id="invite">
+					    <div class="modal-dialog">
+					      	<div class="modal-content">					      
+						        <!-- Modal Header -->
+						        <div class="modal-header">
+						          <h4 class="modal-title">Invite</h4>
+						          <button type="button" class="close" data-dismiss="modal">&times;</button>
+						        </div>
+						        
+						        <!-- Modal body -->
+						        <div class="modal-body edit align-self-center">
+									<div class="container">
+										<div class="row">
+											<div class="col-sm-8">
+												<input type="text" name="" class="form-control">												
+											</div>
+											<div class="col-sm-4">
+												<button class="btn btn-primary" data-toggle="modal" data-target="#invite1">Add</button>
+											</div>
+										</div>
+									</div>								
+						        </div>				     
+					      	</div>
+					    </div>
+					</div>
+
+					<!-- Modal invite 1 -->
+					<div class="modal fade" id="invite1">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<!-- Modal Header -->
+								<div class="modal-header">
+									<h4 class="modal-title">Invite</h4>
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+								</div>	
+
+								<!-- Modal body -->
+								<div class="modal-body edit align-self-center">
+									<div class="container">
+										<div class="row">
+											<div class="col-sm-8">
+												<input type="text" name="" class="form-control">
+											</div>
+											<div class="col-sm-4">
+												<button class="btn btn-primary" data-toggle="modal" data-dismiss="modal">Add</button>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-sm-4">
+												<img src="http://wagtailhighlighted.com.au/wp-content/uploads/2016/05/defualt.png" alt="" width="108px">
+											</div>
+											<div class="col-sm-8 align-self-center">
+												<h5>Joey</h5>
+												<p>Lorem ipsum dolor sit amet.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>					
+
+					<div class="col-sm-2"></div>
+					<div class="col-sm-5 text-center">
+						<button type="button" class="btn btn-primary btn-block share" data-toggle="modal" data-target="#share">Share</button>
+					</div>
+					
+					<!-- The Modal share -->
+					<div class="modal fade" id="share">
+					    <div class="modal-dialog">
+					      	<div class="modal-content">
+					      
+						        <!-- Modal Header -->
+						        <div class="modal-header">
+						          <h4 class="modal-title">Share</h4>
+						          <button type="button" class="close" data-dismiss="modal">&times;</button>
+						        </div>
+						        
+						        <!-- Modal body -->
+						        <div class="modal-body align-self-center share-button" style="font-size: 40px;">
+									<i class="fa fa-facebook"></i>
+									<i class="fa fa-twitter"></i>
+									<i class="fa fa-whatsapp"></i>
+									<i class="fa fa-google-plus"></i>
+									<i class="fa fa-instagram"></i>
+									
+						        </div>
+
+						        <!-- Modal footer -->
+						        <div class="modal-footer">
+						        	<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						        </div>					     
+					      	</div>
+					    </div>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- Map & Link of players -->
+			<div class="col-sm-6 map-players">
+				<div class="map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1685.932412332003!2d25.5442180159557!3d65.00376585077306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4681cd60fa2dd7fb%3A0x8864e28f561a0117!2sK-Market+Isterintie!5e0!3m2!1svi!2sfi!4v1512395989877" width="450" height="260" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+
+				<div class="link-players">
+					<!-- Link to Open the Modal -->
+					<a href="#linkPlayers" data-toggle="modal" data-target="#linkPlayers">Link of players</a>
+				</div>
+
+				<!-- The Modal link players -->
+				<div class="modal fade" id="linkPlayers">
+				    <div class="modal-dialog">
+				      	<div class="modal-content">
+				      
+					        <!-- Modal Header -->
+					        <div class="modal-header">
+					          <h4 class="modal-title">PLayers name</h4>
+					          <button type="button" class="close" data-dismiss="modal">&times;</button>
+					        </div>
+					        
+					        <!-- Modal body -->
+					        <div class="modal-body">
+					        	<div class="container">
+						        	<div class="row">
+							        	<div class="col-sm-6">
+							        		<div class="row">
+								        		<div class="col-sm-4">
+								        			<img class="ava" src="http://wagtailhighlighted.com.au/wp-content/uploads/2016/05/defualt.png">
+								        		</div>
+								        		<div class="col-sm-8 d-flex align-items-center">
+								        			Joey
+								        		</div>						        			
+							        		</div>
+						        		</div>
+
+										<div class="col-sm-6">
+							        		<div class="row">
+								        		<div class="col-sm-4">
+								        			<img class="ava" src="http://wagtailhighlighted.com.au/wp-content/uploads/2016/05/defualt.png">
+								        		</div>
+								        		<div class="col-sm-8 d-flex align-items-center">
+								        			Joey
+								        		</div>						        			
+							        		</div>
+						        		</div>						        		
+						        	</div>
+
+						        	<div class="row">
+							        	<div class="col-sm-6">
+							        		<div class="row">
+								        		<div class="col-sm-4">
+								        			<img class="ava" src="http://wagtailhighlighted.com.au/wp-content/uploads/2016/05/defualt.png">
+								        		</div>
+								        		<div class="col-sm-8 d-flex align-items-center">
+								        			Joey
+								        		</div>						        			
+							        		</div>
+						        		</div>
+
+										<div class="col-sm-6">
+							        		<div class="row">
+								        		<div class="col-sm-4">
+								        			<img class="ava" src="http://wagtailhighlighted.com.au/wp-content/uploads/2016/05/defualt.png">
+								        		</div>
+								        		<div class="col-sm-8 d-flex align-items-center">
+								        			Joey
+								        		</div>						        			
+							        		</div>
+						        		</div>						        		
+						        	</div>
+
+						        	<div class="row">
+							        	<div class="col-sm-6">
+							        		<div class="row">
+								        		<div class="col-sm-4">
+								        			<img class="ava" src="http://wagtailhighlighted.com.au/wp-content/uploads/2016/05/defualt.png">
+								        		</div>
+								        		<div class="col-sm-8 d-flex align-items-center">
+								        			Joey
+								        		</div>						        			
+							        		</div>
+						        		</div>
+
+										<div class="col-sm-6">
+							        		<div class="row">
+								        		<div class="col-sm-4">
+								        			<img class="ava" src="http://wagtailhighlighted.com.au/wp-content/uploads/2016/05/defualt.png">
+								        		</div>
+								        		<div class="col-sm-8 d-flex align-items-center">
+								        			Joey
+								        		</div>						        			
+							        		</div>
+						        		</div>						        		
+						        	</div>
+					        	</div>
+
+					        </div>
+					        
+					        <!-- Modal footer -->
+					        <div class="modal-footer">
+					          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					        </div>
+				     
+				      	</div>
+				    </div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal -->
+					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					  <div class="modal-dialog" role="document">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					          <span aria-hidden="true">&times;</span>
+					        </button>
+					      </div>
+					      <div class="modal-body">
+					        ...
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					        <button type="button" class="btn btn-primary">Save changes</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+	</div>
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
+</html>
