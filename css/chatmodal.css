@@ -10,8 +10,10 @@
         #openChat:hover, #openChat:focus,  #createRoom:hover,  #createRoom:focus
         {
         box-shadow: 0 0 0 0.2rem rgba(253,126,20,.5);
+        cursor: pointer;
         }
         #chatbox{
+        display: block;
         position: fixed;
         bottom: 0;
         background-color: #fefefe;
@@ -19,6 +21,12 @@
         max-width: 100%;
         -webkit-animation: slideIn 0.7s;
         animation: slideIn 0.7s;
+        margin-bottom: 0px;
+        }
+
+        #chatbox .modal-content {
+        width: 100%; /* Full width */
+        max-width: 100%;
         }
         .modal-header {
         justify-content: center;
@@ -52,12 +60,15 @@
         #channel-modal {
         text-align: center;
         }
+
+@media screen and (min-width: 768px) {
         #channel-modal .modal:before {
         content: "";
         display: inline-block;
         height: 100%;
         vertical-align: middle;
         }
+}
         #channel-modal .modal-dialog {
         display: inline-block;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -110,7 +121,7 @@
         color: #fff;
         }
         
-        /*Channel Modal*/
+        /*New channel modal*/
         #myChannel .modal-dialog {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
