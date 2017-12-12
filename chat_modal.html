@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <style type="text/css">
+        #openChat {
+        background-color: #EB9532;
+        border-color: #EB9532;
+        color: #fff;
+        position: fixed;
+        bottom: 0;
+        left: 40%;
+        width: 200px;
+        }
+        #openChat:hover, #openChat:focus
+        {
+        box-shadow: 0 0 0 0.2rem rgba(253,126,20,.5);
+        }
+        .chatbox{
+        position: fixed;
+        bottom: 0;
+        background-color: #fefefe;
+        width: 100%; /* Full width */
+        max-width: 100%;
+        -webkit-animation: slideIn 0.7s;
+        animation: slideIn 0.7s;
+        }
+        .modal-header {
+        justify-content: center;
+        background-color: #EB9532;
+        color: #fff;
+        }
+        #myModal .nav-item a.nav-link {
+        color: #fff;
+        }
+        #myModal .nav-tabs .nav-link.active
+        {
+        color: #495057;
+        background-color: #fff;
+        border-color: #ddd #ddd #fff;
+        }
+        button.close {
+        opacity: .5;
+        }
+        button.close:hover,
+        button.close:focus {
+        opacity: .75;
+        }
+        #add-friend {
+        border-color: #EB9532;
+        }
+        #add-friend:hover {
+        background-color: #EB9532;
+        color: #fff;
+        }
+        /*Channel Modal*/
+        #channel-modal {
+        text-align: center;
+        }
+        .modal:before {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        }
+        #channel-modal .modal-dialog {
+        display: inline-block;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        text-align: left;
+        vertical-align: middle;
+        }
+        #channel-modal .modal-content {
+        width: 350px;
+        }
+        
+        .logo-part {
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+        }
+        img.logoinModal {
+        height: 42px;
+        width: auto;
+        }
+        #channel-modal i.fa {
+        color: #EB9532;
+        }
+        i.fa {
+        padding-left: 3px; font-weight: 800;
+        }
+        /*The search bar*/
+        input.form-control {
+        margin-bottom: 16px;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        background-color: transparent;
+        width: 90%;
+        }
+        .flex-column .nav-item
+        {
+        padding: 6px 42px;
+        border-radius: 2px;
+        margin-top: 6px;
+        margin-bottom: 0;
+        background-color: #EB9532;
+        color: #fff;
+        }
+        .flex-column .nav-item:hover
+        {
+        background-color: #FF7416;
+        color: #fff;
+        }
+        .flex-column .nav-item a{
+        color: #fff;
+        }
+        
+        @-webkit-keyframes slideIn {
+        from {bottom: -300px; opacity: 0}
+        to {bottom: 0; opacity: 1}
+        }
+        @keyframes slideIn {
+        from {bottom: -300px; opacity: 0}
+        to {bottom: 0; opacity: 1}
+        </style>
+        
+    </head>
+    <body>
+        <div class="container">
+            
+            <!-- Trigger the modal with a button -->
+            <button type="button" id="openChat" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Chat</button>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal"  tabindex="-1" role="dialog">
+                <div class="modal-dialog chatbox">
+                    
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#tab1">Player</a></li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#tab2">Team</a></li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#tab3">Badminton</a></li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-toggle="tab" href="#tab4">Football</a></li>
+                                                <li class="nav-item">
+                                                    <span data-toggle="modal" data-target="#channel-modal" title="Add a channel">
+                                                        <a class="nav-link" data-toggle="tab" href="#new">Add a channel<i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                            
+                                            <button type="button" class="close float-right" data-dismiss="modal">Hide<i class="fa fa-angle-double-down" aria-hidden="true"></i></button>
+                                            
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="tab-content">
+                                                <div id="tab1" class="tab-pane fade show active">
+                                                    <h3>Player</h3>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                </div>
+                                                <div id="tab2" class="tab-pane fade">
+                                                    <h3>Team</h3>
+                                                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                </div>
+                                                <div id="tab3" class="tab-pane fade">
+                                                    <h3>Badminton</h3>
+                                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                                                </div>
+                                                <div id="tab4" class="tab-pane fade">
+                                                    <h3>Football</h3>
+                                                    <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" id="add-friend" class="btn btn-outline-secondary">Add a friend</button>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <!--Add a new channel modal-->
+                            <div class="modal fade" id="channel-modal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            Search for a new channel
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="logo-part">
+                                                <img class="logoinModal" src="https://github.com/roxydao97/gameally/blob/master/logo/logo.png?raw=true" alt="Logo">
+                                            </div>
+                                            <input class="form-control" type="text" name="search" placeholder="Type your keyword here" style="display: inline-block;"><i class="fa fa-search" aria-hidden="true"></i>
+                                            <ul class="nav flex-column nav-justified"> <!-- OR  nav-fill compare-->
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#" data-toggle="modal" data-target="#myChannel">Create a new chat room</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Basketball</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Badminton</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Yoga</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Archery</a>
+                                            </li>
+                                        </ul>
+                                        
+                                        
+                                    </div>
+                                    <div class="modal-footer">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Create new channel modal -->
+                        
+                        <div class="modal fade" id="myChannel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+                        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+                        
+                        
+                    </body>
+                </html>
