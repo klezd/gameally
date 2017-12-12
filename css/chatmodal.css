@@ -1,0 +1,136 @@
+        #openChat {
+        background-color: #EB9532;
+        border-color: #EB9532;
+        color: #fff;
+        position: fixed;
+        bottom: 0;
+        left: 40%;
+        width: 200px;
+        }
+        #openChat:hover, #openChat:focus,  #createRoom:hover,  #createRoom:focus
+        {
+        box-shadow: 0 0 0 0.2rem rgba(253,126,20,.5);
+        }
+        .chatbox{
+        position: fixed;
+        bottom: 0;
+        background-color: #fefefe;
+        width: 100%; /* Full width */
+        max-width: 100%;
+        -webkit-animation: slideIn 0.7s;
+        animation: slideIn 0.7s;
+        }
+        .modal-header {
+        justify-content: center;
+        background-color: #EB9532;
+        color: #fff;
+        }
+        #myModal .nav-item a.nav-link {
+        color: #fff;
+        }
+        #myModal .nav-tabs .nav-link.active
+        {
+        color: #495057;
+        background-color: #fff;
+        border-color: #ddd #ddd #fff;
+        }
+        button.close {
+        opacity: .5;
+        }
+        button.close:hover,
+        button.close:focus {
+        opacity: .75;
+        }
+        #add-friend {
+        border-color: #EB9532;
+        }
+        #add-friend:hover {
+        background-color: #EB9532;
+        color: #fff;
+        }
+        /*Channel Modal*/
+        #channel-modal {
+        text-align: center;
+        }
+        #channel-modal .modal:before {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        }
+        #channel-modal .modal-dialog {
+        display: inline-block;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        text-align: left;
+        vertical-align: middle;
+        }
+        #channel-modal .modal-content {
+        width: 350px;
+        }
+        
+        .logo-part {
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+        }
+        img.logoinModal {
+        height: 42px;
+        width: auto;
+        }
+        #channel-modal i.fa {
+        color: #EB9532;
+        }
+        i.fa {
+        padding-left: 3px; font-weight: 800;
+        }
+        /*The search bar*/
+        #channel-modal input.form-control {
+        margin-bottom: 16px;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        background-color: transparent;
+        width: 90%;
+        }
+        .flex-column .nav-item
+        {
+        padding: 6px 42px;
+        border-radius: 2px;
+        margin-top: 6px;
+        margin-bottom: 0;
+        background-color: #EB9532;
+        color: #fff;
+        }
+        .flex-column .nav-item:hover
+        {
+        background-color: #FF7416;
+        color: #fff;
+        }
+        .flex-column .nav-item a{
+        color: #fff;
+        }
+        
+        /*Channel Modal*/
+        #myChannel .modal-dialog {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        #myChannel input.form-control {
+        margin-bottom: 16px;
+        background-color: transparent;
+        width: 90%;
+        }
+        #createRoom {
+        background-color: #EB9532;
+        border-color: #EB9532;
+        color: #fff;
+        left: 40%;
+        width: 150px;
+        }
+        
+        @-webkit-keyframes slideIn {
+        from {bottom: -300px; opacity: 0}
+        to {bottom: 0; opacity: 1}
+        }
+        @keyframes slideIn {
+        from {bottom: -300px; opacity: 0}
+        to {bottom: 0; opacity: 1}
