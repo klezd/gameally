@@ -39,6 +39,30 @@
     #people-field, #team-field, #event-field {
       margin-top: 20px;
     }
+
+
+      .live-chat i{
+  margin: 20px;
+  font-size: 30px;
+  border: 1px solid #5a5a5a;
+  border-radius: 50%;
+  padding: 10px;
+  background: #5a5a5a;
+  color: white!important;
+}
+
+.live-chat-form {
+  transition: all 0.2s;
+  transform: rotateX(-90deg);
+  height: 0px;
+}
+
+#live-chat-visible, .live-chat-visible {
+  padding: 20px;
+    background-color: white;
+    border: 2px solid lightgray;
+    width: 350px;
+    transform: rotateX(0deg);
   </style>
 
   </head>
@@ -472,10 +496,10 @@
 
            <!-- Trigger the modal with a button -->
           
-            <button type="button" id="openChat" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Chat</button>
+            <button type="button" id="openChat" class="btn btn-info btn-lg" data-toggle="modal" data-target="#chatModal">Chat</button>
             
             
-            <div class="modal fade" id="myModal"  tabindex="-1" role="dialog">
+            <div class="modal fade" id="chatModal"  tabindex="-1" role="dialog">
                 <div class="modal-dialog" id="chatbox">
                     
                     <!-- Modal content-->
@@ -598,6 +622,28 @@
 
 
         </div><!-- /.container -->
+        <div class="live-chat">
+          <div class="d-flex justify-content-end fixed-bottom">
+              <a href="#live-chat-visible" onclick="livechat()">
+                <i class="fa fa-commenting"></i>
+              </a>
+          </div>      
+          <div class="d-flex justify-content-end fixed-bottom live-chat-form" id="visible" style="left: 926px; bottom: 20px; height: 230px;">
+            <form action="" style="width: 306px;">
+              <div class="form-group">            
+                <input type="text" name="" class="form-control" placeholder="Email address">
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="" id="" rows="3" placeholder="How can we help you?"></textarea>
+              </div>  
+              <div class="live-chat-button">
+                <a href="index(logged_in).html" class="btn btn-primary">Send</a>
+                <a href="index(logged_in).html" class="btn btn secondary">Close</a>
+              </div>          
+            </form>
+          </div>
+        </div>
+        
         <!-- FOOTER -->
         <footer class="container">
           <p class="float-right"><a href="#">Back to top</a></p>
@@ -607,6 +653,12 @@
           <!-- Bootstrap core JavaScript
           ================================================== -->
           <!-- Placed at the end of the document so the pages load faster -->
+           <script type="text/javascript">
+        function livechat(){
+          document.getElementById("visible").classList.toggle("live-chat-visible");
+        }
+      </script>
+
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>

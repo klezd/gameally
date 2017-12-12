@@ -33,10 +33,10 @@
         background-color: #EB9532;
         color: #fff;
         }
-        #myModal .nav-item a.nav-link {
+        #chatModal .nav-item a.nav-link {
         color: #fff;
         }
-        #myModal .nav-tabs .nav-link.active
+        #chatModal .nav-tabs .nav-link.active
         {
         color: #495057;
         background-color: #fff;
