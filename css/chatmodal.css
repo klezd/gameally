@@ -11,7 +11,7 @@
         {
         box-shadow: 0 0 0 0.2rem rgba(253,126,20,.5);
         }
-        .chatbox{
+        #chatbox{
         position: fixed;
         bottom: 0;
         background-color: #fefefe;
