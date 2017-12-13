@@ -72,141 +72,148 @@
     </header>
 
       <!--Match game MODAL -->
-      <div class="modal fade matchgame" id="match-game">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              MATCH GAME
-            </div>
-            <div class="modal-body">
-              <div class="back2">
-                <div class="container">
-                  <ul class="nav nav-tabs" role="tablist">
-                    <li class="nav-item">
-                      <a class="nav-link active" data-toggle="tab" href="#find-match">Find Match</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" data-toggle="tab" href="#create-match">Create Match</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-                <!--tab-->
-              <div class="tab-content">
-                <!--find match-->
-                <div id="find-match" class="container tab-pane active">
-                  <div class="row">
-                    <label>Choose Your Sport</label>
-                    <div class="sport-list">
-                      <div class="sport-icon">
-                        <img src="icon/baseball.png" alt="baseball">
-                      </div>
-                      <div class="sport-icon">
-                        <img src="icon/football.png" alt="football">
-                      </div>
-                      <div class="sport-icon">
-                        <img src="icon/icehockey.svg" alt="ichockey">
-                      </div>
-                      <div class="sport-icon">
-                        <img src="icon/swimming.png" alt="swimming">
-                      </div>
-                      <div class="sport-icon">
-                        <img src="icon/tennis.png" alt="tennis">
-                      </div>
-                      <div class="sport-icon">
-                        <img src="icon/basketball.png" alt="basketball">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row location-choice">
-                    <label style="margin-top: 10px;">Choose Your Location</label>
-                    <input type="text" name="location" class="searchbox" id="locationforFind" placeholder="Search...">
-                    <!-- map -->
-                    <div class="map01" id="map01">
-                    </div>
-                  </div>
-                  <div class="applyButtons">
-                    <a href="#">Find Your Match</a>
-                  </div>
+			<div class="modal fade matchgame" id="match-game">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							MATCH GAME
+						</div>
+						<div class="modal-body">
+							<div class="back2">
+								<div class="container">
+									<ul class="nav nav-tabs" role="tablist">
+										<li class="nav-item">
+											<a class="nav-link active" data-toggle="tab" href="#find-match">Find Match</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" data-toggle="tab" href="#create-match">Create Match</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+								<!--tab-->
+							<div class="tab-content">
+								<!--find match-->
+								<div id="find-match" class="container tab-pane active">
+									<div class="row">
+										<label>Choose Your Sport</label>
+										<div class="sport-list">
+											<div class="sport-icon">
+												<img src="icon/baseball.png" alt="baseball">
+											</div>
+											<div class="sport-icon">
+												<img src="icon/football.png" alt="football">
+											</div>
+											<div class="sport-icon">
+												<img src="icon/icehockey.svg" alt="ichockey">
+											</div>
+											<div class="sport-icon">
+												<img src="icon/swimming.png" alt="swimming">
+											</div>
+											<div class="sport-icon">
+												<img src="icon/tennis.png" alt="tennis">
+											</div>
+											<div class="sport-icon">
+												<img src="icon/basketball.png" alt="basketball">
+											</div>
+										</div>
+									</div>
+									<div class="row location-choice">
+										<label>Choose Your Location</label>
+										<div class="choose-area">
+											<input type="text" name="location" placeholder="Search...">
+										</div>
+										<!-- map -->
+										<div class="map01" id="map01">
+											<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13484.991704512933!2d25.5045982!3d65.008653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4681cd515af7bef9%3A0x38280dd8d86dca6f!2sOuluhalli!5e0!3m2!1sen!2sfi!4v1512999973309" width=100% height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+										</div>
+									</div>
+									<div class="applyButtons">
+										<a href="#">Find Your Match</a>
+									</div>
 
-                </div>
-                <!--create match-->
-                <div id="create-match" class="container tab-pane">
-                  <div class="row">
-                    <label>Choose Your Sport</label>
-                    <div class="sport-list">
-                      <div class="sport-icon">
-                        <img src="icon/baseball.png"  data-toggle="tooltip" title="baseball">
-                      </div>
-                      <div class="sport-icon">
-                        <img src="icon/football.png"  data-toggle="tooltip" title="football">
-                      </div>
-                      <div class="sport-icon">
-                        <img src="icon/icehockey.svg" data-toggle="tooltip" title="ichockey">
-                      </div>
-                      <div class="sport-icon">
-                        <img src="icon/swimming.png" data-toggle="tooltip" title="swimming">
-                      </div>
-                      <div class="sport-icon">
-                        <img src="icon/tennis.png" data-toggle="tooltip" title="tennis">
-                      </div>
-                      <div class="sport-icon">
-                        <img src="icon/basketball.png" data-toggle="tooltip" title="basketball">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row location-choice">
-                    <label style="margin-top: 10px;">Choose Your Location</label>
-                    <input type="text" name="location" class="searchbox" id="locationforCreate" placeholder="Search...">
-                    <!-- map -->
-                    <div class="map02" id="map02">
-                    </div>
-                  </div>
-                  <div class="match-info">
-                    <div class="row">
-                      <div class="col-6">
-                        <label>Name Of Your Match</label>
-                      </div>
-                      <div class="col-6">
-                        <input type="text"  data-toggle="tooltip" title="name of your match" value="">
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-6">
-                        <label>Date</label>
-                      </div>
-                      <div class="col-6">
-                        <input type="date" data-toggle="tooltip" title="date of your match">
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-6">
-                        <label>Time</label>
-                      </div>
-                      <div class="col-6">
-                        <input type="time" data-toggle="tooltip" title="time of your match">
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-6">
-                        <label>Number Of Players</label>
-                      </div>
-                      <div class="col-6">
-                        <input type="number" data-toggle="tooltip" title="number of players needed" style="text-align: center" value="">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="applyButtons">
-                    <a href="#">Create Your Match</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-            </div>
-          </div>
-        </div>
-      </div>
+								</div>
+								<!--create match-->
+								<div id="create-match" class="container tab-pane">
+									<div class="row">
+										<label>Choose Your Sport</label>
+										<div class="sport-list">
+											<div class="sport-icon">
+												<img src="icon/baseball.png"  data-toggle="tooltip" title="baseball">
+											</div>
+											<div class="sport-icon">
+												<img src="icon/football.png"  data-toggle="tooltip" title="football">
+											</div>
+											<div class="sport-icon">
+												<img src="icon/icehockey.svg" data-toggle="tooltip" title="ichockey">
+											</div>
+											<div class="sport-icon">
+												<img src="icon/swimming.png" data-toggle="tooltip" title="swimming">
+											</div>
+											<div class="sport-icon">
+												<img src="icon/tennis.png" data-toggle="tooltip" title="tennis">
+											</div>
+											<div class="sport-icon">
+												<img src="icon/basketball.png" data-toggle="tooltip" title="basketball">
+											</div>
+										</div>
+									</div>
+									<div class="location-choice">
+										<label>Choose Your Location</label>
+										<div class="choose-area">
+											<input type="text" name="location" placeholder="Search...">
+										</div>
+
+										<!-- map -->
+										<div class="map02" id="map02">
+											<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13484.991704512933!2d25.5045982!3d65.008653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4681cd515af7bef9%3A0x38280dd8d86dca6f!2sOuluhalli!5e0!3m2!1sen!2sfi!4v1512999973309" width="400" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+										</div>
+									</div>
+									<div class="match-info">
+										<div class="row">
+											<div class="col-6">
+												<label>Name Of Your Match</label>
+											</div>
+											<div class="col-6">
+												<input type="text"  data-toggle="tooltip" title="name of your match" value="">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-6">
+												<label>Date</label>
+											</div>
+											<div class="col-6">
+												<input type="date" data-toggle="tooltip" title="date of your match">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-6">
+												<label>Time</label>
+											</div>
+											<div class="col-6">
+												<input type="time" data-toggle="tooltip" title="time of your match">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-6">
+												<label>Number Of Players</label>
+											</div>
+											<div class="col-6">
+												<input type="number" data-toggle="tooltip" title="number of players needed" style="text-align: center" value="">
+											</div>
+										</div>
+									</div>
+									<div class="applyButtons">
+										<a href="#">Create Your Match</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+						</div>
+					</div>
+				</div>
+			</div>
 
       <!--  MODAL ends  -->
 
@@ -234,7 +241,7 @@
 									<input type="" name="">
 								</div>
 							</div>
-						
+
 							<div class="row personal">
 								<div class="col-sm-4">
 									<p>Our motto</p>
@@ -259,31 +266,31 @@
 						<!--Invite members -->
 						<div class="col-sm-6 text-center invite">
 							<h4>Want to invite some awesome prople to your team?</h4>
-				    		<a href="" class="btn btn-primary" data-toggle="modal" data-target="#invite">Send an invite</a>	
+				    		<a href="" class="btn btn-primary" data-toggle="modal" data-target="#invite">Send an invite</a>
 
 							<!-- The Modal invite -->
 							<div class="modal fade" id="invite">
 							    <div class="modal-dialog">
-							      	<div class="modal-content">					      
+							      	<div class="modal-content">
 								        <!-- Modal Header -->
 								        <div class="modal-header">
 								          <h4 class="modal-title">Add members</h4>
 								          <button type="button" class="close" data-dismiss="modal">&times;</button>
 								        </div>
-								        
+
 								        <!-- Modal body -->
 								        <div class="modal-body edit align-self-center">
 											<div class="container">
 												<div class="row">
 													<div class="col-sm-8">
-														<input type="text" name="" class="form-control">												
+														<input type="text" name="" class="form-control">
 													</div>
 													<div class="col-sm-4">
 														<button class="btn btn-primary" data-toggle="modal" data-target="#invite1">Add</button>
 													</div>
 												</div>
-											</div>								
-								        </div>				     
+											</div>
+								        </div>
 							      	</div>
 							    </div>
 							</div>
@@ -296,7 +303,7 @@
 										<div class="modal-header">
 											<h4 class="modal-title">Add members</h4>
 												<button type="button" class="close" data-dismiss="modal">&times;</button>
-										</div>	
+										</div>
 
 										<!-- Modal body -->
 										<div class="modal-body edit align-self-center">
@@ -323,7 +330,7 @@
 										</div>
 									</div>
 								</div>
-							</div>	
+							</div>
 
 
 						</div>
@@ -345,7 +352,7 @@
 								<div class="col-sm-6">
 									<input type="checkbox">Volleyball
 									<input type="range" name="points" min="0" max="2" data-toggle="tooltip" data-placement="top" title="Adjust the slider depending on your skill level!">
-								</div>								
+								</div>
 								<div class="col-sm-6">
 									<input type="checkbox">Football
 									<input type="range" name="points" min="0" max="2" data-toggle="tooltip" data-placement="top" title="Adjust the slider depending on your skill level!">
@@ -373,7 +380,7 @@
 							</div>
 						</div>
 					</div>
-				</div>	
+				</div>
 
 				<!--External link-->
 				<div class="col-sm-4 text-center external-link">
@@ -394,7 +401,7 @@
 				</div>
 			</div>
 
-			<a href="team-profile.html">	
+			<a href="team-profile.html">
 				<button class="btn btn-primary save">Save</button>
 			</a>
 		</div>
@@ -405,7 +412,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 	</body>
-	
+
 	<script>
 		$(function () {
 		  $('[data-toggle="tooltip"]').tooltip()

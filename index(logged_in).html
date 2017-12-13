@@ -15,7 +15,6 @@
     <link href="css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" style="text/css" href="css/menubar.css">
-    <link rel="stylesheet" href="css/map.css">
     <link rel="stylesheet" href="css/common-ele.css">
     <link rel="stylesheet" type="text/css" href="css/chatmodal.css">
 
@@ -63,6 +62,7 @@
     border: 2px solid lightgray;
     width: 350px;
     transform: rotateX(0deg);
+  }
   </style>
 
   </head>
@@ -159,10 +159,13 @@
                     </div>
                   </div>
                   <div class="row location-choice">
-                    <label style="margin-top: 10px;">Choose Your Location</label>
-                    <input type="text" name="location" class="searchbox" id="locationforFind" placeholder="Search...">
+                    <label>Choose Your Location</label>
+                    <div class="choose-area">
+                      <input type="text" name="location" placeholder="Search...">
+                    </div>
                     <!-- map -->
                     <div class="map01" id="map01">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13484.991704512933!2d25.5045982!3d65.008653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4681cd515af7bef9%3A0x38280dd8d86dca6f!2sOuluhalli!5e0!3m2!1sen!2sfi!4v1512999973309" width=100% height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
                   </div>
                   <div class="applyButtons">
@@ -195,11 +198,15 @@
                       </div>
                     </div>
                   </div>
-                  <div class="row location-choice">
-                    <label style="margin-top: 10px;">Choose Your Location</label>
-                    <input type="text" name="location" class="searchbox" id="locationforCreate" placeholder="Search...">
+                  <div class="location-choice">
+                    <label>Choose Your Location</label>
+                    <div class="choose-area">
+                      <input type="text" name="location" placeholder="Search...">
+                    </div>
+
                     <!-- map -->
                     <div class="map02" id="map02">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13484.991704512933!2d25.5045982!3d65.008653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4681cd515af7bef9%3A0x38280dd8d86dca6f!2sOuluhalli!5e0!3m2!1sen!2sfi!4v1512999973309" width="400" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
                   </div>
                   <div class="match-info">
@@ -349,13 +356,13 @@
             <!-- Button to Open the Modal -->
               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Search</button>
           </div>
-      
+
 
               <!-- The Modal -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
                 <div class="modal-content">
-              
+
                   <!-- Modal Header -->
                 <div class="modal-header">
                   <h5 class="modal-title" id="exampleModalLabel">Search Result</h5>
@@ -365,7 +372,7 @@
                 </div>
 
               <!-- Modal body -->
-                  <div class="modal-body">              
+                  <div class="modal-body">
                     <!--Tab filter-->
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                   <li class="nav-item">
@@ -436,7 +443,7 @@
                               </div>
                             </div>
                           </div>
-                    </div>                  
+                    </div>
                   </div>
 
                   <!-- People field-->
@@ -464,7 +471,7 @@
                                 <p>Lorem ipsum dolor.</p>
                                 <p>Lorem ipsum dolor sit amet.</p>
                               </div>
-                        </div>      
+                        </div>
                   </div>
 
                   <!-- Event field-->
@@ -495,17 +502,17 @@
           <!-- Chat modal -->
 
            <!-- Trigger the modal with a button -->
-          
+
             <button type="button" id="openChat" class="btn btn-info btn-lg" data-toggle="modal" data-target="#chatModal">Chat</button>
-            
-            
+
+
             <div class="modal fade" id="chatModal"  tabindex="-1" role="dialog">
                 <div class="modal-dialog" id="chatbox">
-                    
+
                     <!-- Modal content-->
                     <div class="modal-content">
                         <div class="modal-header">
-                            
+
                             <ul class="nav nav-tabs">
                                 <li class="nav-item">
                                     <a class="nav-link active" data-toggle="tab" href="#tab1">Player</a></li>
@@ -521,9 +528,9 @@
                                                     </span>
                                                 </li>
                                             </ul>
-                                            
+
                                             <button type="button" class="close float-right" data-dismiss="modal">Hide<i class="fa fa-angle-double-down" aria-hidden="true"></i></button>
-                                            
+
                                         </div>
                                         <div class="modal-body">
                                             <div class="tab-content">
@@ -543,17 +550,17 @@
                                                     <h3>Football</h3>
                                                     <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
                                                 </div>
-                                                
+
                                             </div>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" id="add-friend" class="btn btn-outline-secondary">Add a friend</button>
                                         </div>
-                                        
-                                        
+
+
                                     </div>
                                 </div>
-                                
+
                             </div>
           <!--Add a new channel modal-->
                             <div class="modal fade" id="channel-modal">
@@ -587,8 +594,8 @@
                                                     <a class="nav-link" href="#">Archery</a>
                                                 </li>
                                             </ul>
-                                            
-                                            
+
+
                                         </div>
                                         <div class="modal-footer">
                                         </div>
@@ -596,7 +603,7 @@
                                 </div>
                             </div>
           <!-- Create new channel modal -->
-                            
+
                             <div class="modal fade" id="myChannel" role="dialog" aria-labelledby="myChannel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
@@ -611,7 +618,7 @@
                                             <input class="form-control" type="text" name="roomPass" placeholder="Password" style="display: inline-block;">
                                         </div>
                                         <div class="modal-footer">
-                                            
+
                                             <button type="button" class="btn btn-primary" id="createRoom">CREATE</button>
                                         </div>
                                     </div>
@@ -627,23 +634,23 @@
               <a href="#live-chat-visible" onclick="livechat()">
                 <i class="fa fa-commenting"></i>
               </a>
-          </div>      
+          </div>
           <div class="d-flex justify-content-end fixed-bottom live-chat-form" id="visible" style="left: 926px; bottom: 20px; height: 230px;">
             <form action="" style="width: 306px;">
-              <div class="form-group">            
+              <div class="form-group">
                 <input type="text" name="" class="form-control" placeholder="Email address">
               </div>
               <div class="form-group">
                 <textarea class="form-control" name="" id="" rows="3" placeholder="How can we help you?"></textarea>
-              </div>  
+              </div>
               <div class="live-chat-button">
                 <a href="index(logged_in).html" class="btn btn-primary">Send</a>
                 <a href="index(logged_in).html" class="btn btn secondary">Close</a>
-              </div>          
+              </div>
             </form>
           </div>
         </div>
-        
+
         <!-- FOOTER -->
         <footer class="container">
           <p class="float-right"><a href="#">Back to top</a></p>
@@ -666,9 +673,9 @@
           <!--self modify scripts-->
           <script src="scripts/scripts.js"></script>
           <script type="text/javascript" src="scripts/tooltip.js"></script>
-          <!--API map-->
+          <!--API map
           <script src="scripts/mapscripts.js"></script>
-          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbOShWjpquyii-cNH0euq2d-WCG676718&libraries=places&callback=initAutocomplete" async defer></script>
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbOShWjpquyii-cNH0euq2d-WCG676718&libraries=places&callback=initAutocomplete" async defer></script>-->
 
         </body>
       </html>
