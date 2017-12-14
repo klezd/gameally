@@ -505,3 +505,23 @@ header a {
   top: 76px;
 
 }
+
+#people,
+#team,
+#event {
+    margin: auto;
+    border-bottom: 1px solid #e9ecef;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#team,
+#event {
+    border-top: 1px solid #e9ecef;
+}
+
+#people-field,
+#team-field,
+#event-field {
+    margin-top: 20px;
+}
