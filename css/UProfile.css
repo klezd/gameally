@@ -229,10 +229,7 @@ a.editButton:hover {
 
 /*edit profile page*/
 .avatar {
-  padding: 5px;
-  margin: auto;
   width: auto;
-
 }
 
 .avatar img{
@@ -241,19 +238,55 @@ a.editButton:hover {
   border: #d9d9d9 solid 1px;
   box-shadow: 1px 1px 1px #d9d9d9;
 }
-
+/*.avatarImg {
+  width: 180px;
+  height: 180px;
+  margin: auto;
+  padding: 5px;
+}*/
 .changePic {
   background: #EEEEEE;
   color: black;
   font-weight: 400;
-  display: block;
+  display: none;
   width: 170px;
+  top: 0;
+  margin: auto;
+  z-index: 10;
   word-wrap: break-word;
+  position: absolute;
+  height: 170px;
+  transition: 1s ease-in-out;
+}
+.blank {
+  width: 170px;
+  position: absolute;
+  top: 0;
+  height: calc(170px - 50px);
+  z-index: inherit;
+}
+.text {
+  width: 170px;
+  height: 50px;
   padding: 4px;
-
+  position: absolute;
+  z-index: inherit;
+  top: 120px;
 }
 .changePic a {
   color: black;
+}
+.avatar:hover .changePic {
+  display: block;
+  opacity: 0.8!important;
+  transform: translate(0,0px);
+}
+.avatar:hover .text {
+  opacity: 1!important;
+}
+.avatar:hover .text > a {
+  opacity: 1;
+  font-weight: bold;
 }
 
 .infoformRow input:not([type="range"]), .infoformRow select:not(:disabled), .map input {
