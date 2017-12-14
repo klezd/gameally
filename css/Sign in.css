@@ -8,7 +8,7 @@ input.form-control {
   border-left: 0;
   border-right: 0;
   background-color: transparent;
-  width: 35vh;
+  width: 100%;
 }
 
 .remember-me, .signin-btn, .signup-btn {

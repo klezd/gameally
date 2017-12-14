@@ -87,8 +87,8 @@
 
               <div class="dropdown-menu" aria-labelledby="dropdown01">
 
-                  <a class="dropdown-item" href="edit_user_profile.html" title="Edit My Profile">Edit My Profile</a>
-                  <a class="dropdown-item" href="Team-profile.html" title="My Team's Profile">Your Team</a>
+                  <a class="dropdown-item" href="user_profile.html" title="My Profile">Profile</a>
+                  <a class="dropdown-item" href="Team-profile.html" title="My Team's Profile">My Team</a>
                   <a class="dropdown-item" title="Sign Out" href="index(not_login).html">Sign Out</a>
 
               </div>
@@ -103,13 +103,34 @@
             </li>
 
             <li class="nav-item">
+              <a class="nav-link" href="Team-information.html" title="List all teams">Teams</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="list event.html" title="List all events">Events</a>
+            </li>
+
+            <li class="nav-item">
               <a class="nav-link" href="contact us.html" title="Contact us">Contact us</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" title="Search" onclick="show_search()">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </a>
             </li>
           </ul>
 
             </div>
       </nav>
     </header>
+    <!--Search part-->
+    <div id="search" class="hide-search">
+      <a data-toggle="modal" href="#Search-modal" class="btn search-btn">
+        <span class="fa fa-search" aria-hidden="true"></span>
+      </a>
+      <input class="search-area" type="text" class="form-control">
+    </div>
 
       <!--Match game MODAL -->
       <div class="modal fade matchgame" id="match-game">
@@ -673,6 +694,7 @@
           <!--self modify scripts-->
           <script src="scripts/scripts.js"></script>
           <script type="text/javascript" src="scripts/tooltip.js"></script>
+          <script type="text/javascript" src="scripts/search.js"></script>
           <!--API map
           <script src="scripts/mapscripts.js"></script>
           <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbOShWjpquyii-cNH0euq2d-WCG676718&libraries=places&callback=initAutocomplete" async defer></script>-->

@@ -17,13 +17,13 @@
   justify-content: space-between;
 }
 
-input.form-control {
+#Sign-in input.form-control, #Sign-up input.form-control {
   margin-bottom: 16px;
   border-top: 0;
   border-left: 0;
   border-right: 0;
   background-color: transparent;
-  width: 35vh;
+  width: 375px;
 }
 
 .remember-me, .signin-btn, .signup-btn {
@@ -238,10 +238,6 @@ p {
   text-align: left;
   vertical-align: middle;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.modal-content {
-  width: 375px;
 }
 
 .matchgame .modal-content {
@@ -468,6 +464,37 @@ p {
   margin-left: 0;
   margin-top: 10px;
 }
-.map01, .map02 {
+
+header a {
+  cursor: pointer;
+}
+
+#search {
+  position: absolute;
+  right: 0;
+  width: 25%;
+  z-index: 2;
+  vertical-align: middle;
+  transition: all 300ms ease;
+}
+
+#search a.search-btn {
+  position: absolute;
+  float: right;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#search input {
   width: 100%;
+  padding: 6px 12px;
+}
+
+.hide-search {
+  top: 0;
+}
+
+.show-search {
+  top: 76px;
+
 }
