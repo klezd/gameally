@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" style="text/css" href="css/list event.css">
     <link rel="stylesheet" style="text/css" href="css/common-ele.css">
-    <link rel="stylesheet" style="text/css" href="css/map.css">
+  <!--  <link rel="stylesheet" style="text/css" href="css/map.css">-->
     <link href="css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" style="text/css" href="css/menubar.css">
@@ -22,7 +22,7 @@
     <!--Header-->
     <header>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a href="index(logged_in)" title="Home"><img src="logo/logo.png" alt="GameAlly" class="logo"></a>
+        <a href="index(logged_in).html" title="Home"><img src="logo/logo.png" alt="GameAlly" class="logo"></a>
 
         <!-- Toggle icon when in mobile view -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,7 +42,7 @@
 
                   <a class="dropdown-item" href="edit_user_profile.html" title="Edit My Profile">Edit My Profile</a>
                   <a class="dropdown-item" href="Team-profile.html" title="My Team's Profile">Your Team</a>
-                  <a class="dropdown-item" title="Sign Out" href="#">Sign Out</a>
+                  <a class="dropdown-item" title="Sign Out" href="index(not_login).html">Sign Out</a>
 
               </div>
             </li>
@@ -111,10 +111,13 @@
                   </div>
                 </div>
                 <div class="row location-choice">
-                  <label style="margin-top: 10px;">Choose Your Location</label>
-                  <input type="text" name="location" class="searchbox" id="locationforFind" placeholder="Search...">
+                  <label>Choose Your Location</label>
+                  <div class="choose-area">
+                    <input type="text" name="location" placeholder="Search...">
+                  </div>
                   <!-- map -->
                   <div class="map01" id="map01">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13484.991704512933!2d25.5045982!3d65.008653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4681cd515af7bef9%3A0x38280dd8d86dca6f!2sOuluhalli!5e0!3m2!1sen!2sfi!4v1512999973309" width=100% height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
                   </div>
                 </div>
                 <div class="applyButtons">
@@ -147,11 +150,15 @@
                     </div>
                   </div>
                 </div>
-                <div class="row location-choice">
-                  <label style="margin-top: 10px;">Choose Your Location</label>
-                  <input type="text" name="location" class="searchbox" id="locationforCreate" placeholder="Search...">
+                <div class="location-choice">
+                  <label>Choose Your Location</label>
+                  <div class="choose-area">
+                    <input type="text" name="location" placeholder="Search...">
+                  </div>
+
                   <!-- map -->
                   <div class="map02" id="map02">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13484.991704512933!2d25.5045982!3d65.008653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4681cd515af7bef9%3A0x38280dd8d86dca6f!2sOuluhalli!5e0!3m2!1sen!2sfi!4v1512999973309" width="400" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
                   </div>
                 </div>
                 <div class="match-info">
@@ -189,7 +196,7 @@
                   </div>
                 </div>
                 <div class="applyButtons">
-                  <a href="#">Create Your Match</a>
+                  <a href="create-match-sucessful.html">Create Your Match</a>
                 </div>
               </div>
             </div>
@@ -244,7 +251,9 @@
                 </div>
               </div>
             </div>
-            <div id="map03" style="width:100%;height:300px"></div>
+            <div id="map03" style="width:100%;height:300px">
+
+            </div>
           </div>
           <div class="modal-footer">
 
@@ -254,10 +263,10 @@
     </div>
 
     <!--List event part-->
-    <div class="events">
+    <div id='listevnt' class="events">
       <!--Navigation tabs-->
       <div class="container-fluid background-evnt back2">
-        <div class="container">
+        <div class="list container">
           <ul class="nav nav-tabs" role="tablist">
             <li class="nav-item">
               <a class="nav-link active" data-toggle="tab" href="#com-evnt">Comunity events</a>
@@ -494,8 +503,8 @@
         });
       });
     </script>
-
+    <!--
     <script src="scripts/mapscripts.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbOShWjpquyii-cNH0euq2d-WCG676718&libraries=places&callback=initAutocomplete" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbOShWjpquyii-cNH0euq2d-WCG676718&libraries=places&callback=initAutocomplete" async defer></script>-->
   </body>
 </html>

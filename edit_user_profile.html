@@ -12,10 +12,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--self modify css-->
     <link href="css/index.css" rel="stylesheet">
-    <link rel="stylesheet" style="text/css" href="css/menubar.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/UProfile.css">
-    <link rel="stylesheet" href="css/map.css">
+    <link rel="stylesheet" href="css/menubar.css">
+
+    <!--map with API<link rel="stylesheet" href="css/map.css">-->
 
   </head>
   <body >
@@ -40,7 +41,7 @@
 
                   <a class="dropdown-item active" href="edit_user_profile.html" title="Edit My Profile">Edit My Profile</a>
                   <a class="dropdown-item" href="Team-profile.html" title="My Team's Profile">Your Team</a>
-                  <a class="dropdown-item" title="Sign Out" href="#">Sign Out</a>
+                  <a class="dropdown-item" title="Sign Out" href="index(not_login).html">Sign Out</a>
 
               </div>
             </li>
@@ -110,14 +111,17 @@
                   </div>
                 </div>
                 <div class="row location-choice">
-                  <label style="margin-top: 10px;">Choose Your Location</label>
-                  <input type="text" name="location" class="searchbox" id="locationforFind" placeholder="Search...">
+                  <label>Choose Your Location</label>
+                  <div class="choose-area">
+                    <input type="text" name="location" placeholder="Search...">
+                  </div>
                   <!-- map -->
                   <div class="map01" id="map01">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13484.991704512933!2d25.5045982!3d65.008653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4681cd515af7bef9%3A0x38280dd8d86dca6f!2sOuluhalli!5e0!3m2!1sen!2sfi!4v1512999973309" width=100% height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
                   </div>
                 </div>
                 <div class="applyButtons">
-                  <a href="#">Find Your Match</a>
+                  <a href="">Find Your Match</a>
                 </div>
 
               </div>
@@ -146,11 +150,15 @@
                     </div>
                   </div>
                 </div>
-                <div class="row location-choice">
-                  <label style="margin-top: 10px;">Choose Your Location</label>
-                  <input type="text" name="location" class="searchbox" id="locationforCreate" placeholder="Search...">
+                <div class="location-choice">
+                  <label>Choose Your Location</label>
+                  <div class="choose-area">
+                    <input type="text" name="location" placeholder="Search...">
+                  </div>
+
                   <!-- map -->
                   <div class="map02" id="map02">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13484.991704512933!2d25.5045982!3d65.008653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4681cd515af7bef9%3A0x38280dd8d86dca6f!2sOuluhalli!5e0!3m2!1sen!2sfi!4v1512999973309" width="400" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
                   </div>
                 </div>
                 <div class="match-info">
@@ -188,7 +196,7 @@
                   </div>
                 </div>
                 <div class="applyButtons">
-                  <a href="#">Create Your Match</a>
+                  <a href="create-match-sucessful.html">Create Your Match</a>
                 </div>
               </div>
             </div>
@@ -204,39 +212,46 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-3">
-
-            <div class="avatar">
+          <div class="avatar">
+            <div class="avatarImg">
               <img src="images/avatar icon.png" alt="" id="profilePic">
-              <div class="changePic">
+            </div>
+            <div class="changePic">
+              <div class="blank">
+
+              </div>
+              <div class="text" style="width: 160px; margin: auto; height: 50px;">
                 <a href="#" data-toggle="modal" data-target="#changePic"><i class="fa fa-camera"></i> Change your profile picture</a>
               </div>
             </div>
-            <!--change pic modal-->
-            <div class="modal fade" id="changePic">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    Change profile picture
+          </div>
+        </div>
+        <!--change pic modal-->
+        <div class="modal fade" id="changePic">
+          <div class="modal-dialog">
+            <div class="modal-content" style="width:100%!important">
+              <div class="modal-header">
+                Change profile picture
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-6">
+                    <img src="images/avatar icon.png" alt="" width="150px" >
                   </div>
-                  <div class="modal-body">
-                    <div class="row">
-                      <div class="col-6">
-                        <img src="images/avatar icon.png" alt="" width="150px" >
-                      </div>
-                      <div class="col-6">
-                        <label>Select profile picture</label>
-                        <input type="file" name="profilePicture" style="border-radius: 5px; padding: 5px; width: 100%">
-                        <a href="#" class="editButton" style="width:100%; margin-top:20px">Submit</a>
-                      </div>
-                    </div>
+                  <div class="col-6">
+                    <label>Select profile picture</label>
+                    <input type="file" name="profilePicture" style="border-radius: 5px; padding: 5px; width: 100%">
+                    <a href="edit_user_profile.html" class="editButton" style="width:100%; margin-top:20px">Submit</a>
                   </div>
-                  <div class="modal-footer">
-                  </div>
-
                 </div>
               </div>
+              <div class="modal-footer">
+              </div>
+
             </div>
+          </div>
         </div>
+
         <div class="col-sm-6 " style="border-left: 1px solid #9E9E9E; border-right: 1px solid #9E9E9E; padding: 0 5px 10px 0; border-radius:5px">
           <div class="row infoformRow">
             <label class="infoformLabel col-3">Name</label>
@@ -280,9 +295,10 @@
                 </div>
                 <div class="modal-body">
 
-                  <input id="pac-input" class="controls pac-input searchbox" type="text" placeholder="Search Box">
+                  <input id="pac-input" class="searchbox" type="text" placeholder="Search Box">
 
-                  <div class="" id="map" >
+                  <div style="width:auto;margin:auto" id="map" >
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6742.801996852199!2d25.4411711427395!3d65.0074403597741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468032bbeb318e5f%3A0x4e31f987c33f6647!2sHollihaka%2C+90120+Oulu!5e0!3m2!1sen!2sfi!4v1513004632434" width="350" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
                   </div>
                 </div>
                 <div class="modal-footer">
@@ -385,9 +401,9 @@
 
     <script src="scripts/scripts.js"></script>
     <script type="text/javascript" src="scripts/tooltip.js"></script>
-    <!--API map-->
+    <!--API map
     <script src="scripts/mapscripts_for-edit-page-only.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbOShWjpquyii-cNH0euq2d-WCG676718&libraries=places&callback=initAutocomplete01" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbOShWjpquyii-cNH0euq2d-WCG676718&libraries=places&callback=initAutocomplete01" async defer></script>-->
 
 
   </body>
