@@ -470,6 +470,7 @@ header a {
 }
 
 #search {
+  background-color: white;
   position: absolute;
   right: 0;
   width: 25%;
@@ -479,15 +480,21 @@ header a {
 }
 
 #search a.search-btn {
-  position: absolute;
+  line-height: 40px;
+  border: none;
+  position: relative;
   float: right;
   background-color: transparent;
   cursor: pointer;
+  padding: 0;
+  margin-right: 12px;
 }
 
 #search input {
-  width: 100%;
+  border: none;
+  vertical-align: middle;
   padding: 6px 12px;
+  width: calc(100% - 41px);
 }
 
 .hide-search {
