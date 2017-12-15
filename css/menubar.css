@@ -17,7 +17,7 @@
   justify-content: space-between;
 }
 
-#Sign-in input.form-control, #Sign-up input.form-control {
+#Sign-in input.form-control, #Sign-up input.form-control, #Forgot-password input.form-control {
   margin-bottom: 16px;
   border-top: 0;
   border-left: 0;
@@ -470,6 +470,7 @@ header a {
 }
 
 #search {
+  border: 1px solid #e9ecef;
   background-color: white;
   position: absolute;
   right: 0;
