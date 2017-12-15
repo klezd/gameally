@@ -24,196 +24,196 @@
 <body onload="myFunction()" style="margin:0;">
 	<!-- Navigation bars  -->
 	<!-- Navigation bars -->
-			<!-- Navigation bars-->
+	<!--Header part-->
 	<header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a href="index(logged_in)" title="Home"><img src="logo/logo.png" alt="GameAlly" class="logo"></a>
+			<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+					<a href="index(logged_in).html" title="Home"><img src="logo/logo.png" alt="GameAlly" class="logo"></a>
+					<!-- Toggle icon when in mobile view -->
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarCollapse">
+							<ul class="navbar-nav ml-auto">
+									<li class="nav-item dropdown">
+											<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<span style="font-size:25">Welcome ABC!</span>
+							<img src="images/avatar icon.png" width="30" height="30" style="padding: auto" id="userInfoIcon"></a>
+											<div class="dropdown-menu" aria-labelledby="dropdown01">
+													<a class="dropdown-item" href="user_profile.html" title="My Profile">Profile</a>
+													<a class="dropdown-item" href="Team-profile.html" title="My Team's Profile">My Team</a>
+													<a class="dropdown-item" title="Sign Out" href="index(not_login).html">Sign Out</a>
+											</div>
+									</li>
+									<li class="nav-item">
+											<a class="nav-link" data-toggle="modal" data-target="#match-game">
+							<span data-toggle="tootltip" data-placement="bottom" title="Find a Match or Create a Match Yourself">
+								Match Game
+							</span>
+						</a>
+									</li>
+									<li class="nav-item">
+											<a class="nav-link" href="Team-information.html" title="List all teams">Teams</a>
+									</li>
+									<li class="nav-item">
+											<a class="nav-link" href="list event.html" title="List all events">Events</a>
+									</li>
+									<li class="nav-item">
+											<a class="nav-link" href="contact us.html" title="Contact us">Contact us</a>
+									</li>
+									<li class="nav-item">
+											<a class="nav-link" title="Search" onclick="show_search()">
+							<i class="fa fa-search" aria-hidden="true"></i>
+						</a>
+									</li>
+							</ul>
+					</div>
+			</nav>
+	</header>
+	<!--Search part-->
+	<div id="search" class="hide-search">
+			<a data-toggle="modal" href="#Search-modal" class="btn search-btn">
+			<span class="fa fa-search" aria-hidden="true"></span>
+		</a>
+			<input class="search-area" type="text" class="form-control" placeholder="Search...">
+	</div>
+	<!--Search modal-->
+	<div class="modal fade" id="Search-modal">
+				<div class="modal-dialog modal-lg">
+							<div class="modal-content">
 
-        <!-- Toggle icon when in mobile view -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
+								<!-- Modal Header -->
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Search Result</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+							</div>
 
-        <div class="collapse navbar-collapse" id="navbarCollapse">
+						<!-- Modal body -->
+								<div class="modal-body">
+									<!--Tab filter-->
+							<ul class="nav nav-tabs" id="myTab" role="tablist">
+								<li class="nav-item">
+									<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">All</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">People</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Team</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Event</a>
+								</li>
+							</ul>
 
-          <ul class="navbar-nav ml-auto">
+							<!-- Search content -->
+							<div class="tab-content" id="myTabContent" style="margin: 10px;">
+								<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+									<div class="search-content">
+										<!--People -->
+												<div class="people">
+													<p id="people" style="margin: 10px;"><strong>PEOPLE</strong></p>
+													<div class="row">
+														<div class="col-sm-2">
+															<img src="images/avatar icon.png" class="image-search" width="100%">
+														</div>
+														<div class="col-sm-10 align-self-center">
+															<a href="#"><strong>Joey</strong></a>
+															<p>29 years old.</p>
+															<p>Football, Volleyball.</p>
+														</div>
+													</div>
+												</div>
 
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span style="font-size:25">Welcome ABC!</span>
-                <img src="images/avatar icon.png" width="30" height="30" style="padding: auto" id="userInfoIcon"></a>
+												<!--Team -->
+												<div class="team">
+													<p id="team" style="margin: 10px;"><strong>TEAM</strong></p>
+													<div class="row">
+														<div class="col-sm-2">
+															<img src="images/kraken.jpg" class="image-search" width="100%">
+														</div>
+														<div class="col-sm-6 align-self-center">
+															<a href="#"><strong>The Kraken Team</strong></a>
+															<p>Football, Hockey</p>
+														</div>
+														<div class="col-sm-4 align-self-center">
+															<button class="btn btn-primary">More info</button>
+														</div>
+													</div>
+												</div>
 
-              <div class="dropdown-menu" aria-labelledby="dropdown01">
+												<!--Event -->
+												<div class="event">
+													<p id="event" style="margin: 10px;"><strong>EVENT</strong></p>
+													<div class="row">
+														<div class="col-sm-2">
+															<img src="http://content.sportslogos.net/logos/9/1947/full/vwogl7uztun1krysgezh4pn45.gif" class="image-search" width="100%">
+														</div>
+														<div class="col-sm-6 align-self-center">
+															<a href="#"><strong>Olympic Europe</strong></a>
+															<p>Ouluhalli</p>
+															<p>Soccer</p>
+														</div>
+														<div class="col-sm-4 align-self-center">
+															<button class="btn btn-primary">More info</button>
+														</div>
+													</div>
+												</div>
+									</div>
+								</div>
 
-                  <a class="dropdown-item" href="edit_user_profile.html" title="Edit My Profile">Edit My Profile</a>
-                  <a class="dropdown-item" href="Team-profile.html" title="My Team's Profile">Your Team</a>
-                  <a class="dropdown-item" title="Sign Out" href="index(not_login).html">Sign Out</a>
+								<!-- People field-->
+								<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+									<div class="row" id="people-field">
+														<div class="col-sm-2">
+															<img src="images/avatar icon.png" class="image-search" width="100%">
+														</div>
+														<div class="col-sm-10">
+															<a href="#"><strong>Joey</strong></a>
+															<p>29 years old.</p>
+															<p>Soccer, Cricket</p>
+														</div>
+											</div>
+								</div>
 
-              </div>
-            </li>
+								<!-- Team field-->
+								<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+											<div class="row" id="team-field">
+												<div class="col-sm-2">
+															<img src="images/kraken.jpg" class="image-search" width="100%">
+														</div>
+														<div class="col-sm-10">
+															<a href="#"><strong>The Kraken Team</strong></a>
+															<p>Hockey, Volleyball</p>
+														</div>
+											</div>
+								</div>
 
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="modal" data-target="#match-game">
-                <span data-toggle="tootltip" data-placement="bottom" title="Find a Match or Create a Match Yourself">
-                  Match Game
-                </span>
-              </a>
-            </li>
+								<!-- Event field-->
+								<div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+												<div class="row" id="event-field">
+													<div class="col-sm-2">
+																<img src="http://content.sportslogos.net/logos/9/1947/full/vwogl7uztun1krysgezh4pn45.gif" class="image-search" width="100%">
+															</div>
+															<div class="col-sm-10">
+																<a href="#"><strong>Olympic Europe</strong></a>
+																<p>Ouluhalli</p>
+																<p>Football</p>
+															</div>
+												</div>
+								</div>
+							</div>
 
-            <li class="nav-item">
-              <a class="nav-link" href="contact us.html" title="Contact us">Contact us</a>
-            </li>
-          </ul>
+								</div>
 
-            </div>
-      </nav>
-    </header>
-
-      <!--Match game MODAL -->
-			<div class="modal fade matchgame" id="match-game">
-	      <div class="modal-dialog">
-	        <div class="modal-content">
-	          <div class="modal-header">
-	            MATCH GAME
-	          </div>
-	          <div class="modal-body">
-	            <div class="back2">
-	              <div class="container">
-	                <ul class="nav nav-tabs" role="tablist">
-	                  <li class="nav-item">
-	                    <a class="nav-link active" data-toggle="tab" href="#find-match">Find Match</a>
-	                  </li>
-	                  <li class="nav-item">
-	                    <a class="nav-link" data-toggle="tab" href="#create-match">Create Match</a>
-	                  </li>
-	                </ul>
-	              </div>
-	            </div>
-	              <!--tab-->
-	            <div class="tab-content">
-	              <!--find match-->
-	              <div id="find-match" class="container tab-pane active">
-	                <div class="row">
-	                  <label>Choose Your Sport</label>
-	                  <div class="sport-list">
-	                    <div class="sport-icon">
-	                      <img src="icon/baseball.png" alt="baseball">
-	                    </div>
-	                    <div class="sport-icon">
-	                      <img src="icon/football.png" alt="football">
-	                    </div>
-	                    <div class="sport-icon">
-	                      <img src="icon/icehockey.svg" alt="ichockey">
-	                    </div>
-	                    <div class="sport-icon">
-	                      <img src="icon/swimming.png" alt="swimming">
-	                    </div>
-	                    <div class="sport-icon">
-	                      <img src="icon/tennis.png" alt="tennis">
-	                    </div>
-	                    <div class="sport-icon">
-	                      <img src="icon/basketball.png" alt="basketball">
-	                    </div>
-	                  </div>
-	                </div>
-	                <div class="row location-choice">
-	                  <label>Choose Your Location</label>
-	                  <div class="choose-area">
-	                    <input type="text" name="location" placeholder="Search...">
-	                  </div>
-	                  <!-- map -->
-	                  <div class="map01" id="map01">
-	                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13484.991704512933!2d25.5045982!3d65.008653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4681cd515af7bef9%3A0x38280dd8d86dca6f!2sOuluhalli!5e0!3m2!1sen!2sfi!4v1512999973309" width=100% height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
-	                  </div>
-	                </div>
-	                <div class="applyButtons">
-	                  <a href="#">Find Your Match</a>
-	                </div>
-
-	              </div>
-	              <!--create match-->
-	              <div id="create-match" class="container tab-pane">
-	                <div class="row">
-	                  <label>Choose Your Sport</label>
-	                  <div class="sport-list">
-	                    <div class="sport-icon">
-	                      <img src="icon/baseball.png"  data-toggle="tooltip" title="baseball">
-	                    </div>
-	                    <div class="sport-icon">
-	                      <img src="icon/football.png"  data-toggle="tooltip" title="football">
-	                    </div>
-	                    <div class="sport-icon">
-	                      <img src="icon/icehockey.svg" data-toggle="tooltip" title="ichockey">
-	                    </div>
-	                    <div class="sport-icon">
-	                      <img src="icon/swimming.png" data-toggle="tooltip" title="swimming">
-	                    </div>
-	                    <div class="sport-icon">
-	                      <img src="icon/tennis.png" data-toggle="tooltip" title="tennis">
-	                    </div>
-	                    <div class="sport-icon">
-	                      <img src="icon/basketball.png" data-toggle="tooltip" title="basketball">
-	                    </div>
-	                  </div>
-	                </div>
-	                <div class="location-choice">
-	                  <label>Choose Your Location</label>
-	                  <div class="choose-area">
-	                    <input type="text" name="location" placeholder="Search...">
-	                  </div>
-
-	                  <!-- map -->
-	                  <div class="map02" id="map02">
-	                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13484.991704512933!2d25.5045982!3d65.008653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4681cd515af7bef9%3A0x38280dd8d86dca6f!2sOuluhalli!5e0!3m2!1sen!2sfi!4v1512999973309" width="400" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
-	                  </div>
-	                </div>
-	                <div class="match-info">
-	                  <div class="row">
-	                    <div class="col-6">
-	                      <label>Name Of Your Match</label>
-	                    </div>
-	                    <div class="col-6">
-	                      <input type="text"  data-toggle="tooltip" title="name of your match" value="">
-	                    </div>
-	                  </div>
-	                  <div class="row">
-	                    <div class="col-6">
-	                      <label>Date</label>
-	                    </div>
-	                    <div class="col-6">
-	                      <input type="date" data-toggle="tooltip" title="date of your match">
-	                    </div>
-	                  </div>
-	                  <div class="row">
-	                    <div class="col-6">
-	                      <label>Time</label>
-	                    </div>
-	                    <div class="col-6">
-	                      <input type="time" data-toggle="tooltip" title="time of your match">
-	                    </div>
-	                  </div>
-	                  <div class="row">
-	                    <div class="col-6">
-	                      <label>Number Of Players</label>
-	                    </div>
-	                    <div class="col-6">
-	                      <input type="number" data-toggle="tooltip" title="number of players needed" style="text-align: center" value="">
-	                    </div>
-	                  </div>
-	                </div>
-	                <div class="applyButtons">
-	                  <a href="create-match-sucessful.html">Create Your Match</a>
-	                </div>
-	              </div>
-	            </div>
-	          </div>
-	          <div class="modal-footer">
-	          </div>
-	        </div>
-	      </div>
-	    </div>
-
-      <!--  MODAL ends  -->
+						<!-- Modal footer-->
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondaryr" data-dismiss="modal">Close</button>
+						</div>
+							</div>
+				</div>
+			</div>
 
 	<!--Content page-->
 	<!--Loading successful-->
@@ -549,5 +549,6 @@ function myFunction() {
 		document.getElementById("myDiv").style.display = "block";
 		}
 </script>
+<script type="text/javascript" src="scripts/search.js"></script>
 </body>
 </html>
