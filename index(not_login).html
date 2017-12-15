@@ -1,554 +1,608 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <title>GameAlly</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="GameAlly">
     <meta name="author" content="GameAlly">
     <link rel="Shortcut Icon" href="logo/logo-icon.ico" type="image/x-icon">
-
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <!--self modify css and scripts-->
     <link href="css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" style="text/css" href="css/menubar.css">
-    <!--<link rel="stylesheet" href="css/map.css">-->
+    <link rel="stylesheet" type="text/css" href="css/live_support.css">
+</head>
 
-
-  </head>
-
-  <body>
+<body>
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a href="index(not_login).html" title="Home"><img src="logo/logo.png" alt="GameAlly" class="logo"></a>
-
-        <!-- Toggle icon when in mobile view -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a data-toggle="modal" data-target="#Sign-in" class="nav-link" title="Sign In">Sign In</a>
-            </li>
-            <li class="nav-item">
-              <a data-toggle="modal" data-target="#Sign-up" class="nav-link" title="Sign Up">Sign Up</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="modal" data-target="#match-game">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a href="index(not_login).html" title="Home"><img src="logo/logo.png" alt="GameAlly" class="logo"></a>
+            <!-- Toggle icon when in mobile view -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a data-toggle="modal" data-target="#Sign-in" class="nav-link" title="Sign In">Sign In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-toggle="modal" data-target="#Sign-up" class="nav-link" title="Sign Up">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="modal" data-target="#match-game">
                 <span data-toggle="tootltip" data-placement="bottom" title="Find a Match or Create a Match Yourself">
                   Match Game
                 </span>
               </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="Team-information.html" title="List all teams">Teams</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="list event.html" title="List all events">Events</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="contact us.html" title="Contact us">Contact us</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" title="Search" onclick="show_search()">
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Team-information.html" title="List all teams">Teams</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="list event.html" title="List all events">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact us.html" title="Contact us">Contact us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" title="Search" onclick="show_search()">
                 <i class="fa fa-search" aria-hidden="true"></i>
               </a>
-            </li>
-          </ul>
-      </nav>
+                    </li>
+                </ul>
+        </nav>
     </header>
-
     <!--Search part-->
     <div id="search" class="hide-search">
-      <a data-toggle="modal" href="#Search-modal" class="btn search-btn">
+        <a data-toggle="modal" href="#Search-modal" class="btn search-btn">
         <span class="fa fa-search" aria-hidden="true"></span>
       </a>
-      <input class="search-area" type="text" class="form-control" placeholder="Search...">
+        <input class="search-area" type="text" class="form-control" placeholder="Search...">
     </div>
-
     <!-- MODALS -->
     <!--Match game MODAL -->
     <div class="modal fade matchgame" id="match-game">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            MATCH GAME
-          </div>
-          <div class="modal-body">
-            <div class="back2">
-              <div class="container">
-                <ul class="nav nav-tabs" role="tablist">
-                  <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#find-match">Find Match</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#create-match">Create Match</a>
-                  </li>
-                </ul>
-              </div>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    MATCH GAME
+                </div>
+                <div class="modal-body">
+                    <div class="back2">
+                        <div class="container">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#find-match">Find Match</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#create-match">Create Match</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--tab-->
+                    <div class="tab-content">
+                        <!--find match-->
+                        <div id="find-match" class="container tab-pane active">
+                            <div class="row">
+                                <label>Choose Your Sport</label>
+                                <div class="sport-list">
+                                    <div class="sport-icon">
+                                        <img src="icon/baseball.png" alt="baseball">
+                                    </div>
+                                    <div class="sport-icon">
+                                        <img src="icon/football.png" alt="football">
+                                    </div>
+                                    <div class="sport-icon">
+                                        <img src="icon/icehockey.svg" alt="ichockey">
+                                    </div>
+                                    <div class="sport-icon">
+                                        <img src="icon/swimming.png" alt="swimming">
+                                    </div>
+                                    <div class="sport-icon">
+                                        <img src="icon/tennis.png" alt="tennis">
+                                    </div>
+                                    <div class="sport-icon">
+                                        <img src="icon/basketball.png" alt="basketball">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row location-choice">
+                                <label>Choose Your Location</label>
+                                <div class="choose-area">
+                                    <input type="text" name="location" placeholder="Search...">
+                                </div>
+                                <!-- map -->
+                                <div class="map01" id="map01">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13484.991704512933!2d25.5045982!3d65.008653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4681cd515af7bef9%3A0x38280dd8d86dca6f!2sOuluhalli!5e0!3m2!1sen!2sfi!4v1512999973309" width=100% height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="applyButtons">
+                                <a href="list event-personal.html">Find Your Match</a>
+                            </div>
+                        </div>
+                        <!--create match-->
+                        <div id="create-match" class="container tab-pane">
+                            <div class="row">
+                                <label>Choose Your Sport</label>
+                                <div class="sport-list">
+                                    <div class="sport-icon">
+                                        <img src="icon/baseball.png" data-toggle="tooltip" title="baseball">
+                                    </div>
+                                    <div class="sport-icon">
+                                        <img src="icon/football.png" data-toggle="tooltip" title="football">
+                                    </div>
+                                    <div class="sport-icon">
+                                        <img src="icon/icehockey.svg" data-toggle="tooltip" title="ichockey">
+                                    </div>
+                                    <div class="sport-icon">
+                                        <img src="icon/swimming.png" data-toggle="tooltip" title="swimming">
+                                    </div>
+                                    <div class="sport-icon">
+                                        <img src="icon/tennis.png" data-toggle="tooltip" title="tennis">
+                                    </div>
+                                    <div class="sport-icon">
+                                        <img src="icon/basketball.png" data-toggle="tooltip" title="basketball">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="location-choice">
+                                <label>Choose Your Location</label>
+                                <div class="choose-area">
+                                    <input type="text" name="location" placeholder="Search...">
+                                </div>
+                                <!-- map -->
+                                <div class="map02" id="map02">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13484.991704512933!2d25.5045982!3d65.008653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4681cd515af7bef9%3A0x38280dd8d86dca6f!2sOuluhalli!5e0!3m2!1sen!2sfi!4v1512999973309" width="400" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="match-info">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label>Name Of Your Match</label>
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="text" data-toggle="tooltip" title="name of your match" value="">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label>Date</label>
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="date" data-toggle="tooltip" title="date of your match">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label>Time</label>
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="time" data-toggle="tooltip" title="time of your match">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label>Number Of Players</label>
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="number" data-toggle="tooltip" title="number of players needed" style="text-align: center" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="applyButtons">
+                                <a href="create-match-sucessful.html">Create Your Match</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
             </div>
-              <!--tab-->
-            <div class="tab-content">
-              <!--find match-->
-              <div id="find-match" class="container tab-pane active">
-                <div class="row">
-                  <label>Choose Your Sport</label>
-                  <div class="sport-list">
-                    <div class="sport-icon">
-                      <img src="icon/baseball.png" alt="baseball">
-                    </div>
-                    <div class="sport-icon">
-                      <img src="icon/football.png" alt="football">
-                    </div>
-                    <div class="sport-icon">
-                      <img src="icon/icehockey.svg" alt="ichockey">
-                    </div>
-                    <div class="sport-icon">
-                      <img src="icon/swimming.png" alt="swimming">
-                    </div>
-                    <div class="sport-icon">
-                      <img src="icon/tennis.png" alt="tennis">
-                    </div>
-                    <div class="sport-icon">
-                      <img src="icon/basketball.png" alt="basketball">
-                    </div>
-                  </div>
-                </div>
-                <div class="row location-choice">
-                  <label>Choose Your Location</label>
-                  <div class="choose-area">
-                    <input type="text" name="location" placeholder="Search...">
-                  </div>
-                  <!-- map -->
-                  <div class="map01" id="map01">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13484.991704512933!2d25.5045982!3d65.008653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4681cd515af7bef9%3A0x38280dd8d86dca6f!2sOuluhalli!5e0!3m2!1sen!2sfi!4v1512999973309" width=100% height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
-                  </div>
-                </div>
-                <div class="applyButtons">
-                  <a href="list event-personal.html">Find Your Match</a>
-                </div>
-
-              </div>
-              <!--create match-->
-              <div id="create-match" class="container tab-pane">
-                <div class="row">
-                  <label>Choose Your Sport</label>
-                  <div class="sport-list">
-                    <div class="sport-icon">
-                      <img src="icon/baseball.png"  data-toggle="tooltip" title="baseball">
-                    </div>
-                    <div class="sport-icon">
-                      <img src="icon/football.png"  data-toggle="tooltip" title="football">
-                    </div>
-                    <div class="sport-icon">
-                      <img src="icon/icehockey.svg" data-toggle="tooltip" title="ichockey">
-                    </div>
-                    <div class="sport-icon">
-                      <img src="icon/swimming.png" data-toggle="tooltip" title="swimming">
-                    </div>
-                    <div class="sport-icon">
-                      <img src="icon/tennis.png" data-toggle="tooltip" title="tennis">
-                    </div>
-                    <div class="sport-icon">
-                      <img src="icon/basketball.png" data-toggle="tooltip" title="basketball">
-                    </div>
-                  </div>
-                </div>
-                <div class="location-choice">
-                  <label>Choose Your Location</label>
-                  <div class="choose-area">
-                    <input type="text" name="location" placeholder="Search...">
-                  </div>
-
-                  <!-- map -->
-                  <div class="map02" id="map02">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13484.991704512933!2d25.5045982!3d65.008653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4681cd515af7bef9%3A0x38280dd8d86dca6f!2sOuluhalli!5e0!3m2!1sen!2sfi!4v1512999973309" width="400" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
-                  </div>
-                </div>
-                <div class="match-info">
-                  <div class="row">
-                    <div class="col-6">
-                      <label>Name Of Your Match</label>
-                    </div>
-                    <div class="col-6">
-                      <input type="text"  data-toggle="tooltip" title="name of your match" value="">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-6">
-                      <label>Date</label>
-                    </div>
-                    <div class="col-6">
-                      <input type="date" data-toggle="tooltip" title="date of your match">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-6">
-                      <label>Time</label>
-                    </div>
-                    <div class="col-6">
-                      <input type="time" data-toggle="tooltip" title="time of your match">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-6">
-                      <label>Number Of Players</label>
-                    </div>
-                    <div class="col-6">
-                      <input type="number" data-toggle="tooltip" title="number of players needed" style="text-align: center" value="">
-                    </div>
-                  </div>
-                </div>
-                <div class="applyButtons">
-                  <a href="create-match-sucessful.html">Create Your Match</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-          </div>
         </div>
-      </div>
     </div>
-
     <!--Sign in modal-->
     <div class="modal fade" id="Sign-in">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            SIGN IN FORM
-          </div>
-          <div class="modal-body">
-            <div class="logo-part">
-              <img class="logoinModal" src="https://github.com/roxydao97/gameally/blob/master/logo/logo.png?raw=true" alt="">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    SIGN IN FORM
+                </div>
+                <div class="modal-body">
+                    <div class="logo-part">
+                        <img class="logoinModal" src="https://github.com/roxydao97/gameally/blob/master/logo/logo.png?raw=true" alt="">
+                    </div>
+                    <input class="form-control" type="text" name="usernam" placeholder="username">
+                    <input class="form-control" type="password" name="pass" placeholder="password">
+                    <div class="remember-me">
+                        <input type="checkbox" value=""> Remember me.</div>
+                    <div class="signin-btn"><a class="btn" href="index(logged_in).html" type="button" role="button">Sign in</a></div>
+                </div>
+                <div class="modal-footer">
+                    <a class="forgot-pass" href="#" data-dismiss="modal" data-toggle="modal" data-target="#Forgot-password">Forgot password?</a>
+                    <div class="">
+                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                    </div>
+                </div>
             </div>
-            <input class="form-control" type="text" name="usernam" placeholder="username">
-            <input class="form-control" type="password" name="pass" placeholder="password">
-            <div class="remember-me"><input type="checkbox" value=""> Remember me.</div>
-            <div class="signin-btn"><a class="btn" href="index(logged_in).html" type="button" role="button">Sign in</a></div>
-          </div>
-          <div class="modal-footer">
-            <a class="forgot-pass" href="#" data-dismiss="modal" data-toggle="modal" data-target="#Forgot-password">Forgot password?</a>
-            <div class="">
-              <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-              <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
     <!--Sign up modal-->
     <div class="modal fade" id="Sign-up">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            SIGN UP FORM
-          </div>
-          <div class="modal-body">
-            <div class="logo-part">
-              <img class="logoinModal" src="https://github.com/roxydao97/gameally/blob/master/logo/logo.png?raw=true" alt="">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    SIGN UP FORM
+                </div>
+                <div class="modal-body">
+                    <div class="logo-part">
+                        <img class="logoinModal" src="https://github.com/roxydao97/gameally/blob/master/logo/logo.png?raw=true" alt="">
+                    </div>
+                    <input class="form-control" type="text" name="usernam" placeholder="User name" data-toggle="tooltip" title="4-16 characters and not contain /\:*?<>|">
+                    <input class="form-control" type="text" name="usernam" placeholder="Email" data-toggle="tooltip" title="example@gmail.com">
+                    <input class="form-control" type="password" name="pass" placeholder="Password" data-toggle="tooltip" title="at least 8 characters include number and letter">
+                    <input class="form-control" type="password" name="pass" placeholder="Repeat password">
+                    <div class="signup-btn"><a class="btn" href="edit_user_profile.html" type="button" role=""="button">Sign up</a></div>
+                </div>
+                <div class="modal-footer">
+                    <div class="">
+                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                    </div>
+                </div>
             </div>
-            <input class="form-control" type="text" name="usernam" placeholder="User name" data-toggle="tooltip" title="4-16 characters and not contain /\:*?<>|">
-            <input class="form-control" type="text" name="usernam" placeholder="Email" data-toggle="tooltip" title="example@gmail.com">
-            <input class="form-control" type="password" name="pass" placeholder="Password" data-toggle="tooltip" title="at least 8 characters include number and letter">
-            <input class="form-control" type="password" name="pass" placeholder="Repeat password">
-            <div class="signup-btn"><a class="btn" href="edit_user_profile.html" type="button" role=""="button">Sign up</a></div>
-          </div>
-          <div class="modal-footer">
-            <div class="">
-              <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-              <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
     <!--Forgot password modal-->
     <div class="modal fade" id="Forgot-password">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            FORGOT PASSWORD
-          </div>
-          <div class="modal-body">
-            <div class="logo-part">
-              <img class="logoinModal" src="https://github.com/roxydao97/gameally/blob/master/logo/logo.png?raw=true" alt="">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    FORGOT PASSWORD
+                </div>
+                <div class="modal-body">
+                    <div class="logo-part">
+                        <img class="logoinModal" src="https://github.com/roxydao97/gameally/blob/master/logo/logo.png?raw=true" alt="">
+                    </div>
+                    <input class="form-control" type="text" name="usernam" placeholder="User name">
+                    <input class="form-control" type="text" name="usernam" placeholder="Email">
+                    <div class="signup-btn">
+                        <button id="verify-btn" class="btn" type="button" name="button" onclick="showmore()">Get verification link</button>
+                    </div>
+                    <div id="flip" class="notify-verification">
+                        <div class="notify">
+                            <p>The verification has been sent!</p>
+                            <p>Please check your email.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
             </div>
-            <input class="form-control" type="text" name="usernam" placeholder="User name">
-            <input class="form-control" type="text" name="usernam" placeholder="Email">
-            <div class="signup-btn"><button id="verify-btn" class="btn" type="button" name="button" onclick="showmore()">Get verification link</button></div>
-            <div id="flip" class="notify-verification">
-              <div class="notify">
-                <p>The verification has been sent!</p>
-                <p>Please check your email.</p>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-          </div>
         </div>
-      </div>
     </div>
-
     <!--Search modal-->
     <div class="modal fade" id="Search-modal">
-			    <div class="modal-dialog modal-lg">
-				      	<div class="modal-content">
-
-					        <!-- Modal Header -->
-						    <div class="modal-header">
-						    	<h5 class="modal-title" id="exampleModalLabel">Search Result</h5>
-						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						        	<span aria-hidden="true">&times;</span>
-						        </button>
-						    </div>
-
-							<!-- Modal body -->
-					        <div class="modal-body">
-					        	<!--Tab filter-->
-								<ul class="nav nav-tabs" id="myTab" role="tablist">
-								  <li class="nav-item">
-								    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">All</a>
-								  </li>
-								  <li class="nav-item">
-								    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">People</a>
-								  </li>
-								  <li class="nav-item">
-								    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Team</a>
-								  </li>
-								  <li class="nav-item">
-								    <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Event</a>
-								  </li>
-								</ul>
-
-								<!-- Search content -->
-								<div class="tab-content" id="myTabContent" style="margin: 10px;">
-									<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-										<div class="search-content">
-											<!--People -->
-								        	<div class="people">
-								        		<p id="people" style="margin: 10px;"><strong>PEOPLE</strong></p>
-								        		<div class="row">
-								        			<div class="col-sm-2">
-								        				<img src="images/avatar icon.png" class="image-search" width="100%">
-								        			</div>
-								        			<div class="col-sm-10 align-self-center">
-								        				<a href="#"><strong>Joey</strong></a>
-								        				<p>29 years old.</p>
-								        				<p>Football, Volleyball.</p>
-								        			</div>
-								        		</div>
-								        	</div>
-
-								        	<!--Team -->
-								        	<div class="team">
-								        		<p id="team" style="margin: 10px;"><strong>TEAM</strong></p>
-								        		<div class="row">
-								        			<div class="col-sm-2">
-								        				<img src="images/kraken.jpg" class="image-search" width="100%">
-								        			</div>
-								        			<div class="col-sm-6 align-self-center">
-								        				<a href="#"><strong>The Kraken Team</strong></a>
-								        				<p>Football, Hockey</p>
-								        			</div>
-								        			<div class="col-sm-4 align-self-center">
-								        				<button class="btn btn-primary">More info</button>
-								        			</div>
-								        		</div>
-								        	</div>
-
-								        	<!--Event -->
-								        	<div class="event">
-								        		<p id="event" style="margin: 10px;"><strong>EVENT</strong></p>
-								        		<div class="row">
-								        			<div class="col-sm-2">
-								        				<img src="http://content.sportslogos.net/logos/9/1947/full/vwogl7uztun1krysgezh4pn45.gif" class="image-search" width="100%">
-								        			</div>
-								        			<div class="col-sm-6 align-self-center">
-								        				<a href="#"><strong>Olympic Europe</strong></a>
-								        				<p>Ouluhalli</p>
-								        				<p>Soccer</p>
-								        			</div>
-								        			<div class="col-sm-4 align-self-center">
-								        				<button class="btn btn-primary">More info</button>
-								        			</div>
-								        		</div>
-								        	</div>
-										</div>
-									</div>
-
-									<!-- People field-->
-									<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-										<div class="row" id="people-field">
-								        			<div class="col-sm-2">
-								        				<img src="images/avatar icon.png" class="image-search" width="100%">
-								        			</div>
-								        			<div class="col-sm-10">
-								        				<a href="#"><strong>Joey</strong></a>
-								        				<p>29 years old.</p>
-								        				<p>Soccer, Cricket</p>
-								        			</div>
-								        </div>
-									</div>
-
-									<!-- Team field-->
-									<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-												<div class="row" id="team-field">
-													<div class="col-sm-2">
-								        				<img src="images/kraken.jpg" class="image-search" width="100%">
-								        			</div>
-								        			<div class="col-sm-10">
-								        				<a href="#"><strong>The Kraken Team</strong></a>
-								        				<p>Hockey, Volleyball</p>
-								        			</div>
-												</div>
-									</div>
-
-									<!-- Event field-->
-									<div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">
-													<div class="row" id="event-field">
-														<div class="col-sm-2">
-									        				<img src="http://content.sportslogos.net/logos/9/1947/full/vwogl7uztun1krysgezh4pn45.gif" class="image-search" width="100%">
-									        			</div>
-									        			<div class="col-sm-10">
-									        				<a href="#"><strong>Olympic Europe</strong></a>
-                                  <p>Ouluhalli</p>
-									        				<p>Football</p>
-									        			</div>
-													</div>
-									</div>
-								</div>
-
-					        </div>
-
-							<!-- Modal footer-->
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondaryr" data-dismiss="modal">Close</button>
-							</div>
-				      	</div>
-			    </div>
-		  	</div>
-
-    <main role="main">
-      <!-- Carousel starts -->
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="first-slide" src="images/items.jpg" alt="Hockey">
-            <div class="container">
-              <div class="carousel-caption text-left">
-                <h1>Events happening now.</h1>
-                <p><a class="btn btn-lg btn-primary" href="list event.html" role="button">Browse all events</a></p>
-              </div>
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Search Result</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <!--Tab filter-->
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">All</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">People</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Event</a>
+                        </li>
+                    </ul>
+                    <!-- Search content -->
+                    <div class="tab-content" id="myTabContent" style="margin: 10px;">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="search-content">
+                                <!--People -->
+                                <div class="people">
+                                    <p id="people" style="margin: 10px;"><strong>PEOPLE</strong></p>
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <img src="images/avatar icon.png" class="image-search" width="100%">
+                                        </div>
+                                        <div class="col-sm-10 align-self-center">
+                                            <a href="#"><strong>Joey</strong></a>
+                                            <p>29 years old.</p>
+                                            <p>Football, Volleyball.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Team -->
+                                <div class="team">
+                                    <p id="team" style="margin: 10px;"><strong>TEAM</strong></p>
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <img src="images/kraken.jpg" class="image-search" width="100%">
+                                        </div>
+                                        <div class="col-sm-6 align-self-center">
+                                            <a href="#"><strong>The Kraken Team</strong></a>
+                                            <p>Football, Hockey</p>
+                                        </div>
+                                        <div class="col-sm-4 align-self-center">
+                                            <button class="btn btn-primary">More info</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Event -->
+                                <div class="event">
+                                    <p id="event" style="margin: 10px;"><strong>EVENT</strong></p>
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <img src="http://content.sportslogos.net/logos/9/1947/full/vwogl7uztun1krysgezh4pn45.gif" class="image-search" width="100%">
+                                        </div>
+                                        <div class="col-sm-6 align-self-center">
+                                            <a href="#"><strong>Olympic Europe</strong></a>
+                                            <p>Ouluhalli</p>
+                                            <p>Soccer</p>
+                                        </div>
+                                        <div class="col-sm-4 align-self-center">
+                                            <button class="btn btn-primary">More info</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- People field-->
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="row" id="people-field">
+                                <div class="col-sm-2">
+                                    <img src="images/avatar icon.png" class="image-search" width="100%">
+                                </div>
+                                <div class="col-sm-10">
+                                    <a href="#"><strong>Joey</strong></a>
+                                    <p>29 years old.</p>
+                                    <p>Soccer, Cricket</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Team field-->
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                            <div class="row" id="team-field">
+                                <div class="col-sm-2">
+                                    <img src="images/kraken.jpg" class="image-search" width="100%">
+                                </div>
+                                <div class="col-sm-10">
+                                    <a href="#"><strong>The Kraken Team</strong></a>
+                                    <p>Hockey, Volleyball</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Event field-->
+                        <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                            <div class="row" id="event-field">
+                                <div class="col-sm-2">
+                                    <img src="http://content.sportslogos.net/logos/9/1947/full/vwogl7uztun1krysgezh4pn45.gif" class="image-search" width="100%">
+                                </div>
+                                <div class="col-sm-10">
+                                    <a href="#"><strong>Olympic Europe</strong></a>
+                                    <p>Ouluhalli</p>
+                                    <p>Football</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal footer-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondaryr" data-dismiss="modal">Close</button>
+                </div>
             </div>
-          </div>
-          <div class="carousel-item">
-            <img class="second-slide" src="images/sports-cancun.jpg" alt="Soccer">
-            <div class="container">
-              <div class="carousel-caption">
-                <h1>Events happening now.</h1>
-                <p><a class="btn btn-lg btn-primary" href="list event.html" role="button">Browse all events</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="third-slide" src="images/OS1st-Sports.jpg" alt="Volleyball">
-            <div class="container">
-              <div class="carousel-caption text-right">
-                <h1>Events happening now.</h1>
-                <p><a class="btn btn-lg btn-primary" href="list event.html" role="button">Browse all events</a></p>
-              </div>
-            </div>
-          </div>
         </div>
-        <!-- Left and right carousel controls -->
-        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+    </div>
+    <main role="main">
+        <!-- Carousel starts -->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="first-slide" src="images/items.jpg" alt="Sports_items">
+                    <div class="container">
+                        <div class="carousel-caption text-left transbox">
+                            <h1>Events happening now.</h1>
+                            <p><a class="btn btn-lg btn-primary" href="list event.html" role="button">Browse all events</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="second-slide" src="images/sports-cancun.jpg" alt="Sports">
+                    <div class="container">
+                        <div class="carousel-caption transbox">
+                            <h1>Events happening now.</h1>
+                            <p><a class="btn btn-lg btn-primary" href="list event.html" role="button">Browse all events</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="third-slide" src="images/fit.jpg" alt="Soccer">
+                    <div class="container">
+                        <div class="carousel-caption text-left transbox">
+                            <h1>Events happening now.</h1>
+                            <p><a class="btn btn-lg btn-primary" href="list event.html" role="button">Browse all events</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="fourth-slide" src="images/basket.jpg" alt="Basketball">
+                    <div class="container">
+                        <div class="carousel-caption transbox">
+                            <h1>Events happening now.</h1>
+                            <p><a class="btn btn-lg btn-primary" href="list event.html" role="button">Browse all events</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="fifth-slide" src="images/bike.jpeg" alt="Biking">
+                    <div class="container">
+                        <div class="carousel-caption text-left transbox">
+                            <h1>Events happening now.</h1>
+                            <p><a class="btn btn-lg btn-primary" href="list event.html" role="button">Browse all events</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Left and right carousel controls -->
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
-      </div>
-      <!-- Features
+        </div>
+        <!-- Features
       ================================================== -->
-      <!-- Wrap the rest of the page in another container to center all the content. -->
-      <div class="container">
-        <!-- START THE FEATURES -->
-        <hr class="featurette-divider">
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">Our features <br></h2>
-            <p class="lead">Sign up and...<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-          </div>
-          <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" src="images/sports-textile.png" alt="Feature 1">
-          </div>
+        <!-- Wrap the rest of the page in another container to center all the content. -->
+        <div class="container">
+            <!-- START THE FEATURES -->
+            <hr class="featurette-divider">
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Connect to people through sports</h2>
+                    <p class="lead">Find a new friend who's just as enthusiastic as you to work out together!</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="featurette-image img-fluid mx-auto" src="images/sports-textile.png" alt="Feature 1">
+                </div>
+            </div>
+            <hr class="featurette-divider">
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading">Create a team</h2>
+                    <p class="lead">Assemble your own dream team with your friends or people you have met through our website and show off the cool trophies you've gathered!</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img class="featurette-image img-fluid mx-auto" src="images/volleyball.jpg" alt="Feature 2">
+                </div>
+            </div>
+            <hr class="featurette-divider">
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Network!</h2>
+                    <p class="lead">Chat with your teammates, as well as other players or teams who share the same interests.</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="featurette-image img-fluid mx-auto" src="images/hockey.jpg" alt="Feature 3">
+                </div>
+            </div>
+            <hr class="featurette-divider">
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading">
+Find a match to play</h2>
+                    <p class="lead">Search for local sports events in your area by sports type, location or a venue</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img class="featurette-image img-fluid mx-auto" src="images/soccer.jpg" alt="Feature 4">
+                </div>
+            </div>
+            <hr class="featurette-divider">
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Create you own matches</h2>
+                    <p class="lead">If you haven't found any event that caught your eye, create your own one and invite people to join!</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="featurette-image img-fluid mx-auto" src="images/rugby.jpg" alt="Feature 5">
+                </div>
+            </div>
+            <hr class="featurette-divider">
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading">Quick find</h2>
+                    <p class="lead">Using keywords quickly find an event, a team or a person that interests you</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img class="featurette-image img-fluid mx-auto" src="images/3960271727_fc9f08d739.jpg" alt="Feature 6">
+                </div>
+            </div>
+            <hr class="featurette-divider">
+            <!-- /END THE FEATURETTES -->
         </div>
-        <hr class="featurette-divider">
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">And some more...</h2>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-          </div>
-          <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" src="images/volleyball.jpg" alt="Feature 2">
-          </div>
+        <!-- /.container -->
+        <!-- Live Support -->
+        <div class="live-chat">
+            <div class="d-flex justify-content-end fixed-bottom">
+                <a href="#live-chat-visible" onclick="livechat()">
+                <i class="fa fa-commenting"></i>
+              </a>
+            </div>
+            <div class="d-flex justify-content-end fixed-bottom live-chat-form" id="visible" style="left: 926px; bottom: 20px; height: 230px;">
+                <form action="" style="width: 306px;">
+                    <div class="form-group">
+                        <input type="text" name="" class="form-control" placeholder="Email address">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="" id="" rows="3" placeholder="How can we help you?"></textarea>
+                    </div>
+                    <div class="live-chat-button">
+                        <a href="index(not_login).html" class="btn btn-primary">Send</a>
+                        <a href="index(not_login).html" class="btn btn secondary">Close</a>
+                    </div>
+                </form>
+            </div>
         </div>
-        <hr class="featurette-divider">
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">Stuff goes here...</h2>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-          </div>
-          <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" src="images/hockey.jpg" alt="Feature 3">
-          </div>
-        </div>
-        <hr class="featurette-divider">
-        <!-- /END THE FEATURETTES -->
-        </div><!-- /.container -->
         <!-- FOOTER -->
         <footer class="container">
-          <p class="float-right"><a href="#">Back to top</a></p>
-          <p>&copy; 2017 GameAlly, Inc. &middot;</p>
+            <p class="float-right"><a href="#">Back to top</a></p>
+            <p>&copy; 2017 GameAlly, Inc. &middot;</p>
         </footer>
-      </main>
-
-      <!-- Bootstrap core JavaScript
+    </main>
+    <!-- Bootstrap core JavaScript
       ================================================== -->
-      <!-- Placed at the end of the document so the pages load faster -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
-      <!--self modify css and scripts-->
-      <script src="scripts/scripts.js"></script>
-      <script type="text/javascript" src="scripts/tooltip.js"></script>
-      <script type="text/javascript" src="scripts/search.js"></script>
-      <!--API map
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript">
+    function livechat() {
+        document.getElementById("visible").classList.toggle("live-chat-visible");
+    }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <!--self modify css and scripts-->
+    <script src="scripts/scripts.js"></script>
+    <script type="text/javascript" src="scripts/tooltip.js"></script>
+    <script type="text/javascript" src="scripts/search.js"></script>
+    <!--API map
       <script src="scripts/mapscripts.js"></script>
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbOShWjpquyii-cNH0euq2d-WCG676718&libraries=places&callback=initAutocomplete" async defer></script>-->
+</body>
 
-    </body>
-  </html>
+</html>

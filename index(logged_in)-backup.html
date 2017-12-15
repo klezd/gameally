@@ -17,11 +17,79 @@
     <link rel="stylesheet" style="text/css" href="css/menubar.css">
     <link rel="stylesheet" href="css/common-ele.css">
     <link rel="stylesheet" type="text/css" href="css/chatmodal.css">
-    <link rel="stylesheet" type="text/css" href="css/live_support.css">
+    <style type="text/css">
+    div.transbox {
+        margin: 10px;
+        padding: 20px;
+        background-color: black;
+        border: 1px solid black;
+        border-radius: 5px;
+        opacity: 0.6;
+        filter: alpha(opacity=60);
+        /* For IE8 and earlier */
+    }
+
+    div.transbox p {
+        margin: 5%;
+        font-weight: bold;
+        color: #fff;
+    }
+
+
+    .image-search {
+        width: 45px;
+        height: 45px;
+    }
+
+    #people,
+    #team,
+    #event {
+        margin: auto;
+        border-bottom: 1px solid #e9ecef;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    #team,
+    #event {
+        border-top: 1px solid #e9ecef;
+    }
+
+    #people-field,
+    #team-field,
+    #event-field {
+        margin-top: 20px;
+    }
+
+
+    .live-chat i {
+        margin: 20px;
+        font-size: 30px;
+        border: 1px solid #5a5a5a;
+        border-radius: 50%;
+        padding: 10px;
+        background: #5a5a5a;
+        color: white!important;
+    }
+
+    .live-chat-form {
+        transition: all 0.2s;
+        transform: rotateX(-90deg);
+        height: 0px;
+    }
+
+    #live-chat-visible,
+    .live-chat-visible {
+        padding: 20px;
+        background-color: white;
+        border: 2px solid lightgray;
+        width: 350px;
+        transform: rotateX(0deg);
+    }
+    </style>
 </head>
 
 <body>
-    <!--Header part-->
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <a href="index(logged_in).html" title="Home"><img src="logo/logo.png" alt="GameAlly" class="logo"></a>
@@ -71,135 +139,7 @@
         <a data-toggle="modal" href="#Search-modal" class="btn search-btn">
         <span class="fa fa-search" aria-hidden="true"></span>
       </a>
-        <input class="search-area" type="text" class="form-control" placeholder="Search...">
-    </div>
-    <!--Search modal-->
-    <div class="modal fade" id="Search-modal">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <!-- Modal Header -->
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Search Result</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <!-- Modal body -->
-                <div class="modal-body">
-                    <!--Tab filter-->
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">All</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">People</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Team</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Event</a>
-                        </li>
-                    </ul>
-                    <!-- Search content -->
-                    <div class="tab-content" id="myTabContent" style="margin: 10px;">
-                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                            <div class="search-content">
-                                <!--People -->
-                                <div class="people">
-                                    <p id="people" style="margin: 10px;"><strong>PEOPLE</strong></p>
-                                    <div class="row">
-                                        <div class="col-sm-2">
-                                            <img src="images/avatar icon.png" class="image-search" width="100%">
-                                        </div>
-                                        <div class="col-sm-10 align-self-center">
-                                            <a href="#"><strong>Joey</strong></a>
-                                            <p>29 years old.</p>
-                                            <p>Football, Volleyball.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Team -->
-                                <div class="team">
-                                    <p id="team" style="margin: 10px;"><strong>TEAM</strong></p>
-                                    <div class="row">
-                                        <div class="col-sm-2">
-                                            <img src="images/kraken.jpg" class="image-search" width="100%">
-                                        </div>
-                                        <div class="col-sm-6 align-self-center">
-                                            <a href="#"><strong>The Kraken Team</strong></a>
-                                            <p>Football, Hockey</p>
-                                        </div>
-                                        <div class="col-sm-4 align-self-center">
-                                            <button class="btn btn-primary">More info</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Event -->
-                                <div class="event">
-                                    <p id="event" style="margin: 10px;"><strong>EVENT</strong></p>
-                                    <div class="row">
-                                        <div class="col-sm-2">
-                                            <img src="http://content.sportslogos.net/logos/9/1947/full/vwogl7uztun1krysgezh4pn45.gif" class="image-search" width="100%">
-                                        </div>
-                                        <div class="col-sm-6 align-self-center">
-                                            <a href="#"><strong>Olympic Europe</strong></a>
-                                            <p>Ouluhalli</p>
-                                            <p>Soccer</p>
-                                        </div>
-                                        <div class="col-sm-4 align-self-center">
-                                            <button class="btn btn-primary">More info</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- People field-->
-                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                            <div class="row" id="people-field">
-                                <div class="col-sm-2">
-                                    <img src="images/avatar icon.png" class="image-search" width="100%">
-                                </div>
-                                <div class="col-sm-10">
-                                    <a href="#"><strong>Joey</strong></a>
-                                    <p>29 years old.</p>
-                                    <p>Soccer, Cricket</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Team field-->
-                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                            <div class="row" id="team-field">
-                                <div class="col-sm-2">
-                                    <img src="images/kraken.jpg" class="image-search" width="100%">
-                                </div>
-                                <div class="col-sm-10">
-                                    <a href="#"><strong>The Kraken Team</strong></a>
-                                    <p>Hockey, Volleyball</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Event field-->
-                        <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">
-                            <div class="row" id="event-field">
-                                <div class="col-sm-2">
-                                    <img src="http://content.sportslogos.net/logos/9/1947/full/vwogl7uztun1krysgezh4pn45.gif" class="image-search" width="100%">
-                                </div>
-                                <div class="col-sm-10">
-                                    <a href="#"><strong>Olympic Europe</strong></a>
-                                    <p>Ouluhalli</p>
-                                    <p>Football</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Modal footer-->
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondaryr" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
+        <input class="search-area" type="text" class="form-control">
     </div>
     <!--Match game MODAL -->
     <div class="modal fade matchgame" id="match-game">
@@ -351,8 +291,6 @@
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
                 <li data-target="#myCarousel" data-slide-to="2"></li>
-                <li data-target="#myCarousel" data-slide-to="3"></li>
-                <li data-target="#myCarousel" data-slide-to="4"></li>
             </ol>
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
@@ -368,7 +306,7 @@
                 <div class="carousel-item">
                     <img class="second-slide" src="images/sports-cancun.jpg" alt="Sports">
                     <div class="container">
-                        <div class="carousel-caption transbox">
+                        <div class="carousel-caption text-right transbox">
                             <h1>Events happening now.</h1>
                             <p><a class="btn btn-lg btn-primary" href="list event.html" role="button">Browse all events</a></p>
                         </div>
@@ -386,7 +324,7 @@
                 <div class="carousel-item">
                     <img class="fourth-slide" src="images/basket.jpg" alt="Basketball">
                     <div class="container">
-                        <div class="carousel-caption transbox">
+                        <div class="carousel-caption text-right transbox">
                             <h1>Events happening now.</h1>
                             <p><a class="btn btn-lg btn-primary" href="list event.html" role="button">Browse all events</a></p>
                         </div>
@@ -420,8 +358,9 @@
             <hr class="featurette-divider">
             <div class="row featurette">
                 <div class="col-md-7">
-                    <h2 class="featurette-heading">Connect to people through sports</h2>
-                    <p class="lead">Find a new friend who's just as enthusiastic as you to work out together!</p>
+                    <h2 class="featurette-heading">Our features <br></h2>
+                    <p class="lead">Sign up and...
+                        <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
                 </div>
                 <div class="col-md-5">
                     <img class="featurette-image img-fluid mx-auto" src="images/sports-textile.png" alt="Feature 1">
@@ -430,8 +369,8 @@
             <hr class="featurette-divider">
             <div class="row featurette">
                 <div class="col-md-7 order-md-2">
-                    <h2 class="featurette-heading">Create a team</h2>
-                    <p class="lead">Assemble your own dream team with your friends or people you have met through our website and show off the cool trophies you've gathered!</p>
+                    <h2 class="featurette-heading">And some more...</h2>
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
                 </div>
                 <div class="col-md-5 order-md-1">
                     <img class="featurette-image img-fluid mx-auto" src="images/volleyball.jpg" alt="Feature 2">
@@ -440,42 +379,11 @@
             <hr class="featurette-divider">
             <div class="row featurette">
                 <div class="col-md-7">
-                    <h2 class="featurette-heading">Network!</h2>
-                    <p class="lead">Chat with your teammates, as well as other players or teams who share the same interests.</p>
+                    <h2 class="featurette-heading">Stuff goes here...</h2>
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
                 </div>
                 <div class="col-md-5">
                     <img class="featurette-image img-fluid mx-auto" src="images/hockey.jpg" alt="Feature 3">
-                </div>
-            </div>
-            <hr class="featurette-divider">
-            <div class="row featurette">
-                <div class="col-md-7 order-md-2">
-                    <h2 class="featurette-heading">
-Find a match to play</h2>
-                    <p class="lead">Search for local sports events in your area by sports type, location or a venue</p>
-                </div>
-                <div class="col-md-5 order-md-1">
-                    <img class="featurette-image img-fluid mx-auto" src="images/soccer.jpg" alt="Feature 4">
-                </div>
-            </div>
-            <hr class="featurette-divider">
-            <div class="row featurette">
-                <div class="col-md-7">
-                    <h2 class="featurette-heading">Create you own matches</h2>
-                    <p class="lead">If you haven't found any event that caught your eye, create your own one and invite people to join!</p>
-                </div>
-                <div class="col-md-5">
-                    <img class="featurette-image img-fluid mx-auto" src="images/rugby.jpg" alt="Feature 5">
-                </div>
-            </div>
-            <hr class="featurette-divider">
-            <div class="row featurette">
-                <div class="col-md-7 order-md-2">
-                    <h2 class="featurette-heading">Quick find</h2>
-                    <p class="lead">Using keywords quickly find an event, a team or a person that interests you</p>
-                </div>
-                <div class="col-md-5 order-md-1">
-                    <img class="featurette-image img-fluid mx-auto" src="images/3960271727_fc9f08d739.jpg" alt="Feature 6">
                 </div>
             </div>
             <hr class="featurette-divider">
@@ -730,7 +638,6 @@ Find a match to play</h2>
             </div>
         </div>
         <!-- /.container -->
-        <!-- Live Support -->
         <div class="live-chat">
             <div class="d-flex justify-content-end fixed-bottom">
                 <a href="#live-chat-visible" onclick="livechat()">

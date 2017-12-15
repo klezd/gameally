@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>List of event</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,14 +12,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" style="text/css" href="css/list event.css">
     <link rel="stylesheet" style="text/css" href="css/common-ele.css">
-  <!--  <link rel="stylesheet" style="text/css" href="css/map.css">-->
+    <link rel="stylesheet" type="text/css" href="css/chatmodal.css">
+    <link rel="stylesheet" type="text/css" href="css/live_support.css">
+    <!--  <link rel="stylesheet" style="text/css" href="css/map.css">-->
     <link href="css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" style="text/css" href="css/menubar.css">
     <script type="text/javascript" src="scripts/tooltip.js"></script>
+</head>
 
-  </head>
-  <body>
+<body>
     <!--Header part-->
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -73,587 +76,679 @@
     </div>
     <!--Search modal-->
     <div class="modal fade" id="Search-modal">
-          <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-
-                  <!-- Modal Header -->
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!-- Modal Header -->
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Search Result</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Search Result</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
+                        <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-
-              <!-- Modal body -->
-                  <div class="modal-body">
+                <!-- Modal body -->
+                <div class="modal-body">
                     <!--Tab filter-->
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                  <li class="nav-item">
-                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">All</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">People</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Team</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Event</a>
-                  </li>
-                </ul>
-
-                <!-- Search content -->
-                <div class="tab-content" id="myTabContent" style="margin: 10px;">
-                  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    <div class="search-content">
-                      <!--People -->
-                          <div class="people">
-                            <p id="people" style="margin: 10px;"><strong>PEOPLE</strong></p>
-                            <div class="row">
-                              <div class="col-sm-2">
-                                <img src="images/avatar icon.png" class="image-search" width="100%">
-                              </div>
-                              <div class="col-sm-10 align-self-center">
-                                <a href="#"><strong>Joey</strong></a>
-                                <p>29 years old.</p>
-                                <p>Football, Volleyball.</p>
-                              </div>
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">All</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">People</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Event</a>
+                        </li>
+                    </ul>
+                    <!-- Search content -->
+                    <div class="tab-content" id="myTabContent" style="margin: 10px;">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="search-content">
+                                <!--People -->
+                                <div class="people">
+                                    <p id="people" style="margin: 10px;"><strong>PEOPLE</strong></p>
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <img src="images/avatar icon.png" class="image-search" width="100%">
+                                        </div>
+                                        <div class="col-sm-10 align-self-center">
+                                            <a href="#"><strong>Joey</strong></a>
+                                            <p>29 years old.</p>
+                                            <p>Football, Volleyball.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Team -->
+                                <div class="team">
+                                    <p id="team" style="margin: 10px;"><strong>TEAM</strong></p>
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <img src="images/kraken.jpg" class="image-search" width="100%">
+                                        </div>
+                                        <div class="col-sm-6 align-self-center">
+                                            <a href="#"><strong>The Kraken Team</strong></a>
+                                            <p>Football, Hockey</p>
+                                        </div>
+                                        <div class="col-sm-4 align-self-center">
+                                            <button class="btn btn-primary">More info</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Event -->
+                                <div class="event">
+                                    <p id="event" style="margin: 10px;"><strong>EVENT</strong></p>
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <img src="http://content.sportslogos.net/logos/9/1947/full/vwogl7uztun1krysgezh4pn45.gif" class="image-search" width="100%">
+                                        </div>
+                                        <div class="col-sm-6 align-self-center">
+                                            <a href="#"><strong>Olympic Europe</strong></a>
+                                            <p>Ouluhalli</p>
+                                            <p>Soccer</p>
+                                        </div>
+                                        <div class="col-sm-4 align-self-center">
+                                            <button class="btn btn-primary">More info</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                          </div>
-
-                          <!--Team -->
-                          <div class="team">
-                            <p id="team" style="margin: 10px;"><strong>TEAM</strong></p>
-                            <div class="row">
-                              <div class="col-sm-2">
-                                <img src="images/kraken.jpg" class="image-search" width="100%">
-                              </div>
-                              <div class="col-sm-6 align-self-center">
-                                <a href="#"><strong>The Kraken Team</strong></a>
-                                <p>Football, Hockey</p>
-                              </div>
-                              <div class="col-sm-4 align-self-center">
-                                <button class="btn btn-primary">More info</button>
-                              </div>
-                            </div>
-                          </div>
-
-                          <!--Event -->
-                          <div class="event">
-                            <p id="event" style="margin: 10px;"><strong>EVENT</strong></p>
-                            <div class="row">
-                              <div class="col-sm-2">
-                                <img src="http://content.sportslogos.net/logos/9/1947/full/vwogl7uztun1krysgezh4pn45.gif" class="image-search" width="100%">
-                              </div>
-                              <div class="col-sm-6 align-self-center">
-                                <a href="#"><strong>Olympic Europe</strong></a>
-                                <p>Ouluhalli</p>
-                                <p>Soccer</p>
-                              </div>
-                              <div class="col-sm-4 align-self-center">
-                                <button class="btn btn-primary">More info</button>
-                              </div>
-                            </div>
-                          </div>
-                    </div>
-                  </div>
-
-                  <!-- People field-->
-                  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                    <div class="row" id="people-field">
-                              <div class="col-sm-2">
-                                <img src="images/avatar icon.png" class="image-search" width="100%">
-                              </div>
-                              <div class="col-sm-10">
-                                <a href="#"><strong>Joey</strong></a>
-                                <p>29 years old.</p>
-                                <p>Soccer, Cricket</p>
-                              </div>
                         </div>
-                  </div>
-
-                  <!-- Team field-->
-                  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                        <div class="row" id="team-field">
-                          <div class="col-sm-2">
-                                <img src="images/kraken.jpg" class="image-search" width="100%">
-                              </div>
-                              <div class="col-sm-10">
-                                <a href="#"><strong>The Kraken Team</strong></a>
-                                <p>Hockey, Volleyball</p>
-                              </div>
-                        </div>
-                  </div>
-
-                  <!-- Event field-->
-                  <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">
-                          <div class="row" id="event-field">
-                            <div class="col-sm-2">
-                                  <img src="http://content.sportslogos.net/logos/9/1947/full/vwogl7uztun1krysgezh4pn45.gif" class="image-search" width="100%">
+                        <!-- People field-->
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="row" id="people-field">
+                                <div class="col-sm-2">
+                                    <img src="images/avatar icon.png" class="image-search" width="100%">
                                 </div>
                                 <div class="col-sm-10">
-                                  <a href="#"><strong>Olympic Europe</strong></a>
-                                  <p>Ouluhalli</p>
-                                  <p>Football</p>
+                                    <a href="#"><strong>Joey</strong></a>
+                                    <p>29 years old.</p>
+                                    <p>Soccer, Cricket</p>
                                 </div>
-                          </div>
-                  </div>
+                            </div>
+                        </div>
+                        <!-- Team field-->
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                            <div class="row" id="team-field">
+                                <div class="col-sm-2">
+                                    <img src="images/kraken.jpg" class="image-search" width="100%">
+                                </div>
+                                <div class="col-sm-10">
+                                    <a href="#"><strong>The Kraken Team</strong></a>
+                                    <p>Hockey, Volleyball</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Event field-->
+                        <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                            <div class="row" id="event-field">
+                                <div class="col-sm-2">
+                                    <img src="http://content.sportslogos.net/logos/9/1947/full/vwogl7uztun1krysgezh4pn45.gif" class="image-search" width="100%">
+                                </div>
+                                <div class="col-sm-10">
+                                    <a href="#"><strong>Olympic Europe</strong></a>
+                                    <p>Ouluhalli</p>
+                                    <p>Football</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                  </div>
-
-              <!-- Modal footer-->
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondaryr" data-dismiss="modal">Close</button>
-              </div>
+                <!-- Modal footer-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondaryr" data-dismiss="modal">Close</button>
                 </div>
-          </div>
+            </div>
         </div>
-
+    </div>
     <!--Match game MODAL -->
     <div class="modal fade matchgame" id="match-game">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            MATCH GAME
-          </div>
-          <div class="modal-body">
-            <div class="back2">
-              <div class="container">
-                <ul class="nav nav-tabs" role="tablist">
-                  <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#find-match">Find Match</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#create-match">Create Match</a>
-                  </li>
-                </ul>
-              </div>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    MATCH GAME
+                </div>
+                <div class="modal-body">
+                    <div class="back2">
+                        <div class="container">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#find-match">Find Match</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#create-match">Create Match</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--tab-->
+                    <div class="tab-content">
+                        <!--find match-->
+                        <div id="find-match" class="container tab-pane active">
+                            <div class="row">
+                                <label>Choose Your Sport</label>
+                                <div class="sport-list">
+                                    <div class="sport-icon">
+                                        <img src="icon/baseball.png" alt="baseball">
+                                    </div>
+                                    <div class="sport-icon">
+                                        <img src="icon/football.png" alt="football">
+                                    </div>
+                                    <div class="sport-icon">
+                                        <img src="icon/icehockey.svg" alt="ichockey">
+                                    </div>
+                                    <div class="sport-icon">
+                                        <img src="icon/swimming.png" alt="swimming">
+                                    </div>
+                                    <div class="sport-icon">
+                                        <img src="icon/tennis.png" alt="tennis">
+                                    </div>
+                                    <div class="sport-icon">
+                                        <img src="icon/basketball.png" alt="basketball">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row location-choice">
+                                <label>Choose Your Location</label>
+                                <div class="choose-area">
+                                    <input type="text" name="location" placeholder="Search...">
+                                </div>
+                                <!-- map -->
+                                <div class="map01" id="map01">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13484.991704512933!2d25.5045982!3d65.008653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4681cd515af7bef9%3A0x38280dd8d86dca6f!2sOuluhalli!5e0!3m2!1sen!2sfi!4v1512999973309" width=100% height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="applyButtons">
+                                <a href="#">Find Your Match</a>
+                            </div>
+                        </div>
+                        <!--create match-->
+                        <div id="create-match" class="container tab-pane">
+                            <div class="row">
+                                <label>Choose Your Sport</label>
+                                <div class="sport-list">
+                                    <div class="sport-icon">
+                                        <img src="icon/baseball.png" data-toggle="tooltip" title="baseball">
+                                    </div>
+                                    <div class="sport-icon">
+                                        <img src="icon/football.png" data-toggle="tooltip" title="football">
+                                    </div>
+                                    <div class="sport-icon">
+                                        <img src="icon/icehockey.svg" data-toggle="tooltip" title="ichockey">
+                                    </div>
+                                    <div class="sport-icon">
+                                        <img src="icon/swimming.png" data-toggle="tooltip" title="swimming">
+                                    </div>
+                                    <div class="sport-icon">
+                                        <img src="icon/tennis.png" data-toggle="tooltip" title="tennis">
+                                    </div>
+                                    <div class="sport-icon">
+                                        <img src="icon/basketball.png" data-toggle="tooltip" title="basketball">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="location-choice">
+                                <label>Choose Your Location</label>
+                                <div class="choose-area">
+                                    <input type="text" name="location" placeholder="Search...">
+                                </div>
+                                <!-- map -->
+                                <div class="map02" id="map02">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13484.991704512933!2d25.5045982!3d65.008653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4681cd515af7bef9%3A0x38280dd8d86dca6f!2sOuluhalli!5e0!3m2!1sen!2sfi!4v1512999973309" width="400" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="match-info">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label>Name Of Your Match</label>
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="text" data-toggle="tooltip" title="name of your match" value="">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label>Date</label>
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="date" data-toggle="tooltip" title="date of your match">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label>Time</label>
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="time" data-toggle="tooltip" title="time of your match">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label>Number Of Players</label>
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="number" data-toggle="tooltip" title="number of players needed" style="text-align: center" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="applyButtons">
+                                <a href="create-match-sucessful.html">Create Your Match</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
             </div>
-              <!--tab-->
-            <div class="tab-content">
-              <!--find match-->
-              <div id="find-match" class="container tab-pane active">
-                <div class="row">
-                  <label>Choose Your Sport</label>
-                  <div class="sport-list">
-                    <div class="sport-icon">
-                      <img src="icon/baseball.png" alt="baseball">
-                    </div>
-                    <div class="sport-icon">
-                      <img src="icon/football.png" alt="football">
-                    </div>
-                    <div class="sport-icon">
-                      <img src="icon/icehockey.svg" alt="ichockey">
-                    </div>
-                    <div class="sport-icon">
-                      <img src="icon/swimming.png" alt="swimming">
-                    </div>
-                    <div class="sport-icon">
-                      <img src="icon/tennis.png" alt="tennis">
-                    </div>
-                    <div class="sport-icon">
-                      <img src="icon/basketball.png" alt="basketball">
-                    </div>
-                  </div>
-                </div>
-                <div class="row location-choice">
-                  <label>Choose Your Location</label>
-                  <div class="choose-area">
-                    <input type="text" name="location" placeholder="Search...">
-                  </div>
-                  <!-- map -->
-                  <div class="map01" id="map01">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13484.991704512933!2d25.5045982!3d65.008653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4681cd515af7bef9%3A0x38280dd8d86dca6f!2sOuluhalli!5e0!3m2!1sen!2sfi!4v1512999973309" width=100% height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
-                  </div>
-                </div>
-                <div class="applyButtons">
-                  <a href="#">Find Your Match</a>
-                </div>
-
-              </div>
-              <!--create match-->
-              <div id="create-match" class="container tab-pane">
-                <div class="row">
-                  <label>Choose Your Sport</label>
-                  <div class="sport-list">
-                    <div class="sport-icon">
-                      <img src="icon/baseball.png"  data-toggle="tooltip" title="baseball">
-                    </div>
-                    <div class="sport-icon">
-                      <img src="icon/football.png"  data-toggle="tooltip" title="football">
-                    </div>
-                    <div class="sport-icon">
-                      <img src="icon/icehockey.svg" data-toggle="tooltip" title="ichockey">
-                    </div>
-                    <div class="sport-icon">
-                      <img src="icon/swimming.png" data-toggle="tooltip" title="swimming">
-                    </div>
-                    <div class="sport-icon">
-                      <img src="icon/tennis.png" data-toggle="tooltip" title="tennis">
-                    </div>
-                    <div class="sport-icon">
-                      <img src="icon/basketball.png" data-toggle="tooltip" title="basketball">
-                    </div>
-                  </div>
-                </div>
-                <div class="location-choice">
-                  <label>Choose Your Location</label>
-                  <div class="choose-area">
-                    <input type="text" name="location" placeholder="Search...">
-                  </div>
-
-                  <!-- map -->
-                  <div class="map02" id="map02">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13484.991704512933!2d25.5045982!3d65.008653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4681cd515af7bef9%3A0x38280dd8d86dca6f!2sOuluhalli!5e0!3m2!1sen!2sfi!4v1512999973309" width="400" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
-                  </div>
-                </div>
-                <div class="match-info">
-                  <div class="row">
-                    <div class="col-6">
-                      <label>Name Of Your Match</label>
-                    </div>
-                    <div class="col-6">
-                      <input type="text"  data-toggle="tooltip" title="name of your match" value="">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-6">
-                      <label>Date</label>
-                    </div>
-                    <div class="col-6">
-                      <input type="date" data-toggle="tooltip" title="date of your match">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-6">
-                      <label>Time</label>
-                    </div>
-                    <div class="col-6">
-                      <input type="time" data-toggle="tooltip" title="time of your match">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-6">
-                      <label>Number Of Players</label>
-                    </div>
-                    <div class="col-6">
-                      <input type="number" data-toggle="tooltip" title="number of players needed" style="text-align: center" value="">
-                    </div>
-                  </div>
-                </div>
-                <div class="applyButtons">
-                  <a href="create-match-sucessful.html">Create Your Match</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-          </div>
         </div>
-      </div>
     </div>
-
     <!--Search event part-->
     <div class="container-fluid background-evnt back1">
-      <div class="container">
-        <div class="search-event">
-          <button type="button" class="btn search-btn">
-            <span class="fa fa-search" aria-hidden="true"></span>
-          </button>
-          <div class="search-area">
-            <button type="button" class="btn map-btn" data-toggle="modal" data-target="#search-map">
-              <span class="fa fa-map-marker" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Search by map"></span>
-            </button>
-            <div class="text-area">
-              <input type="text" class="form-control text-search" placeholder="Search here">
+        <div class="container">
+            <div class="search-event">
+                <button type="button" class="btn search-btn">
+                    <span class="fa fa-search" aria-hidden="true"></span>
+                </button>
+                <div class="search-area">
+                    <button type="button" class="btn map-btn" data-toggle="modal" data-target="#search-map">
+                        <span class="fa fa-map-marker" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Search by map"></span>
+                    </button>
+                    <div class="text-area">
+                        <input type="text" class="form-control text-search" placeholder="Search here">
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-
     <!--Search map modal-->
     <div class="modal fade" id="search-map">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            Location
-          </div>
-          <div class="modal-body">
-            <div class="search-event">
-              <button type="button" class="btn search-btn">
-                <span class="fa fa-search" aria-hidden="true"></span>
-              </button>
-              <div class="search-area">
-                <div class="text-area">
-                  <input type="text" class="form-control text-search" placeholder="Search here">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    Location
                 </div>
-              </div>
-            </div>
-            <div class="search-event ser-date">
-              <div class="search-area search-date">
-                <div class="text-area">
-                  <input type="date" name="bday" class="form-control text-search searchbox" placeholder="Search here">
+                <div class="modal-body">
+                    <div class="search-event">
+                        <button type="button" class="btn search-btn">
+                            <span class="fa fa-search" aria-hidden="true"></span>
+                        </button>
+                        <div class="search-area">
+                            <div class="text-area">
+                                <input type="text" class="form-control text-search" placeholder="Search here">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-event ser-date">
+                        <div class="search-area search-date">
+                            <div class="text-area">
+                                <input type="date" name="bday" class="form-control text-search searchbox" placeholder="Search here">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d1685.5774035498898!2d25.4665631165588!3d65.00939068399272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d65.00948629999999!2d25.468390199999998!4m5!1s0x468032afdbc7eda5%3A0xf3cff0689bc1be51!2sOulu%2C+90100!3m2!1d65.0094807!2d25.468372!5e0!3m2!1svi!2sfi!4v1513274925060" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
                 </div>
-              </div>
+                <div class="modal-footer">
+                </div>
             </div>
-            <div class="map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d1685.5774035498898!2d25.4665631165588!3d65.00939068399272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d65.00948629999999!2d25.468390199999998!4m5!1s0x468032afdbc7eda5%3A0xf3cff0689bc1be51!2sOulu%2C+90100!3m2!1d65.0094807!2d25.468372!5e0!3m2!1svi!2sfi!4v1513274925060" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="modal-footer">
-
-          </div>
         </div>
-      </div>
     </div>
-
     <!--List event part-->
     <div id='listevnt' class="events">
-      <!--Navigation tabs-->
-      <div class="container-fluid background-evnt back2">
-        <div class="list container">
-          <ul class="nav nav-tabs" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active" data-toggle="tab" href="#com-evnt">Comunity events</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#per-evnt">Personal events</a>
-            </li>
-          </ul>
+        <!--Navigation tabs-->
+        <div class="container-fluid background-evnt back2">
+            <div class="list container">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#com-evnt">Community events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#per-evnt">Personal events</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
-      <!--Tab panel-->
-      <div class="tab-content">
-        <div id="com-evnt" class="container tab-pane active">
-            <div class="content page-1-com">
-              <div class="result-quantity">
-                About 210.000 results.
-              </div>
-              <table class="table">
-                <!--Item 1-->
-                <tr>
-                  <td class="info">
-                    <h4><a class="evnt-name" href="#">World Cup</a></h4>
-                    英霊アルトリア・ペンドラゴンと同一の過去と
-                    伝説を有する完全な同一人物にして、別人。
-                    まさしく「理想の王子様」「蒼銀の騎士」と いった清廉な姿を取って現界している。
-                    異なる世界から来訪した英霊、との事だが―――
-                  </td>
-                  <td class="time-date">
-                    <span class="time">10:30</span> 24th December
-                  </td>
-                  <td class="location">
-                    OUAS Kotkantie 1, 90250 Oulu
-                  </td>
-                  <td class="calendar-btn">
-                    <button class="btn add-calendar-btn" type="button">
-                      <i class="fa fa-calendar-plus-o" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Add to my calendar"></i>
-                      <i class="fa fa-check" aria-hidden="true"></i>
-                    </button>
-                  </td>
-                </tr>
-                <!--Item 2-->
-                <tr>
-                  <td class="info">
-                    <h4><a class="evnt-name" href="#">Sea Game</a></h4>
-                    Approving of the virtuous and correcting atrocities.
-                    A hero who is like a knight in shining armor that anyone would dream about as a child.
-                    Also called the wielder of the holy sword of the planet.
-                    His true identity is that of the ｢King of Knights｣ of a parallel universe, who reached this world by chasing after some sort of existence.
-                  </td>
-                  <td class="time-date">
-                    <span class="time">21:30</span> 1st January
-                  </td>
-                  <td class="location">
-                    Ouluhallintie 20, 90130 Oulu
-                  </td>
-                  <td class="calendar-btn">
-                    <button class="btn add-calendar-btn" type="button">
-                      <i class="fa fa-calendar-plus-o" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Add to my calendar"></i>
-                      <i class="fa fa-check" aria-hidden="true"></i>
-                    </button>
-                  </td>
-                </tr>
-                <!--Item 3-->
-                <tr>
-                  <td class="info">
-                    <h4><a class="evnt-name" href="#">Olympia</a></h4>
-                    善良なるものを良しとし、悪逆なるものを糾す。
-                    子供心に誰もが夢見る白馬の騎士の如き英雄。
-                    星の聖剣使いとも言われる。
-                    その正体は、何らかの存在を追ってこの世界に 辿り着いた異世界の「騎士王」である。
-                  </td>
-                  <td class="time-date">
-                    <span class="time">13:00</span> 22nd March
-                  </td>
-                  <td class="location">
-                    Kaarlenväylä 5, 90100 Oulu
-                  </td>
-                  <td class="calendar-btn">
-                    <button class="btn add-calendar-btn" type="button">
-                      <i class="fa fa-calendar-plus-o" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Add to my calendar"></i>
-                      <i class="fa fa-check" aria-hidden="true"></i>
-                    </button>
-                  </td>
-                </tr>
-                <!--Item 4-->
-                <tr>
-                  <td class="info">
-                    <h4><a class="evnt-name" href="#">MU vs Asenal</a></h4>
-                    A completely identical, and yet different person than Heroic Spirit Artoria Pendragon
-                    - possessing the same past and legend as her. He has manifested in this world while taking
-                    an integrous form that can be described as an ｢Ideal Prince｣ or a ｢Knight of Blue and Silver｣.
-                    A heroic spirit visiting from a different world, or so he says but───
-                  </td>
-                  <td class="time-date">
-                    <span class="time">08:00</span> 15th April
-                  </td>
-                  <td class="location">
-                    Market square Kauppatori, 90100 Oulu
-                  </td>
-                  <td class="calendar-btn">
-                    <button class="btn add-calendar-btn" type="button">
-                      <i class="fa fa-calendar-plus-o" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Add to my calendar"></i>
-                      <i class="fa fa-check" aria-hidden="true"></i>
-                    </button>
-                  </td>
-                </tr>
-              </table>
+        <!--Tab panel-->
+        <div class="tab-content">
+            <div id="com-evnt" class="container tab-pane active">
+                <div class="content page-1-com">
+                    <div class="result-quantity">
+                        About 210.000 results.
+                    </div>
+                    <table class="table">
+                        <!--Item 1-->
+                        <tr>
+                            <td class="info">
+                                <h4><a class="evnt-name" href="#">World Cup</a></h4> 英霊アルトリア・ペンドラゴンと同一の過去と 伝説を有する完全な同一人物にして、別人。 まさしく「理想の王子様」「蒼銀の騎士」と いった清廉な姿を取って現界している。 異なる世界から来訪した英霊、との事だが―――
+                            </td>
+                            <td class="time-date">
+                                <span class="time">10:30</span> 24th December
+                            </td>
+                            <td class="location">
+                                OUAS Kotkantie 1, 90250 Oulu
+                            </td>
+                            <td class="calendar-btn">
+                                <button class="btn add-calendar-btn" type="button">
+                                    <i class="fa fa-calendar-plus-o" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Add to my calendar"></i>
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <!--Item 2-->
+                        <tr>
+                            <td class="info">
+                                <h4><a class="evnt-name" href="#">Sea Game</a></h4> Approving of the virtuous and correcting atrocities. A hero who is like a knight in shining armor that anyone would dream about as a child. Also called the wielder of the holy sword of the planet. His true identity is that of the ｢King of Knights｣ of a parallel universe, who reached this world by chasing after some sort of existence.
+                            </td>
+                            <td class="time-date">
+                                <span class="time">21:30</span> 1st January
+                            </td>
+                            <td class="location">
+                                Ouluhallintie 20, 90130 Oulu
+                            </td>
+                            <td class="calendar-btn">
+                                <button class="btn add-calendar-btn" type="button">
+                                    <i class="fa fa-calendar-plus-o" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Add to my calendar"></i>
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <!--Item 3-->
+                        <tr>
+                            <td class="info">
+                                <h4><a class="evnt-name" href="#">Olympia</a></h4> 善良なるものを良しとし、悪逆なるものを糾す。 子供心に誰もが夢見る白馬の騎士の如き英雄。 星の聖剣使いとも言われる。 その正体は、何らかの存在を追ってこの世界に 辿り着いた異世界の「騎士王」である。
+                            </td>
+                            <td class="time-date">
+                                <span class="time">13:00</span> 22nd March
+                            </td>
+                            <td class="location">
+                                Kaarlenväylä 5, 90100 Oulu
+                            </td>
+                            <td class="calendar-btn">
+                                <button class="btn add-calendar-btn" type="button">
+                                    <i class="fa fa-calendar-plus-o" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Add to my calendar"></i>
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <!--Item 4-->
+                        <tr>
+                            <td class="info">
+                                <h4><a class="evnt-name" href="#">MU vs Asenal</a></h4> A completely identical, and yet different person than Heroic Spirit Artoria Pendragon - possessing the same past and legend as her. He has manifested in this world while taking an integrous form that can be described as an ｢Ideal Prince｣ or a ｢Knight of Blue and Silver｣. A heroic spirit visiting from a different world, or so he says but───
+                            </td>
+                            <td class="time-date">
+                                <span class="time">08:00</span> 15th April
+                            </td>
+                            <td class="location">
+                                Market square Kauppatori, 90100 Oulu
+                            </td>
+                            <td class="calendar-btn">
+                                <button class="btn add-calendar-btn" type="button">
+                                    <i class="fa fa-calendar-plus-o" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Add to my calendar"></i>
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!--Pages number-->
+                <div class="pages-list">
+                    <ul class="pagination">
+                        <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                        <li class="page-item active"><a class="page-link" href="#page-1-com">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#page-2">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#page-3">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                </div>
             </div>
-            <!--Pages number-->
-            <div class="pages-list">
-              <ul class="pagination">
-                <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
-                <li class="page-item active"><a class="page-link" href="#page-1-com">1</a></li>
-                <li class="page-item"><a class="page-link" href="#page-2">2</a></li>
-                <li class="page-item"><a class="page-link" href="#page-3">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">Next</a></li>
-              </ul>
+            <div id="per-evnt" class="container tab-pane fade">
+                <div class="content page-1-per">
+                    <div class="result-quantity">
+                        About 680.000 results.
+                    </div>
+                    <table class="table">
+                        <!--Item 1-->
+                        <tr>
+                            <td class="info">
+                                <h4><a class="evnt-name" href="#">Football Game</a></h4> The hero matching a thousand admired in the "Nibelungenlied". With the holy sword Balmung in hand, the "dragon slayer" who defeated the evil dragon Fafnir. Although taciturn, his passions run deep. In the　battlefield, he is constantly on the front lines protecting his comrades.
+                            </td>
+                            <td class="time-date">
+                                <span class="time">09:00</span> 18th June
+                            </td>
+                            <td class="location">
+                                Oulu Haali
+                            </td>
+                            <td class="sport-act">
+                                Football
+                            </td>
+                        </tr>
+                        <!--Item 2-->
+                        <tr>
+                            <td class="info">
+                                <h4><a class="evnt-name" href="#">John's Game</a></h4> 「ニーベルンゲンの歌」に謳われる万夫不当の英雄。 聖剣バルムンクを手に邪竜ファヴニールを打倒した“竜殺し”。 寡黙であるが、情は深い。 戦場では常に前面へと出て仲間を守る。
+                            </td>
+                            <td class="time-date">
+                                <span class="time">15:30</span> 9th July
+                            </td>
+                            <td class="location">
+                                Center square
+                            </td>
+                            <td class="sport-act">
+                                Badminton
+                            </td>
+                            </td>
+                        </tr>
+                        <!--Item 3-->
+                        <tr>
+                            <td class="info">
+                                <h4><a class="evnt-name" href="#">Play with us</a></h4> Siegfried is a great hero introduced in the epic poem of the Middle Ages, the "Nibelungenlied." After going on many adventures, and in the process obtaining the holy sword Balmung as well as an　overcoat that makes him disappear, he finally defeated the evil dragon Fafnir.
+                            </td>
+                            <td class="time-date">
+                                <span class="time">14:00</span> 30th August
+                            </td>
+                            <td class="location">
+                                City Hall
+                            </td>
+                            <td class="sport-act">
+                                Hookey
+                            </td>
+                        </tr>
+                        <!--Item 4-->
+                        <tr>
+                            <td class="info">
+                                <h4><a class="evnt-name" href="#">Pikachu 1000V :)</a></h4> ジークフリートは中世の叙事詩「ニーベルンゲンの歌」に登場する大英雄である。 幾多もの冒険を重ね、その過程で聖剣バルムンクや姿を消す外套を手に入れた彼は、 ついに邪竜ファヴニールを打ち倒す。
+                            </td>
+                            <td class="time-date">
+                                <span class="time">08:45</span> 16th September
+                            </td>
+                            <td class="location">
+                                OAMK Kotkantie 1, 90250 Oulu
+                            </td>
+                            <td class="sport-act">
+                                Tennis
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!--Pages number-->
+                <div class="pages-list">
+                    <ul class="pagination">
+                        <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                        <li class="page-item active"><a class="page-link" href="#page-1-per">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#page-2">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#page-3">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                </div>
             </div>
-          </div>
-          <div id="per-evnt" class="container tab-pane fade">
-            <div class="content page-1-per">
-              <div class="result-quantity">
-                About 680.000 results.
-              </div>
-              <table class="table">
-                <!--Item 1-->
-                <tr>
-                  <td class="info">
-                    <h4><a class="evnt-name" href="#">Football Game</a></h4>
-                    The hero matching a thousand admired in the "Nibelungenlied".
-                    With the holy sword Balmung in hand, the "dragon slayer" who defeated the evil dragon Fafnir.
-                    Although taciturn, his passions run deep.
-                    In the　battlefield, he is constantly on the front lines protecting his comrades.
-                  </td>
-                  <td class="time-date">
-                    <span class="time">09:00</span> 18th June
-                  </td>
-                  <td class="location">
-                    Oulu Haali
-                  </td>
-                  <td class="sport-act">
-                    Football
-                  </td>
-                </tr>
-                <!--Item 2-->
-                <tr>
-                  <td class="info">
-                    <h4><a class="evnt-name" href="#">John's Game</a></h4>
-                    「ニーベルンゲンの歌」に謳われる万夫不当の英雄。
-                    聖剣バルムンクを手に邪竜ファヴニールを打倒した“竜殺し”。
-                    寡黙であるが、情は深い。
-                    戦場では常に前面へと出て仲間を守る。
-                  </td>
-                  <td class="time-date">
-                    <span class="time">15:30</span> 9th July
-                  </td>
-                  <td class="location">
-                    Center square
-                  </td>
-                  <td class="sport-act">
-                    Badminton
-                  </td>
-                  </td>
-                </tr>
-                <!--Item 3-->
-                <tr>
-                  <td class="info">
-                    <h4><a class="evnt-name" href="#">Play with us</a></h4>
-                    Siegfried is a great hero introduced in the epic poem of the Middle Ages, the "Nibelungenlied."
-                    After going on many adventures, and in the process obtaining the holy sword Balmung as well as
-                    an　overcoat that makes him disappear, he finally defeated the evil dragon Fafnir.
-                  </td>
-                  <td class="time-date">
-                    <span class="time">14:00</span> 30th August
-                  </td>
-                  <td class="location">
-                    City Hall
-                  </td>
-                  <td class="sport-act">
-                    Hookey
-                  </td>
-                </tr>
-                <!--Item 4-->
-                <tr>
-                  <td class="info">
-                    <h4><a class="evnt-name" href="#">Pikachu 1000V :)</a></h4>
-                    ジークフリートは中世の叙事詩「ニーベルンゲンの歌」に登場する大英雄である。
-                    幾多もの冒険を重ね、その過程で聖剣バルムンクや姿を消す外套を手に入れた彼は、
-                    ついに邪竜ファヴニールを打ち倒す。
-                  </td>
-                  <td class="time-date">
-                    <span class="time">08:45</span> 16th September
-                  </td>
-                  <td class="location">
-                    OAMK Kotkantie 1, 90250 Oulu
-                  </td>
-                  <td class="sport-act">
-                    Tennis
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <!--Pages number-->
-            <div class="pages-list">
-              <ul class="pagination">
-                <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
-                <li class="page-item active"><a class="page-link" href="#page-1-per">1</a></li>
-                <li class="page-item"><a class="page-link" href="#page-2">2</a></li>
-                <li class="page-item"><a class="page-link" href="#page-3">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">Next</a></li>
-              </ul>
-            </div>
-          </div>
-      </div>
+        </div>
     </div>
 
+
+    <!-- Chat modal -->
+            <!-- Trigger the modal with a button -->
+            <button type="button" id="openChat" class="btn btn-info btn-lg" data-toggle="modal" data-target="#chatModal">Chat</button>
+            <div class="modal fade" id="chatModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" id="chatbox">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#tab1">Player</a></li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#tab2">Team</a></li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#tab3">Badminton</a></li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#tab4">Football</a></li>
+                                <li class="nav-item">
+                                    <span data-toggle="modal" data-dismiss="modal" data-target="#channel-modal" title="Add a channel">
+                                                        <a class="nav-link" data-toggle="tab" href="#new">Add a channel<i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                                                    </span>
+                                </li>
+                            </ul>
+                            <button type="button" class="close float-right" data-dismiss="modal">Hide<i class="fa fa-angle-double-down" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="tab-content">
+                                <div id="tab1" class="tab-pane fade show active">
+                                    <h3>Player</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                                <div id="tab2" class="tab-pane fade">
+                                    <h3>Team</h3>
+                                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                </div>
+                                <div id="tab3" class="tab-pane fade">
+                                    <h3>Badminton</h3>
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                                </div>
+                                <div id="tab4" class="tab-pane fade">
+                                    <h3>Football</h3>
+                                    <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="add-friend" class="btn btn-outline-secondary">Add a friend</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Add a new channel modal-->
+            <div class="modal fade" id="channel-modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Search for a channel</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="logo-part">
+                                <img class="logoinModal" src="https://github.com/roxydao97/gameally/blob/master/logo/logo.png?raw=true" alt="Logo">
+                            </div>
+                            <input class="form-control" type="text" name="search" placeholder="Type your keyword here" style="display: inline-block;"><i class="fa fa-search" aria-hidden="true"></i>
+                            <ul class="nav flex-column nav-justified">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" data-toggle="modal" data-target="#myChannel" data-dismiss="modal">Create a new chat room</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Basketball</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Badminton</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Yoga</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Archery</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Create new channel modal -->
+            <div class="modal fade" id="myChannel" role="dialog" aria-labelledby="myChannel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Create new chat room</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <input class="form-control" type="text" name="roomName" placeholder="Chat room's name" style="display: inline-block;">
+                            <input class="form-control" type="text" name="roomPass" placeholder="Password" style="display: inline-block;">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" id="createRoom">CREATE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!-- Live Support -->
+        <div class="live-chat">
+            <div class="d-flex justify-content-end fixed-bottom">
+                <a href="#live-chat-visible" onclick="livechat()">
+                <i class="fa fa-commenting"></i>
+              </a>
+            </div>
+            <div class="d-flex justify-content-end fixed-bottom live-chat-form" id="visible" style="left: 926px; bottom: 20px; height: 230px;">
+                <form action="" style="width: 306px;">
+                    <div class="form-group">
+                        <input type="text" name="" class="form-control" placeholder="Email address">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="" id="" rows="3" placeholder="How can we help you?"></textarea>
+                    </div>
+                    <div class="live-chat-button">
+                        <a href="list event.html" class="btn btn-primary">Send</a>
+                        <a href="list event.html" class="btn btn secondary">Close</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    <script type="text/javascript">
+    function livechat() {
+        document.getElementById("visible").classList.toggle("live-chat-visible");
+    }
+    </script>
     <script>
-      $(document).ready(function() {
+    $(document).ready(function() {
         $(".fa-calendar-plus-o").click(function() {
-          $(this).css({
-            "display": "none"
-          });
-          $(this).next('.fa-check').css({
-            "display": "inline"
-          });
+            $(this).css({
+                "display": "none"
+            });
+            $(this).next('.fa-check').css({
+                "display": "inline"
+            });
         });
         $(".fa-check").click(function() {
-          $(this).css({
-            "display": "none"
-          });
-          $(this).prev('.fa-calendar-plus-o').css({
-            "display": "inline"
-          });
+            $(this).css({
+                "display": "none"
+            });
+            $(this).prev('.fa-calendar-plus-o').css({
+                "display": "inline"
+            });
         });
-      });
+    });
     </script>
     <script type="text/javascript" src="scripts/tooltip.js"></script>
     <script type="text/javascript" src="scripts/search.js"></script>
     <!--
     <script src="scripts/mapscripts.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbOShWjpquyii-cNH0euq2d-WCG676718&libraries=places&callback=initAutocomplete" async defer></script>-->
-  </body>
+</body>
+
 </html>

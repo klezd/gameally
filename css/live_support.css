@@ -1,0 +1,24 @@
+    .live-chat i {
+        margin: 20px;
+        font-size: 30px;
+        border: 1px solid #5a5a5a;
+        border-radius: 50%;
+        padding: 10px;
+        background: #5a5a5a;
+        color: white!important;
+    }
+
+    .live-chat-form {
+        transition: all 0.2s;
+        transform: rotateX(-90deg);
+        height: 0px;
+    }
+
+    #live-chat-visible,
+    .live-chat-visible {
+        padding: 20px;
+        background-color: white;
+        border: 2px solid lightgray;
+        width: 350px;
+        transform: rotateX(0deg);
+    }
