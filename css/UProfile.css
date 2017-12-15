@@ -155,7 +155,7 @@ a.editButton {
   background: linear-gradient(#F4511E, #FFAB91);
   box-shadow: 1px 1px 1px #2c3e50;
   text-decoration: none;
-  color: black !important;
+  color: white !important;
   margin: 5px;
   font-size: 15px;
   padding: 10px;
@@ -163,6 +163,7 @@ a.editButton {
   display: inline-block;
   text-align: center;
   min-width: 100px;
+  z-index: 2001;
 }
 
 a.cancelButton {
@@ -174,13 +175,14 @@ a.cancelButton {
   background: linear-gradient(#757575, #BDBDBD);
   box-shadow: 1px 1px 1px #2c3e50;
   text-decoration: none;
-  color: black;
+  color: white;
   margin: 3px;
   font-size: 15px;
   padding: 10px;
   font-weight: bold;
   display: inline-block;
   text-align: center;
+  z-index: 2001;
 }
 
 a.editButton:hover {
@@ -190,7 +192,7 @@ a.editButton:hover {
   cursor: pointer;
 }
 
-.cancelButton:hover{
+a.cancelButton:hover{
   color: white;
   background: #757575;
   text-decoration: none;
@@ -338,6 +340,7 @@ span.locationSelect {
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
+  z-index: 2001;
 }
 
 .sports {
