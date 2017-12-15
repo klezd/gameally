@@ -162,6 +162,7 @@ a.editButton {
   font-weight: bold;
   display: inline-block;
   text-align: center;
+  min-width: 100px;
 }
 
 a.cancelButton {
@@ -290,7 +291,7 @@ a.editButton:hover {
 }
 
 .infoformRow input:not([type="range"]), .infoformRow select:not(:disabled), .map input {
-  width: 330px!important;
+  width: calc(100% - 80px)!important;
   border: 1px solid #9E9E9E;
   border-radius: 5px;
   background-color: #FAFAFA;
@@ -415,4 +416,13 @@ input.searchbox {
   width: 100%;
   margin: auto;
   margin-bottom: 10px
+}
+
+/* team prof*/
+.addmem input {
+  width: calc(100% - 0px)!important;
+}
+
+#invite .modal-dialog, #invite1 .modal-dialog {
+  width: 400px;
 }
