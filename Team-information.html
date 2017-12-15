@@ -24,6 +24,8 @@
 	    <link rel="stylesheet" href="css/menubar.css">
 	    <link rel="stylesheet" href="css/map.css">
 	    <link rel="stylesheet" href="css/common-ele.css">
+	       <link rel="stylesheet" type="text/css" href="css/chatmodal.css">
+    <link rel="stylesheet" type="text/css" href="css/live_support.css">
 	</head>
 
 	<body>
@@ -552,6 +554,145 @@
 		  	</ul>
 		</nav>
 	</div>
+	<!-- Chat modal -->
+            <!-- Trigger the modal with a button -->
+            <button type="button" id="openChat" class="btn btn-info btn-lg" data-toggle="modal" data-target="#chatModal">Chat</button>
+            <div class="modal fade" id="chatModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" id="chatbox">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#tab1">Player</a></li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#tab2">Team</a></li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#tab3">Badminton</a></li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#tab4">Football</a></li>
+                                <li class="nav-item">
+                                    <span data-toggle="modal" data-dismiss="modal" data-target="#channel-modal" title="Add a channel">
+                                                        <a class="nav-link" data-toggle="tab" href="#new">Add a channel<i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                                                    </span>
+                                </li>
+                            </ul>
+                            <button type="button" class="close float-right" data-dismiss="modal">Hide<i class="fa fa-angle-double-down" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="tab-content">
+                                <div id="tab1" class="tab-pane fade show active">
+                                    <h3>Player</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                                <div id="tab2" class="tab-pane fade">
+                                    <h3>Team</h3>
+                                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                </div>
+                                <div id="tab3" class="tab-pane fade">
+                                    <h3>Badminton</h3>
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                                </div>
+                                <div id="tab4" class="tab-pane fade">
+                                    <h3>Football</h3>
+                                    <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="add-friend" class="btn btn-outline-secondary">Add a friend</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Add a new channel modal-->
+            <div class="modal fade" id="channel-modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Search for a channel</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="logo-part">
+                                <img class="logoinModal" src="https://github.com/roxydao97/gameally/blob/master/logo/logo.png?raw=true" alt="Logo">
+                            </div>
+                            <input class="form-control" type="text" name="search" placeholder="Type your keyword here" style="display: inline-block;"><i class="fa fa-search" aria-hidden="true"></i>
+                            <ul class="nav flex-column nav-justified">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" data-toggle="modal" data-target="#myChannel" data-dismiss="modal">Create a new chat room</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Basketball</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Badminton</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Yoga</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Archery</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Create new channel modal -->
+            <div class="modal fade" id="myChannel" role="dialog" aria-labelledby="myChannel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Create new chat room</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <input class="form-control" type="text" name="roomName" placeholder="Chat room's name" style="display: inline-block;">
+                            <input class="form-control" type="text" name="roomPass" placeholder="Password" style="display: inline-block;">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" id="createRoom">CREATE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+             <!-- Live Support -->
+        <div class="live-chat">
+            <div class="d-flex justify-content-end fixed-bottom">
+                <a href="#live-chat-visible" onclick="livechat()">
+                <i class="fa fa-commenting"></i>
+              </a>
+            </div>
+            <div class="d-flex justify-content-end fixed-bottom live-chat-form" id="visible" style="left: 926px; bottom: 20px; height: 230px;">
+                <form action="" style="width: 306px;">
+                    <div class="form-group">
+                        <input type="text" name="" class="form-control" placeholder="Email address">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="" id="" rows="3" placeholder="How can we help you?"></textarea>
+                    </div>
+                    <div class="live-chat-button">
+                        <a href="Team-information.html" class="btn btn-primary">Send</a>
+                        <a href="Team-information.html" class="btn btn secondary">Close</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    <script type="text/javascript">
+    function livechat() {
+        document.getElementById("visible").classList.toggle("live-chat-visible");
+    }
+    </script>
 
 		<!-- Optional JavaScript -->
 	    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
